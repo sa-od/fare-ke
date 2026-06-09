@@ -347,3 +347,37 @@ if (whiteBtn) {
 
 // Set initial active state: White is default
 updateColorButtons(null);
+
+// ── cart form intercept ────────────────────────────────────────
+function injectHiddenInput(form, name, value) {
+  let input = form.querySelector(`[name="${CSS.escape(name)}"]`);
+  if (!input) {
+    input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = name;
+    form.appendChild(input);
+  }
+  input.value = value;
+}
+
+const form = document.querySelector('form[action*="/cart/add"]');
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if (!window.__paintState?.variantId) {
+      form.submit();
+      return;
+    }
+
+    const idInput = form.querySelector('input[name="id"]');
+    if (idInput) idInput.value = window.__paintState.variantId;
+
+    if (window.__paintState.shade) {
+      injectHiddenInput(form, 'properties[Shade]', window.__paintState.shade.code);
+      injectHiddenInput(form, 'properties[_hex]', window.__paintState.shade.hex);
+    }
+
+    form.submit();
+  });
+}
