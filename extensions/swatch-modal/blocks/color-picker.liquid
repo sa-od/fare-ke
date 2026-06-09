@@ -1,0 +1,29 @@
+<script>
+  window.__paintData = {
+    variants: {{ product.variants | json }},
+    options: {{ product.options_with_values | json }}
+  };
+</script>
+
+<button
+  type="button"
+  id="open-shade-modal"
+  style="width:100%;padding:12px 16px;background:#1a1a1a;color:#fff;border:none;cursor:pointer;font-size:15px;letter-spacing:.04em;"
+>
+  {{ block.settings.button_label }}
+</button>
+
+{% schema %}
+{
+  "name": "Paint Shade Picker",
+  "target": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Custom Colors"
+    }
+  ]
+}
+{% endschema %}
