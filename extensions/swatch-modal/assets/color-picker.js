@@ -113,26 +113,24 @@ function autoSelectDefaults() {
 
   if (window.__paintState?.shade) return;
 
-  // No palette pre-selected — always start empty
-  paletteSelect.value = "";
+  // Pre-select first palette
+  const firstPalette = palettes[0];
+  paletteSelect.value = firstPalette;
 
-  // Tones from all palettes combined
-  const allTones = [...new Set(palette.map((s) => s.tone))];
-  toneSelect.innerHTML = '<option value="">Select tone</option>';
-  allTones.forEach((tone) => {
+  // Populate tones for this palette, but leave tone unselected
+  const tones = Array.from(tonesByPalette[firstPalette] || []);
+  toneSelect.innerHTML = '<option value="">All tones</option>';
+  tones.forEach((tone) => {
     const opt = document.createElement("option");
     opt.value = tone;
     opt.textContent = tone;
     toneSelect.appendChild(opt);
   });
   toneSelect.disabled = false;
+  toneSelect.value = "";
 
-  const firstTone = allTones[0];
-  if (!firstTone) return;
-  toneSelect.value = firstTone;
-
-  // Show all shades for this tone across every palette
-  renderGrid(palette.filter((s) => s.tone === firstTone));
+  // Show all shades in this palette across all tones
+  renderGrid(palette.filter((s) => s.palette === firstPalette));
 }
 
 function closeModal({ clearState = false } = {}) {
@@ -256,49 +254,39 @@ function listenFormatChange() {
 function onPaletteChange(e) {
   const selected = e.target.value;
   const toneSelect = document.getElementById("shade-tone-select");
-  const currentTone = toneSelect.value;
 
-  const tones = selected
-    ? Array.from(tonesByPalette[selected] || [])
-    : [...new Set(palette.map((s) => s.tone))];
+  toneSelect.innerHTML = '<option value="">All tones</option>';
 
-  toneSelect.innerHTML = '<option value="">Select tone</option>';
+  if (!selected) {
+    toneSelect.disabled = true;
+    document.getElementById("shade-grid").innerHTML = "";
+    return;
+  }
+
+  const tones = Array.from(tonesByPalette[selected] || []);
   tones.forEach((tone) => {
     const opt = document.createElement("option");
     opt.value = tone;
     opt.textContent = tone;
     toneSelect.appendChild(opt);
   });
-  toneSelect.disabled = tones.length === 0;
+  toneSelect.disabled = false;
+  toneSelect.value = "";
 
-  const nextTone = tones.includes(currentTone) ? currentTone : tones[0] || "";
-  toneSelect.value = nextTone;
-
-  if (!nextTone) {
-    document.getElementById("shade-grid").innerHTML = "";
-    return;
-  }
-
-  renderGrid(
-    selected
-      ? palette.filter((s) => s.palette === selected && s.tone === nextTone)
-      : palette.filter((s) => s.tone === nextTone),
-  );
+  // Show all shades in this palette (no tone filter)
+  renderGrid(palette.filter((s) => s.palette === selected));
 }
 
 function onToneChange(e) {
   const paletteVal = document.getElementById("shade-palette-select").value;
   const toneVal = e.target.value;
 
-  if (!toneVal) {
-    document.getElementById("shade-grid").innerHTML = "";
-    return;
-  }
+  if (!paletteVal) { document.getElementById("shade-grid").innerHTML = ""; return; }
 
   renderGrid(
-    paletteVal
+    toneVal
       ? palette.filter((s) => s.palette === paletteVal && s.tone === toneVal)
-      : palette.filter((s) => s.tone === toneVal),
+      : palette.filter((s) => s.palette === paletteVal),
   );
 }
 
