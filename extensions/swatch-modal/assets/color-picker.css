@@ -270,6 +270,34 @@
   }
 }
 
+/* ── two-button color selector ────────────────────────────── */
+.cp-btn-row {
+  display: flex;
+  gap: 8px;
+}
+
+.cp-btn {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .02em;
+  border: 2px solid transparent;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.cp-btn--white {
+  background: #fff;
+  color: #111;
+}
+
+.cp-btn--custom {
+  background: #1a1a1a;
+  color: #fff;
+}
+
 /* ── hide Tier option group — controlled silently by shade picker ── */
 
 /* Pill input row (the buttons themselves) */

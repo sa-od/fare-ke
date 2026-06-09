@@ -6,21 +6,18 @@
   };
 </script>
 
-<button
-  type="button"
-  id="open-shade-modal"
-  style="width:100%;padding:12px 16px;background:#1a1a1a;color:#fff;border:none;cursor:pointer;font-size:15px;letter-spacing:.04em;"
->
-  {{ block.settings.button_label }}
-</button>
-
-<div style="display:flex;align-items:center;gap:10px;margin-top:10px;min-height:24px;">
-  <span
-    id="selected-shade-swatch"
-    hidden
-    style="display:inline-block;width:20px;height:20px;border-radius:50%;border:1px solid #e5e7eb;flex-shrink:0;"
-  ></span>
-  <span id="selected-shade-display" style="font-size:13px;color:#374151;font-weight:500;"></span>
+<div class="cp-btn-row">
+  <button type="button" id="select-base-color" class="cp-btn cp-btn--white">
+    White
+  </button>
+  <button
+    type="button"
+    id="open-shade-modal"
+    class="cp-btn cp-btn--custom"
+    data-default-label="{{ block.settings.button_label }}"
+  >
+    {{ block.settings.button_label }}
+  </button>
 </div>
 
 <script type="module" src="{{ 'color-picker.js' | asset_url }}"></script>

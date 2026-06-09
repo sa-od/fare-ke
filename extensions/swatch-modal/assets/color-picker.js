@@ -77,11 +77,11 @@ function buildModal() {
   document.body.appendChild(overlay);
 
   overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) closeModal({ clearState: true });
+    if (e.target === overlay) closeModal({ clearState: false });
   });
 
   document.getElementById('shade-close').addEventListener('click', () =>
-    closeModal({ clearState: true })
+    closeModal({ clearState: false })
   );
 
   document.getElementById('shade-palette-select').addEventListener('change', onPaletteChange);
@@ -131,10 +131,35 @@ function closeModal({ clearState = false } = {}) {
     document.querySelectorAll('.shade-chip--active').forEach((c) =>
       c.classList.remove('shade-chip--active')
     );
-    const displayEl = document.querySelector('#selected-shade-display');
-    const swatchEl = document.querySelector('#selected-shade-swatch');
-    if (displayEl) displayEl.textContent = '';
-    if (swatchEl) { swatchEl.style.background = ''; swatchEl.hidden = true; }
+    updateColorButtons(null);
+  }
+}
+
+// ── button state ──────────────────────────────────────────────
+function getContrastColor(hex) {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return (0.299 * r + 0.587 * g + 0.114 * b) / 255 > 0.55 ? '#111' : '#fff';
+}
+
+function updateColorButtons(shade) {
+  const whiteBtn = document.getElementById('select-base-color');
+  const customBtn = document.getElementById('open-shade-modal');
+  if (!whiteBtn || !customBtn) return;
+
+  if (shade) {
+    whiteBtn.style.borderColor = '#d1d5db';
+    customBtn.style.background = shade.hex;
+    customBtn.style.color = getContrastColor(shade.hex);
+    customBtn.style.borderColor = '#2563eb';
+    customBtn.textContent = shade.code;
+  } else {
+    whiteBtn.style.borderColor = '#2563eb';
+    customBtn.style.background = '#1a1a1a';
+    customBtn.style.color = '#fff';
+    customBtn.style.borderColor = 'transparent';
+    customBtn.textContent = customBtn.dataset.defaultLabel || 'Custom Colors';
   }
 }
 
@@ -172,11 +197,7 @@ function resolveVariant() {
     setTimeout(() => { _resolvingVariant = false; }, 800);
   }
 
-  // Update shade display below the button
-  const displayEl = document.querySelector('#selected-shade-display');
-  const swatchEl = document.querySelector('#selected-shade-swatch');
-  if (displayEl) displayEl.textContent = shade.code;
-  if (swatchEl) { swatchEl.style.background = shade.hex; swatchEl.hidden = false; }
+  updateColorButtons(shade);
 }
 
 // ── listen for Format option changes ──────────────────────────
@@ -288,6 +309,7 @@ function selectShade(shade) {
 
   window.__paintState = { shade };
   console.log('[paint-picker] shade set →', shade.code, '| tier:', shade.tier, '| state:', window.__paintState);
+  updateColorButtons(shade);
 
   setTimeout(() => {
     closeModal({ clearState: false });
@@ -298,5 +320,30 @@ function selectShade(shade) {
 // ── boot ───────────────────────────────────────────────────────
 buildModal();
 listenFormatChange();
+
 const btn = document.getElementById('open-shade-modal');
 if (btn) btn.addEventListener('click', openModal);
+
+const whiteBtn = document.getElementById('select-base-color');
+if (whiteBtn) {
+  whiteBtn.addEventListener('click', () => {
+    if (_resolvingVariant) return;
+    window.__paintState = null;
+    document.getElementById('shade-footer').innerHTML =
+      '<span class="shade-no-selection">No shade selected</span>';
+    document.querySelectorAll('.shade-chip--active').forEach((c) =>
+      c.classList.remove('shade-chip--active')
+    );
+    const baseInput = document.querySelector('input[value="Base"]');
+    if (baseInput && !baseInput.checked) {
+      _resolvingVariant = true;
+      baseInput.checked = true;
+      baseInput.dispatchEvent(new Event('change', { bubbles: true }));
+      setTimeout(() => { _resolvingVariant = false; }, 800);
+    }
+    updateColorButtons(null);
+  });
+}
+
+// Set initial active state: White is default
+updateColorButtons(null);
