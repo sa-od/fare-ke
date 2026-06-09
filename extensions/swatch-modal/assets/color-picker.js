@@ -2,6 +2,37 @@ import { palette, palettes, tonesByPalette } from './ncs-palette.js';
 
 const OVERLAY_ID = 'shade-overlay';
 
+// ── helpers ────────────────────────────────────────────────────
+function formatMoney(cents) {
+  return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(
+    cents / 100
+  );
+}
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+}
+
+function getSelectedFormat() {
+  // URL is updated synchronously by replaceState/pushState before the section
+  // re-renders, so it's the most accurate signal at the moment resolveVariant fires.
+  const urlId = parseInt(new URLSearchParams(window.location.search).get('variant'), 10);
+  if (urlId) {
+    const v = (window.__paintData?.variants || []).find((v) => v.id === urlId);
+    if (v) return v.option1;
+  }
+
+  // Fallback: hidden input Ritual keeps in the product form (confirmed present
+  // on live store via DevTools — value updates after section re-renders).
+  const hidden = document.querySelector('form[action*="/cart/add"] input[name="id"]');
+  if (hidden?.value) {
+    const v = (window.__paintData?.variants || []).find((v) => v.id === parseInt(hidden.value, 10));
+    if (v) return v.option1;
+  }
+
+  return window.__paintData?.variants?.[0]?.option1 ?? null;
+}
+
 // ── build ──────────────────────────────────────────────────────
 function buildModal() {
   if (document.getElementById(OVERLAY_ID)) return;
@@ -100,7 +131,73 @@ function closeModal({ clearState = false } = {}) {
     document.querySelectorAll('.shade-chip--active').forEach((c) =>
       c.classList.remove('shade-chip--active')
     );
+    const displayEl = document.querySelector('#selected-shade-display');
+    const swatchEl = document.querySelector('#selected-shade-swatch');
+    if (displayEl) displayEl.textContent = '';
+    if (swatchEl) { swatchEl.style.background = ''; swatchEl.hidden = true; }
   }
+}
+
+// ── variant resolution ─────────────────────────────────────────
+// Guard prevents our replaceState interceptor from re-triggering resolveVariant
+// when Ritual updates the URL after we programmatically select the tier input.
+let _resolvingVariant = false;
+
+function resolveVariant() {
+  if (_resolvingVariant) return;
+
+  const shade = window.__paintState?.shade;
+  const format = getSelectedFormat();
+  const tier = shade ? capitalize(shade.tier) : null;
+  console.log('[paint-picker] resolveVariant → shade:', shade?.code, '| format:', format, '| tier:', tier);
+
+  if (!shade || !format) return;
+
+  const variant = (window.__paintData?.variants || []).find(
+    (v) => v.option1 === format && v.option2 === tier
+  );
+  console.log('[paint-picker] matched variant:', variant ? `${variant.id} (${variant.option1} / ${variant.option2})` : 'none');
+  if (!variant) return;
+
+  window.__paintState.variantId = variant.id;
+
+  // Instead of scraping Ritual's price DOM (which is server-rendered and
+  // varies by theme), trigger Ritual's own tier input. Ritual's variant-picker
+  // then handles the URL update, section re-render and price display natively.
+  const tierInput = document.querySelector(`input[value="${tier}"]`);
+  if (tierInput && !tierInput.checked) {
+    _resolvingVariant = true;
+    tierInput.checked = true;
+    tierInput.dispatchEvent(new Event('change', { bubbles: true }));
+    setTimeout(() => { _resolvingVariant = false; }, 800);
+  }
+
+  // Update shade display below the button
+  const displayEl = document.querySelector('#selected-shade-display');
+  const swatchEl = document.querySelector('#selected-shade-swatch');
+  if (displayEl) displayEl.textContent = shade.code;
+  if (swatchEl) { swatchEl.style.background = shade.hex; swatchEl.hidden = false; }
+}
+
+// ── listen for Format option changes ──────────────────────────
+function listenFormatChange() {
+  // Ritual uses replaceState (not pushState) to update ?variant= in the URL.
+  // Intercept both to be safe across themes.
+  function onHistoryChange() { resolveVariant(); }
+
+  const _replace = history.replaceState.bind(history);
+  history.replaceState = function (...args) {
+    _replace(...args);
+    onHistoryChange();
+  };
+
+  const _push = history.pushState.bind(history);
+  history.pushState = function (...args) {
+    _push(...args);
+    onHistoryChange();
+  };
+
+  window.addEventListener('popstate', onHistoryChange);
 }
 
 // ── dropdown handlers ──────────────────────────────────────────
@@ -190,12 +287,16 @@ function selectShade(shade) {
   `;
 
   window.__paintState = { shade };
+  console.log('[paint-picker] shade set →', shade.code, '| tier:', shade.tier, '| state:', window.__paintState);
 
-  setTimeout(() => closeModal({ clearState: false }), 300);
+  setTimeout(() => {
+    closeModal({ clearState: false });
+    resolveVariant();
+  }, 300);
 }
 
 // ── boot ───────────────────────────────────────────────────────
-// Module scripts are deferred — DOM is already parsed here, no event needed.
 buildModal();
+listenFormatChange();
 const btn = document.getElementById('open-shade-modal');
 if (btn) btn.addEventListener('click', openModal);

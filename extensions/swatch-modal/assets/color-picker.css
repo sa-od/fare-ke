@@ -269,3 +269,21 @@
     gap: 8px;
   }
 }
+
+/* ── hide Tier option group — controlled silently by shade picker ── */
+
+/* Pill input row (the buttons themselves) */
+.product-form__input--pill:has(input[value="Base"]),
+.product-form__input--pill:has(input[value="Light"]),
+.product-form__input--pill:has(input[value="Medium"]),
+.product-form__input--pill:has(input[value="Dark"]) {
+  display: none !important;
+}
+
+/* Full option group wrapper including the "Tier" label.
+   :has() walks up from the inputs to the first matching ancestor.
+   Covers Ritual (.product-form__option) and fieldset-based themes. */
+.product-form__option:has(input[value="Base"]),
+fieldset:has(input[value="Base"]) {
+  display: none !important;
+}
