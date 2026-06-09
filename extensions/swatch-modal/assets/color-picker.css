@@ -1,0 +1,271 @@
+/* ── overlay ──────────────────────────────────────────────── */
+#shade-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 10000;
+  padding: 16px;
+}
+
+#shade-overlay.is-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── modal container ──────────────────────────────────────── */
+#shade-modal {
+  background: #fff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 980px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* ── header ───────────────────────────────────────────────── */
+.shade-modal__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 24px 28px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+.shade-modal__title {
+  flex: 1;
+}
+
+.shade-modal__title h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  line-height: 1.3;
+  color: #111;
+}
+
+.shade-modal__title h2 .cp-blue {
+  color: #2563eb;
+}
+
+.shade-modal__title p {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* ── controls (dropdowns + X) ─────────────────────────────── */
+.shade-modal__controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.shade-modal__select-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.shade-modal__select-group label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #2563eb;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.shade-modal__select-group select {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 9px 36px 9px 12px;
+  font-size: 14px;
+  min-width: 175px;
+  background: #fff
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236b7280' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    no-repeat right 12px center;
+  color: #111;
+  cursor: pointer;
+}
+
+.shade-modal__select-group select:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.shade-modal__select-group select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+#shade-close {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 2px 4px;
+  margin-top: -2px;
+}
+
+#shade-close:hover {
+  color: #111;
+}
+
+/* ── shade grid ───────────────────────────────────────────── */
+#shade-grid {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+  gap: 10px;
+  align-content: start;
+}
+
+#shade-grid:empty::after {
+  content: "Select a palette and tone to see shades";
+  color: #9ca3af;
+  font-size: 14px;
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 0;
+  display: block;
+}
+
+/* ── chip ─────────────────────────────────────────────────── */
+.shade-chip {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+  transition: border-color 0.15s, transform 0.1s, box-shadow 0.15s;
+}
+
+.shade-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.shade-chip--active {
+  border-color: #2563eb !important;
+}
+
+.shade-chip__swatch {
+  display: block;
+  height: 60px;
+  width: 100%;
+}
+
+.shade-chip__label {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: #374151;
+  background: #f9fafb;
+  padding: 5px 6px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* checkmark badge */
+.shade-chip__check {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 18px;
+  height: 18px;
+  background: #2563eb;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.shade-chip--active .shade-chip__check {
+  display: flex;
+}
+
+/* ── footer / selected display ────────────────────────────── */
+.shade-modal__footer {
+  padding: 14px 24px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 60px;
+  flex-shrink: 0;
+}
+
+.shade-swatch-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+.shade-selected-code {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+
+.shade-no-selection {
+  font-size: 14px;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* ── mobile ───────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  #shade-modal {
+    max-height: 95vh;
+  }
+
+  .shade-modal__header {
+    flex-direction: column;
+    padding: 20px 16px 16px;
+  }
+
+  .shade-modal__controls {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .shade-modal__select-group {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .shade-modal__select-group select {
+    min-width: unset;
+    width: 100%;
+  }
+
+  #shade-grid {
+    padding: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+    gap: 8px;
+  }
+}

@@ -1,3 +1,5 @@
+{{ 'color-picker.css' | asset_url | stylesheet_tag }}
+
 <script>
   window.__paintData = {
     variants: {{ product.variants | json }}
@@ -12,11 +14,7 @@
   {{ block.settings.button_label }}
 </button>
 
-<script>
-  document.getElementById('open-shade-modal').addEventListener('click', function() {
-    console.log(window.__paintData.variants);
-  });
-</script>
+<script type="module" src="{{ 'color-picker.js' | asset_url }}"></script>
 
 {% schema %}
 {
