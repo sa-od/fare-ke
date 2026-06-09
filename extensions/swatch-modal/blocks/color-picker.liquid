@@ -1,7 +1,6 @@
 <script>
   window.__paintData = {
-    variants: {{ product.variants | json }},
-    options: {{ product.options_with_values | json }}
+    variants: {{ product.variants | json }}
   };
 </script>
 
@@ -12,6 +11,12 @@
 >
   {{ block.settings.button_label }}
 </button>
+
+<script>
+  document.getElementById('open-shade-modal').addEventListener('click', function() {
+    console.log(window.__paintData.variants);
+  });
+</script>
 
 {% schema %}
 {
