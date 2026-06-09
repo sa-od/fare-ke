@@ -1,12 +1,13 @@
-import { palette, palettes, tonesByPalette } from './ncs-palette.js';
+import { palette, palettes, tonesByPalette } from "./ncs-palette.js";
 
-const OVERLAY_ID = 'shade-overlay';
+const OVERLAY_ID = "shade-overlay";
 
 // ── helpers ────────────────────────────────────────────────────
 function formatMoney(cents) {
-  return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(
-    cents / 100
-  );
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  }).format(cents / 100);
 }
 
 function capitalize(str) {
@@ -16,7 +17,10 @@ function capitalize(str) {
 function getSelectedFormat() {
   // URL is updated synchronously by replaceState/pushState before the section
   // re-renders, so it's the most accurate signal at the moment resolveVariant fires.
-  const urlId = parseInt(new URLSearchParams(window.location.search).get('variant'), 10);
+  const urlId = parseInt(
+    new URLSearchParams(window.location.search).get("variant"),
+    10,
+  );
   if (urlId) {
     const v = (window.__paintData?.variants || []).find((v) => v.id === urlId);
     if (v) return v.option1;
@@ -24,9 +28,13 @@ function getSelectedFormat() {
 
   // Fallback: hidden input Ritual keeps in the product form (confirmed present
   // on live store via DevTools — value updates after section re-renders).
-  const hidden = document.querySelector('form[action*="/cart/add"] input[name="id"]');
+  const hidden = document.querySelector(
+    'form[action*="/cart/add"] input[name="id"]',
+  );
   if (hidden?.value) {
-    const v = (window.__paintData?.variants || []).find((v) => v.id === parseInt(hidden.value, 10));
+    const v = (window.__paintData?.variants || []).find(
+      (v) => v.id === parseInt(hidden.value, 10),
+    );
     if (v) return v.option1;
   }
 
@@ -39,9 +47,9 @@ function buildModal() {
 
   const paletteOptions = palettes
     .map((p) => `<option value="${p}">${p}</option>`)
-    .join('');
+    .join("");
 
-  const overlay = document.createElement('div');
+  const overlay = document.createElement("div");
   overlay.id = OVERLAY_ID;
   overlay.innerHTML = `
     <div id="shade-modal" role="dialog" aria-modal="true" aria-label="Choose paint shade">
@@ -76,61 +84,68 @@ function buildModal() {
 
   document.body.appendChild(overlay);
 
-  overlay.addEventListener('click', (e) => {
+  overlay.addEventListener("click", (e) => {
     if (e.target === overlay) closeModal({ clearState: false });
   });
 
-  document.getElementById('shade-close').addEventListener('click', () =>
-    closeModal({ clearState: false })
-  );
+  document
+    .getElementById("shade-close")
+    .addEventListener("click", () => closeModal({ clearState: false }));
 
-  document.getElementById('shade-palette-select').addEventListener('change', onPaletteChange);
-  document.getElementById('shade-tone-select').addEventListener('change', onToneChange);
+  document
+    .getElementById("shade-palette-select")
+    .addEventListener("change", onPaletteChange);
+  document
+    .getElementById("shade-tone-select")
+    .addEventListener("change", onToneChange);
 }
 
 // ── open / close ───────────────────────────────────────────────
 function openModal() {
-  document.getElementById(OVERLAY_ID).classList.add('is-open');
-  document.body.style.overflow = 'hidden';
+  document.getElementById(OVERLAY_ID).classList.add("is-open");
+  document.body.style.overflow = "hidden";
   autoSelectDefaults();
 }
 
 function autoSelectDefaults() {
-  const paletteSelect = document.getElementById('shade-palette-select');
-  if (paletteSelect.value) return; // already selected — preserve state
+  const paletteSelect = document.getElementById("shade-palette-select");
+  const toneSelect = document.getElementById("shade-tone-select");
 
-  const firstPalette = palettes[0];
-  paletteSelect.value = firstPalette;
+  if (window.__paintState?.shade) return;
 
-  const toneSelect = document.getElementById('shade-tone-select');
+  // No palette pre-selected — always start empty
+  paletteSelect.value = "";
+
+  // Tones from all palettes combined
+  const allTones = [...new Set(palette.map((s) => s.tone))];
   toneSelect.innerHTML = '<option value="">Select tone</option>';
-  const tones = Array.from(tonesByPalette[firstPalette] || []);
-  tones.forEach((tone) => {
-    const opt = document.createElement('option');
+  allTones.forEach((tone) => {
+    const opt = document.createElement("option");
     opt.value = tone;
     opt.textContent = tone;
     toneSelect.appendChild(opt);
   });
   toneSelect.disabled = false;
 
-  const firstTone = tones[0];
+  const firstTone = allTones[0];
   if (!firstTone) return;
   toneSelect.value = firstTone;
 
-  renderGrid(palette.filter((s) => s.palette === firstPalette && s.tone === firstTone));
+  // Show all shades for this tone across every palette
+  renderGrid(palette.filter((s) => s.tone === firstTone));
 }
 
 function closeModal({ clearState = false } = {}) {
-  document.getElementById(OVERLAY_ID).classList.remove('is-open');
-  document.body.style.overflow = '';
+  document.getElementById(OVERLAY_ID).classList.remove("is-open");
+  document.body.style.overflow = "";
 
   if (clearState) {
     window.__paintState = null;
-    document.getElementById('shade-footer').innerHTML =
+    document.getElementById("shade-footer").innerHTML =
       '<span class="shade-no-selection">No shade selected</span>';
-    document.querySelectorAll('.shade-chip--active').forEach((c) =>
-      c.classList.remove('shade-chip--active')
-    );
+    document
+      .querySelectorAll(".shade-chip--active")
+      .forEach((c) => c.classList.remove("shade-chip--active"));
     updateColorButtons(null);
   }
 }
@@ -140,26 +155,26 @@ function getContrastColor(hex) {
   const r = parseInt(hex.slice(1, 3), 16);
   const g = parseInt(hex.slice(3, 5), 16);
   const b = parseInt(hex.slice(5, 7), 16);
-  return (0.299 * r + 0.587 * g + 0.114 * b) / 255 > 0.55 ? '#111' : '#fff';
+  return (0.299 * r + 0.587 * g + 0.114 * b) / 255 > 0.55 ? "#111" : "#fff";
 }
 
 function updateColorButtons(shade) {
-  const whiteBtn = document.getElementById('select-base-color');
-  const customBtn = document.getElementById('open-shade-modal');
+  const whiteBtn = document.getElementById("select-base-color");
+  const customBtn = document.getElementById("open-shade-modal");
   if (!whiteBtn || !customBtn) return;
 
   if (shade) {
-    whiteBtn.style.borderColor = '#d1d5db';
+    whiteBtn.style.borderColor = "#d1d5db";
     customBtn.style.background = shade.hex;
     customBtn.style.color = getContrastColor(shade.hex);
-    customBtn.style.borderColor = '#2563eb';
+    customBtn.style.borderColor = "#2563eb";
     customBtn.textContent = shade.code;
   } else {
-    whiteBtn.style.borderColor = '#2563eb';
-    customBtn.style.background = '#1a1a1a';
-    customBtn.style.color = '#fff';
-    customBtn.style.borderColor = 'transparent';
-    customBtn.textContent = customBtn.dataset.defaultLabel || 'Custom Colors';
+    whiteBtn.style.borderColor = "#2563eb";
+    customBtn.style.background = "#1a1a1a";
+    customBtn.style.color = "#fff";
+    customBtn.style.borderColor = "transparent";
+    customBtn.textContent = customBtn.dataset.defaultLabel || "Custom Colors";
   }
 }
 
@@ -174,14 +189,26 @@ function resolveVariant() {
   const shade = window.__paintState?.shade;
   const format = getSelectedFormat();
   const tier = shade ? capitalize(shade.tier) : null;
-  console.log('[paint-picker] resolveVariant → shade:', shade?.code, '| format:', format, '| tier:', tier);
+  console.log(
+    "[paint-picker] resolveVariant → shade:",
+    shade?.code,
+    "| format:",
+    format,
+    "| tier:",
+    tier,
+  );
 
   if (!shade || !format) return;
 
   const variant = (window.__paintData?.variants || []).find(
-    (v) => v.option1 === format && v.option2 === tier
+    (v) => v.option1 === format && v.option2 === tier,
   );
-  console.log('[paint-picker] matched variant:', variant ? `${variant.id} (${variant.option1} / ${variant.option2})` : 'none');
+  console.log(
+    "[paint-picker] matched variant:",
+    variant
+      ? `${variant.id} (${variant.option1} / ${variant.option2})`
+      : "none",
+  );
   if (!variant) return;
 
   window.__paintState.variantId = variant.id;
@@ -193,8 +220,10 @@ function resolveVariant() {
   if (tierInput && !tierInput.checked) {
     _resolvingVariant = true;
     tierInput.checked = true;
-    tierInput.dispatchEvent(new Event('change', { bubbles: true }));
-    setTimeout(() => { _resolvingVariant = false; }, 800);
+    tierInput.dispatchEvent(new Event("change", { bubbles: true }));
+    setTimeout(() => {
+      _resolvingVariant = false;
+    }, 800);
   }
 
   updateColorButtons(shade);
@@ -204,7 +233,9 @@ function resolveVariant() {
 function listenFormatChange() {
   // Ritual uses replaceState (not pushState) to update ?variant= in the URL.
   // Intercept both to be safe across themes.
-  function onHistoryChange() { resolveVariant(); }
+  function onHistoryChange() {
+    resolveVariant();
+  }
 
   const _replace = history.replaceState.bind(history);
   history.replaceState = function (...args) {
@@ -218,61 +249,69 @@ function listenFormatChange() {
     onHistoryChange();
   };
 
-  window.addEventListener('popstate', onHistoryChange);
+  window.addEventListener("popstate", onHistoryChange);
 }
 
 // ── dropdown handlers ──────────────────────────────────────────
 function onPaletteChange(e) {
   const selected = e.target.value;
-  const toneSelect = document.getElementById('shade-tone-select');
+  const toneSelect = document.getElementById("shade-tone-select");
+  const currentTone = toneSelect.value;
+
+  const tones = selected
+    ? Array.from(tonesByPalette[selected] || [])
+    : [...new Set(palette.map((s) => s.tone))];
 
   toneSelect.innerHTML = '<option value="">Select tone</option>';
-
-  if (!selected || !tonesByPalette[selected]) {
-    toneSelect.disabled = true;
-    document.getElementById('shade-grid').innerHTML = '';
-    return;
-  }
-
-  const tones = Array.from(tonesByPalette[selected]);
   tones.forEach((tone) => {
-    const opt = document.createElement('option');
+    const opt = document.createElement("option");
     opt.value = tone;
     opt.textContent = tone;
     toneSelect.appendChild(opt);
   });
-  toneSelect.disabled = false;
+  toneSelect.disabled = tones.length === 0;
 
-  // Auto-select first tone and render grid immediately
-  toneSelect.value = tones[0];
-  renderGrid(palette.filter((s) => s.palette === selected && s.tone === tones[0]));
-}
+  const nextTone = tones.includes(currentTone) ? currentTone : tones[0] || "";
+  toneSelect.value = nextTone;
 
-function onToneChange(e) {
-  const paletteVal = document.getElementById('shade-palette-select').value;
-  const toneVal = e.target.value;
-
-  if (!paletteVal || !toneVal) {
-    document.getElementById('shade-grid').innerHTML = '';
+  if (!nextTone) {
+    document.getElementById("shade-grid").innerHTML = "";
     return;
   }
 
-  const filtered = palette.filter(
-    (s) => s.palette === paletteVal && s.tone === toneVal
+  renderGrid(
+    selected
+      ? palette.filter((s) => s.palette === selected && s.tone === nextTone)
+      : palette.filter((s) => s.tone === nextTone),
   );
-  renderGrid(filtered);
+}
+
+function onToneChange(e) {
+  const paletteVal = document.getElementById("shade-palette-select").value;
+  const toneVal = e.target.value;
+
+  if (!toneVal) {
+    document.getElementById("shade-grid").innerHTML = "";
+    return;
+  }
+
+  renderGrid(
+    paletteVal
+      ? palette.filter((s) => s.palette === paletteVal && s.tone === toneVal)
+      : palette.filter((s) => s.tone === toneVal),
+  );
 }
 
 // ── grid ───────────────────────────────────────────────────────
 function renderGrid(shades) {
-  const grid = document.getElementById('shade-grid');
-  grid.innerHTML = '';
+  const grid = document.getElementById("shade-grid");
+  grid.innerHTML = "";
 
   shades.forEach((shade) => {
-    const chip = document.createElement('button');
-    chip.type = 'button';
-    chip.className = 'shade-chip';
-    chip.setAttribute('role', 'option');
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "shade-chip";
+    chip.setAttribute("role", "option");
     chip.dataset.code = shade.code;
     chip.dataset.hex = shade.hex;
     chip.innerHTML = `
@@ -286,29 +325,36 @@ function renderGrid(shades) {
         </svg>
       </span>
     `;
-    chip.addEventListener('click', () => selectShade(shade));
+    chip.addEventListener("click", () => selectShade(shade));
     grid.appendChild(chip);
   });
 }
 
 // ── selection ──────────────────────────────────────────────────
 function selectShade(shade) {
-  document.querySelectorAll('.shade-chip').forEach((c) =>
-    c.classList.remove('shade-chip--active')
-  );
+  document
+    .querySelectorAll(".shade-chip")
+    .forEach((c) => c.classList.remove("shade-chip--active"));
 
   const activeChip = document.querySelector(
-    `.shade-chip[data-code="${CSS.escape(shade.code)}"]`
+    `.shade-chip[data-code="${CSS.escape(shade.code)}"]`,
   );
-  if (activeChip) activeChip.classList.add('shade-chip--active');
+  if (activeChip) activeChip.classList.add("shade-chip--active");
 
-  document.getElementById('shade-footer').innerHTML = `
+  document.getElementById("shade-footer").innerHTML = `
     <div class="shade-swatch-circle" style="background:${shade.hex}"></div>
     <span class="shade-selected-code">${shade.code} &mdash; ${shade.hex}</span>
   `;
 
   window.__paintState = { shade };
-  console.log('[paint-picker] shade set →', shade.code, '| tier:', shade.tier, '| state:', window.__paintState);
+  console.log(
+    "[paint-picker] shade set →",
+    shade.code,
+    "| tier:",
+    shade.tier,
+    "| state:",
+    window.__paintState,
+  );
   updateColorButtons(shade);
 
   setTimeout(() => {
@@ -321,25 +367,27 @@ function selectShade(shade) {
 buildModal();
 listenFormatChange();
 
-const btn = document.getElementById('open-shade-modal');
-if (btn) btn.addEventListener('click', openModal);
+const btn = document.getElementById("open-shade-modal");
+if (btn) btn.addEventListener("click", openModal);
 
-const whiteBtn = document.getElementById('select-base-color');
+const whiteBtn = document.getElementById("select-base-color");
 if (whiteBtn) {
-  whiteBtn.addEventListener('click', () => {
+  whiteBtn.addEventListener("click", () => {
     if (_resolvingVariant) return;
     window.__paintState = null;
-    document.getElementById('shade-footer').innerHTML =
+    document.getElementById("shade-footer").innerHTML =
       '<span class="shade-no-selection">No shade selected</span>';
-    document.querySelectorAll('.shade-chip--active').forEach((c) =>
-      c.classList.remove('shade-chip--active')
-    );
+    document
+      .querySelectorAll(".shade-chip--active")
+      .forEach((c) => c.classList.remove("shade-chip--active"));
     const baseInput = document.querySelector('input[value="Base"]');
     if (baseInput && !baseInput.checked) {
       _resolvingVariant = true;
       baseInput.checked = true;
-      baseInput.dispatchEvent(new Event('change', { bubbles: true }));
-      setTimeout(() => { _resolvingVariant = false; }, 800);
+      baseInput.dispatchEvent(new Event("change", { bubbles: true }));
+      setTimeout(() => {
+        _resolvingVariant = false;
+      }, 800);
     }
     updateColorButtons(null);
   });
@@ -353,8 +401,8 @@ function injectHiddenInput(form, name, value) {
   // Quoted attribute value selector — brackets in value need no escaping
   let input = form.querySelector(`input[name="${name}"]`);
   if (!input) {
-    input = document.createElement('input');
-    input.type = 'hidden';
+    input = document.createElement("input");
+    input.type = "hidden";
     input.name = name;
     form.appendChild(input);
   }
@@ -366,15 +414,27 @@ function injectHiddenInput(form, name, value) {
 // exactly once, with our variant ID and properties already in the form.
 const form = document.querySelector('form[action*="/cart/add"]');
 if (form) {
-  form.addEventListener('submit', () => {
-    if (!window.__paintState?.variantId) return;
+  form.addEventListener(
+    "submit",
+    () => {
+      if (!window.__paintState?.variantId) return;
 
-    const idInput = form.querySelector('input[name="id"]');
-    if (idInput) idInput.value = window.__paintState.variantId;
+      const idInput = form.querySelector('input[name="id"]');
+      if (idInput) idInput.value = window.__paintState.variantId;
 
-    if (window.__paintState.shade) {
-      injectHiddenInput(form, 'properties[Shade]', window.__paintState.shade.code);
-      injectHiddenInput(form, 'properties[_hex]', window.__paintState.shade.hex);
-    }
-  }, { capture: true });
+      if (window.__paintState.shade) {
+        injectHiddenInput(
+          form,
+          "properties[Shade]",
+          window.__paintState.shade.code,
+        );
+        injectHiddenInput(
+          form,
+          "properties[_hex]",
+          window.__paintState.shade.hex,
+        );
+      }
+    },
+    { capture: true },
+  );
 }

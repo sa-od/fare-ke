@@ -136,7 +136,7 @@
 }
 
 #shade-grid:empty::after {
-  content: "Select a palette and tone to see shades";
+  content: "Select a palette to see shades";
   color: #9ca3af;
   font-size: 14px;
   grid-column: 1 / -1;
