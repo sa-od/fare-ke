@@ -350,7 +350,8 @@ updateColorButtons(null);
 
 // ── cart form intercept ────────────────────────────────────────
 function injectHiddenInput(form, name, value) {
-  let input = form.querySelector(`[name="${CSS.escape(name)}"]`);
+  // Quoted attribute value selector — brackets in value need no escaping
+  let input = form.querySelector(`input[name="${name}"]`);
   if (!input) {
     input = document.createElement('input');
     input.type = 'hidden';
@@ -360,15 +361,13 @@ function injectHiddenInput(form, name, value) {
   input.value = value;
 }
 
+// Patch form inputs in capture phase before Ritual reads new FormData(form)
+// in its bubble-phase handler. No stopPropagation — Ritual handles the cart add
+// exactly once, with our variant ID and properties already in the form.
 const form = document.querySelector('form[action*="/cart/add"]');
 if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    if (!window.__paintState?.variantId) {
-      form.submit();
-      return;
-    }
+  form.addEventListener('submit', () => {
+    if (!window.__paintState?.variantId) return;
 
     const idInput = form.querySelector('input[name="id"]');
     if (idInput) idInput.value = window.__paintState.variantId;
@@ -377,7 +376,5 @@ if (form) {
       injectHiddenInput(form, 'properties[Shade]', window.__paintState.shade.code);
       injectHiddenInput(form, 'properties[_hex]', window.__paintState.shade.hex);
     }
-
-    form.submit();
-  });
+  }, { capture: true });
 }
