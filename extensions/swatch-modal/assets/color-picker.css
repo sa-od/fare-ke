@@ -12,27 +12,30 @@
 }
 
 .cp-btn {
-  flex: 0 0 auto;
+  flex: 1;
   padding: 8px 20px;
   border-radius: 999px;
   cursor: pointer;
   font-size: 13px;
   font-weight: 600;
-  border: 1px solid var(--pk-border);
-  transition: border-color 0.15s, background 0.15s, color 0.15s;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: filter 0.15s, background 0.15s;
   white-space: nowrap;
 }
 
+.cp-btn:hover { filter: brightness(0.92); }
+
 .cp-btn--white {
-  background: #fff;
+  background: var(--pk-btn-white-bg, #ffffff);
   color: var(--pk-body);
-  border-color: #cccccc;
+  border-color: var(--pk-btn-white-bg, #cccccc);
 }
 
 .cp-btn--custom {
-  background: var(--pk-blue);
+  background: var(--pk-btn-custom-bg, var(--pk-blue));
   color: #fff;
-  border-color: var(--pk-blue);
+  border-color: var(--pk-btn-custom-bg, var(--pk-blue));
 }
 
 /* ── SHADE MODAL ─────────────────────────────────────────────── */

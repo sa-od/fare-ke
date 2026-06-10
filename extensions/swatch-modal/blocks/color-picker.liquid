@@ -1,5 +1,12 @@
 {{ 'color-picker.css' | asset_url | stylesheet_tag }}
 
+<style>
+  .cp-btn-row {
+    --pk-btn-white-bg:  {{ block.settings.white_btn_color }};
+    --pk-btn-custom-bg: {{ block.settings.custom_btn_color }};
+  }
+</style>
+
 <script>
   window.__paintData = {
     variants:     {{ product.variants | json }},
@@ -33,6 +40,18 @@
       "id": "button_label",
       "label": "Button Label",
       "default": "Custom Colors"
+    },
+    {
+      "type": "color",
+      "id": "white_btn_color",
+      "label": "Base button colour",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "custom_btn_color",
+      "label": "Colour picker button colour",
+      "default": "#1a6faf"
     }
   ]
 }
