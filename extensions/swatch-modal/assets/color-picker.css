@@ -1,6 +1,6 @@
 :root {
-  --pk-blue:   #1a6faf;
-  --pk-body:   #333333;
+  --pk-blue: #1a6faf;
+  --pk-body: #333333;
   --pk-border: #dddddd;
 }
 
@@ -14,28 +14,20 @@
 .cp-btn {
   flex: 1;
   padding: 8px 20px;
-  border-radius: 999px;
+  border-radius: 3px;
   cursor: pointer;
   font-size: 13px;
   font-weight: 600;
   text-align: center;
   border: 1px solid transparent;
-  transition: filter 0.15s, background 0.15s;
+  transition:
+    filter 0.15s,
+    background 0.15s;
   white-space: nowrap;
 }
 
-.cp-btn:hover { filter: brightness(0.92); }
-
-.cp-btn--white {
-  background: var(--pk-btn-white-bg, #ffffff);
-  color: var(--pk-body);
-  border-color: var(--pk-btn-white-bg, #cccccc);
-}
-
-.cp-btn--custom {
-  background: var(--pk-btn-custom-bg, var(--pk-blue));
-  color: #fff;
-  border-color: var(--pk-btn-custom-bg, var(--pk-blue));
+.cp-btn:hover {
+  filter: brightness(0.92);
 }
 
 /* ── SHADE MODAL ─────────────────────────────────────────────── */
@@ -76,7 +68,9 @@
   flex-shrink: 0;
 }
 
-.shade-modal__title { flex: 1; }
+.shade-modal__title {
+  flex: 1;
+}
 
 .shade-modal__title h2 {
   font-size: 24px;
@@ -86,7 +80,9 @@
   color: #111;
 }
 
-.shade-modal__title h2 .cp-blue { color: var(--pk-blue); }
+.shade-modal__title h2 .cp-blue {
+  color: var(--pk-blue);
+}
 
 .shade-modal__title p {
   margin: 0;
@@ -131,7 +127,10 @@
   cursor: pointer;
 }
 
-.shade-modal__select-group select:disabled { opacity: 0.5; cursor: default; }
+.shade-modal__select-group select:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
 
 .shade-modal__select-group select:focus {
   outline: none;
@@ -150,7 +149,9 @@
   padding: 2px 4px;
   margin-top: -2px;
 }
-#shade-close:hover { color: #111; }
+#shade-close:hover {
+  color: #111;
+}
 
 #shade-grid {
   flex: 1;
@@ -182,7 +183,10 @@
   cursor: pointer;
   background: none;
   padding: 0;
-  transition: border-color 0.15s, transform 0.1s, box-shadow 0.15s;
+  transition:
+    border-color 0.15s,
+    transform 0.1s,
+    box-shadow 0.15s;
 }
 
 .shade-chip:hover {
@@ -190,9 +194,15 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.shade-chip--active { border-color: var(--pk-blue) !important; }
+.shade-chip--active {
+  border-color: var(--pk-blue) !important;
+}
 
-.shade-chip__swatch { display: block; height: 60px; width: 100%; }
+.shade-chip__swatch {
+  display: block;
+  height: 60px;
+  width: 100%;
+}
 
 .shade-chip__label {
   display: block;
@@ -221,7 +231,9 @@
   justify-content: center;
 }
 
-.shade-chip--active .shade-chip__check { display: flex; }
+.shade-chip--active .shade-chip__check {
+  display: flex;
+}
 
 .shade-modal__footer {
   padding: 14px 24px;
@@ -241,24 +253,43 @@
   flex-shrink: 0;
 }
 
-.shade-selected-code { font-size: 14px; font-weight: 600; color: #111; }
+.shade-selected-code {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
 
-.shade-no-selection { font-size: 14px; color: #9ca3af; font-style: italic; }
+.shade-no-selection {
+  font-size: 14px;
+  color: #9ca3af;
+  font-style: italic;
+}
 
 /* ── MOBILE ──────────────────────────────────────────────────── */
 
 @media (max-width: 640px) {
-  #shade-modal { max-height: 95vh; }
+  #shade-modal {
+    max-height: 95vh;
+  }
 
   .shade-modal__header {
     flex-direction: column;
     padding: 20px 16px 16px;
   }
 
-  .shade-modal__controls { width: 100%; flex-wrap: wrap; }
+  .shade-modal__controls {
+    width: 100%;
+    flex-wrap: wrap;
+  }
 
-  .shade-modal__select-group { flex: 1; min-width: 0; }
-  .shade-modal__select-group select { min-width: unset; width: 100%; }
+  .shade-modal__select-group {
+    flex: 1;
+    min-width: 0;
+  }
+  .shade-modal__select-group select {
+    min-width: unset;
+    width: 100%;
+  }
 
   #shade-grid {
     padding: 16px;
