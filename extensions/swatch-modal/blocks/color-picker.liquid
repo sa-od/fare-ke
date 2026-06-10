@@ -2,7 +2,8 @@
 
 <script>
   window.__paintData = {
-    variants: {{ product.variants | json }}
+    variants:     {{ product.variants | json }},
+    productPrice: {{ product.price | default: 0 }}
   };
 </script>
 

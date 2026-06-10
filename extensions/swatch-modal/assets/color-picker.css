@@ -1,4 +1,42 @@
-/* ── overlay ──────────────────────────────────────────────── */
+:root {
+  --pk-blue:   #1a6faf;
+  --pk-body:   #333333;
+  --pk-border: #dddddd;
+}
+
+/* ── COLOR BUTTONS ───────────────────────────────────────────── */
+
+.cp-btn-row {
+  display: flex;
+  gap: 8px;
+}
+
+.cp-btn {
+  flex: 0 0 auto;
+  padding: 8px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid var(--pk-border);
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.cp-btn--white {
+  background: #fff;
+  color: var(--pk-body);
+  border-color: #cccccc;
+}
+
+.cp-btn--custom {
+  background: var(--pk-blue);
+  color: #fff;
+  border-color: var(--pk-blue);
+}
+
+/* ── SHADE MODAL ─────────────────────────────────────────────── */
+
 #shade-overlay {
   display: none;
   position: fixed;
@@ -14,7 +52,6 @@
   justify-content: center;
 }
 
-/* ── modal container ──────────────────────────────────────── */
 #shade-modal {
   background: #fff;
   border-radius: 12px;
@@ -27,7 +64,6 @@
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
 }
 
-/* ── header ───────────────────────────────────────────────── */
 .shade-modal__header {
   display: flex;
   align-items: flex-start;
@@ -37,9 +73,7 @@
   flex-shrink: 0;
 }
 
-.shade-modal__title {
-  flex: 1;
-}
+.shade-modal__title { flex: 1; }
 
 .shade-modal__title h2 {
   font-size: 24px;
@@ -49,9 +83,7 @@
   color: #111;
 }
 
-.shade-modal__title h2 .cp-blue {
-  color: #2563eb;
-}
+.shade-modal__title h2 .cp-blue { color: var(--pk-blue); }
 
 .shade-modal__title p {
   margin: 0;
@@ -60,7 +92,6 @@
   line-height: 1.5;
 }
 
-/* ── controls (dropdowns + X) ─────────────────────────────── */
 .shade-modal__controls {
   display: flex;
   align-items: flex-end;
@@ -77,7 +108,7 @@
 .shade-modal__select-group label {
   font-size: 11px;
   font-weight: 700;
-  color: #2563eb;
+  color: var(--pk-blue);
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
@@ -97,15 +128,12 @@
   cursor: pointer;
 }
 
-.shade-modal__select-group select:disabled {
-  opacity: 0.5;
-  cursor: default;
-}
+.shade-modal__select-group select:disabled { opacity: 0.5; cursor: default; }
 
 .shade-modal__select-group select:focus {
   outline: none;
-  border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  border-color: var(--pk-blue);
+  box-shadow: 0 0 0 3px rgba(26, 111, 175, 0.15);
 }
 
 #shade-close {
@@ -119,12 +147,8 @@
   padding: 2px 4px;
   margin-top: -2px;
 }
+#shade-close:hover { color: #111; }
 
-#shade-close:hover {
-  color: #111;
-}
-
-/* ── shade grid ───────────────────────────────────────────── */
 #shade-grid {
   flex: 1;
   overflow-y: auto;
@@ -145,7 +169,6 @@
   display: block;
 }
 
-/* ── chip ─────────────────────────────────────────────────── */
 .shade-chip {
   position: relative;
   display: flex;
@@ -164,15 +187,9 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.shade-chip--active {
-  border-color: #2563eb !important;
-}
+.shade-chip--active { border-color: var(--pk-blue) !important; }
 
-.shade-chip__swatch {
-  display: block;
-  height: 60px;
-  width: 100%;
-}
+.shade-chip__swatch { display: block; height: 60px; width: 100%; }
 
 .shade-chip__label {
   display: block;
@@ -188,7 +205,6 @@
   border-top: 1px solid #e5e7eb;
 }
 
-/* checkmark badge */
 .shade-chip__check {
   display: none;
   position: absolute;
@@ -196,17 +212,14 @@
   right: 5px;
   width: 18px;
   height: 18px;
-  background: #2563eb;
+  background: var(--pk-blue);
   border-radius: 50%;
   align-items: center;
   justify-content: center;
 }
 
-.shade-chip--active .shade-chip__check {
-  display: flex;
-}
+.shade-chip--active .shade-chip__check { display: flex; }
 
-/* ── footer / selected display ────────────────────────────── */
 .shade-modal__footer {
   padding: 14px 24px;
   border-top: 1px solid #e5e7eb;
@@ -225,93 +238,28 @@
   flex-shrink: 0;
 }
 
-.shade-selected-code {
-  font-size: 14px;
-  font-weight: 600;
-  color: #111;
-}
+.shade-selected-code { font-size: 14px; font-weight: 600; color: #111; }
 
-.shade-no-selection {
-  font-size: 14px;
-  color: #9ca3af;
-  font-style: italic;
-}
+.shade-no-selection { font-size: 14px; color: #9ca3af; font-style: italic; }
 
-/* ── mobile ───────────────────────────────────────────────── */
+/* ── MOBILE ──────────────────────────────────────────────────── */
+
 @media (max-width: 640px) {
-  #shade-modal {
-    max-height: 95vh;
-  }
+  #shade-modal { max-height: 95vh; }
 
   .shade-modal__header {
     flex-direction: column;
     padding: 20px 16px 16px;
   }
 
-  .shade-modal__controls {
-    width: 100%;
-    flex-wrap: wrap;
-  }
+  .shade-modal__controls { width: 100%; flex-wrap: wrap; }
 
-  .shade-modal__select-group {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .shade-modal__select-group select {
-    min-width: unset;
-    width: 100%;
-  }
+  .shade-modal__select-group { flex: 1; min-width: 0; }
+  .shade-modal__select-group select { min-width: unset; width: 100%; }
 
   #shade-grid {
     padding: 16px;
     grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
     gap: 8px;
   }
-}
-
-/* ── two-button color selector ────────────────────────────── */
-.cp-btn-row {
-  display: flex;
-  gap: 8px;
-}
-
-.cp-btn {
-  flex: 1;
-  padding: 12px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: .02em;
-  border: 2px solid transparent;
-  transition: border-color 0.15s, background 0.15s, color 0.15s;
-}
-
-.cp-btn--white {
-  background: #fff;
-  color: #111;
-}
-
-.cp-btn--custom {
-  background: #1a1a1a;
-  color: #fff;
-}
-
-/* ── hide Tier option group — controlled silently by shade picker ── */
-
-/* Pill input row (the buttons themselves) */
-.product-form__input--pill:has(input[value="Base"]),
-.product-form__input--pill:has(input[value="Light"]),
-.product-form__input--pill:has(input[value="Medium"]),
-.product-form__input--pill:has(input[value="Dark"]) {
-  display: none !important;
-}
-
-/* Full option group wrapper including the "Tier" label.
-   :has() walks up from the inputs to the first matching ancestor.
-   Covers Ritual (.product-form__option) and fieldset-based themes. */
-.product-form__option:has(input[value="Base"]),
-fieldset:has(input[value="Base"]) {
-  display: none !important;
 }
