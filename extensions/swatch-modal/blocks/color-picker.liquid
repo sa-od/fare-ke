@@ -1,3 +1,8 @@
+{% comment %}
+  Renders only on products the merchant enabled in the app, and feeds that
+  product's own colours (from its $app.palette metafield) to the picker.
+{% endcomment %}
+{% if product.metafields["$app"].enabled.value %}
 {{ 'color-picker.css' | asset_url | stylesheet_tag }}
 
 <style>
@@ -14,7 +19,8 @@
 
 <script>
   window.__paintData = {
-    variants: {{ product.variants | json }}
+    variants: {{ product.variants | json }},
+    shades:   {{ product.metafields["$app"].palette.value | json }}
   };
 </script>
 
@@ -41,6 +47,7 @@
 </div>
 
 <script type="module" src="{{ 'color-picker.js' | asset_url }}"></script>
+{% endif %}
 
 {% schema %}
 {

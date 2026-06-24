@@ -1,6 +1,20 @@
 // ── PALETTE DATA ──────────────────────────────────────────────────────────────
-import { palette, palettes, tonesByPalette } from "./ncs-palette.js";
+import { palette as bundledPalette } from "./ncs-palette.js";
 import { tierMapping } from "./utils.js";
+
+// Shades are injected per product from its $app.palette metafield via Liquid
+// (window.__paintData.shades). Fall back to the bundled sample palette only when
+// the metafield is empty (e.g. while the merchant is still adding colours).
+const _injectedShades = window.__paintData?.shades;
+const SHADES =
+  Array.isArray(_injectedShades) && _injectedShades.length
+    ? _injectedShades
+    : bundledPalette;
+const PALETTES = [...new Set(SHADES.map((s) => s.palette))];
+const TONES_BY_PALETTE = SHADES.reduce((acc, s) => {
+  (acc[s.palette] = acc[s.palette] || new Set()).add(s.tone);
+  return acc;
+}, {});
 
 // ── STATE ─────────────────────────────────────────────────────────────────────
 // window.__paintState = { shade, variantId } — cleared on "White" click
@@ -192,11 +206,11 @@ function listenSizeChange() {
 function buildModal() {
   if (document.getElementById(OVERLAY_ID)) return;
 
-  const paletteOptions = palettes
+  const paletteOptions = PALETTES
     .map((p) => `<option value="${p}">${p}</option>`)
     .join("");
 
-  const paletteCount = palettes.length;
+  const paletteCount = PALETTES.length;
 
   const overlay = document.createElement("div");
   overlay.id = OVERLAY_ID;
@@ -308,7 +322,7 @@ function autoSelectDefaults() {
 
   if (window.__paintState?.shade) return;
 
-  const firstPalette = palettes[0];
+  const firstPalette = PALETTES[0];
   paletteSelect.value = firstPalette;
   populateTones(firstPalette);
 
@@ -341,7 +355,7 @@ function populateTones(paletteVal) {
     return;
   }
 
-  const tones = Array.from(tonesByPalette[paletteVal] || []);
+  const tones = Array.from(TONES_BY_PALETTE[paletteVal] || []);
   tones.forEach((tone) => {
     const opt = document.createElement("option");
     opt.value = tone;
@@ -366,7 +380,7 @@ function applyFilters() {
     .toLowerCase();
 
   if (term) {
-    renderGrid(palette.filter((s) => s.code.toLowerCase().includes(term)));
+    renderGrid(SHADES.filter((s) => s.code.toLowerCase().includes(term)));
     return;
   }
 
@@ -378,7 +392,7 @@ function applyFilters() {
 
   const toneVal = document.getElementById("shade-tone-select").value;
   renderGrid(
-    palette.filter(
+    SHADES.filter(
       (s) => s.palette === paletteVal && (!toneVal || s.tone === toneVal),
     ),
   );
