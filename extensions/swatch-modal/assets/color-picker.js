@@ -4,14 +4,17 @@ import { tierMapping } from "./utils.js";
 
 // ── STATE ─────────────────────────────────────────────────────────────────────
 // window.__paintState = { shade, variantId } — cleared on "White" click
-// window.__paintData  = { variants, productPrice, … } — injected by Liquid
+// window.__paintData  = { variants } — injected by Liquid
 
 const OVERLAY_ID = "shade-overlay";
 let _resolvingVariant = false;
 
 // ── VARIANT RESOLUTION ────────────────────────────────────────────────────────
 
-function getSelectedFormat() {
+// Reads the size (option1) the customer has selected via the theme's own
+// variant picker, so the colour resolves to the correctly-priced size × tier
+// variant. Falls back to the first variant for single-size products.
+function getSelectedSize() {
   const urlId = parseInt(
     new URLSearchParams(window.location.search).get("variant"),
     10,
@@ -37,20 +40,30 @@ function getSelectedFormat() {
 function resolveVariant() {
   if (_resolvingVariant) return;
 
-  const shade  = window.__paintState?.shade;
-  const format = getSelectedFormat();
-  const tier   = shade ? tierMapping[shade.tier] : null;
+  const shade = window.__paintState?.shade;
+  const size  = getSelectedSize();
+  const tier  = shade ? tierMapping[shade.tier] : null;
 
-  if (!shade || !format) return;
+  if (!shade || !size) return;
 
   const variant = (window.__paintData?.variants || []).find(
-    (v) => v.option1 === format && v.option2 === tier,
+    (v) => v.option1 === size && v.option2 === tier,
   );
-  if (!variant) return;
 
+  if (!variant) {
+    // The colour's tier has no variant in the chosen size — tell the customer
+    // instead of silently adding the wrong variant on submit.
+    window.__paintState.variantId = null;
+    showError(
+      `“${shade.code}” isn't available in the selected size. Pick another size or colour.`,
+    );
+    return;
+  }
+
+  clearError();
   window.__paintState.variantId = variant.id;
 
-  const tierInput = document.querySelector(`input[value="${tier}"]`);
+  const tierInput = findOptionInput(tier);
   if (tierInput && !tierInput.checked) {
     _resolvingVariant = true;
     tierInput.checked = true;
@@ -61,29 +74,31 @@ function resolveVariant() {
   updateColorButtons(shade);
 }
 
-function listenFormatChange() {
-  function onHistoryChange() {
-    resolveVariant();
-    const select = document.getElementById("pk-format-select");
-    if (select) {
-      const fmt = getSelectedFormat();
-      if (fmt && select.value !== fmt) select.value = fmt;
-    }
-  }
+// Finds the theme's hidden variant-option radio/input for a given option value.
+// Scoped to the cart form when possible to avoid colliding with unrelated inputs.
+function findOptionInput(value) {
+  if (!value) return null;
+  const form = document.querySelector('form[action*="/cart/add"]');
+  const scope = form || document;
+  return scope.querySelector(`input[value="${CSS.escape(value)}"]`);
+}
 
+// Re-resolves the variant whenever the customer changes the size through the
+// theme's own variant picker (which updates the URL / browser history).
+function listenSizeChange() {
   const _replace = history.replaceState.bind(history);
   history.replaceState = function (...args) {
     _replace(...args);
-    onHistoryChange();
+    resolveVariant();
   };
 
   const _push = history.pushState.bind(history);
   history.pushState = function (...args) {
     _push(...args);
-    onHistoryChange();
+    resolveVariant();
   };
 
-  window.addEventListener("popstate", onHistoryChange);
+  window.addEventListener("popstate", resolveVariant);
 }
 
 // ── MODAL UI ──────────────────────────────────────────────────────────────────
@@ -95,6 +110,8 @@ function buildModal() {
     .map((p) => `<option value="${p}">${p}</option>`)
     .join("");
 
+  const paletteCount = palettes.length;
+
   const overlay = document.createElement("div");
   overlay.id = OVERLAY_ID;
   overlay.innerHTML = `
@@ -102,11 +119,11 @@ function buildModal() {
       <div class="shade-modal__header">
         <div class="shade-modal__title">
           <h2><span class="cp-blue">Choose the color</span> for your product!</h2>
-          <p>Select the filters and click on a color to apply it</p>
+          <p>Select the filters you need from the menu on the right and click on a color to apply it to your product.</p>
         </div>
-        <div class="shade-modal__controls">
+        <div class="shade-modal__controls" id="shade-filters">
           <div class="shade-modal__select-group">
-            <label for="shade-palette-select">Palette</label>
+            <label for="shade-palette-select">Palette (${paletteCount} Available)</label>
             <select id="shade-palette-select">
               <option value="">Select palette</option>
               ${paletteOptions}
@@ -115,10 +132,18 @@ function buildModal() {
           <div class="shade-modal__select-group">
             <label for="shade-tone-select">Tone</label>
             <select id="shade-tone-select" disabled>
-              <option value="">Select tone</option>
+              <option value="">Select shade</option>
             </select>
           </div>
-          <button id="shade-close" aria-label="Close modal">&#x2715;</button>
+          <button type="button" id="shade-near-btn" class="shade-near-btn">NEAR</button>
+        </div>
+        <button id="shade-close" aria-label="Close modal">&#x2715;</button>
+      </div>
+      <div class="shade-modal__search" id="shade-search-view" hidden>
+        <button type="button" id="shade-back-btn" class="shade-back-btn">&larr; Back to filters</button>
+        <div class="shade-search-row">
+          <input type="search" id="shade-search" placeholder="What are you looking for?" autocomplete="off" />
+          <button type="button" id="shade-search-start" class="shade-search-start">START</button>
         </div>
       </div>
       <div id="shade-grid" role="listbox" aria-label="Color shades"></div>
@@ -143,12 +168,51 @@ function buildModal() {
     .addEventListener("change", onPaletteChange);
   document
     .getElementById("shade-tone-select")
-    .addEventListener("change", onToneChange);
+    .addEventListener("change", applyFilters);
+
+  document
+    .getElementById("shade-near-btn")
+    .addEventListener("click", () => setSearchMode(true));
+  document
+    .getElementById("shade-back-btn")
+    .addEventListener("click", () => setSearchMode(false));
+
+  const searchInput = document.getElementById("shade-search");
+  searchInput.addEventListener("input", applyFilters);
+  searchInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      applyFilters();
+    }
+  });
+  document
+    .getElementById("shade-search-start")
+    .addEventListener("click", applyFilters);
+}
+
+// Toggles between the filter view (Palette/Tone) and the NEAR search view.
+// Leaving search clears the term so the grid returns to the dropdown filters.
+function setSearchMode(on) {
+  document.getElementById("shade-modal").classList.toggle("is-searching", on);
+  document.getElementById("shade-filters").hidden = on;
+  document.getElementById("shade-search-view").hidden = !on;
+  const search = document.getElementById("shade-search");
+  if (on) {
+    search.focus();
+  } else {
+    search.value = "";
+    applyFilters();
+  }
 }
 
 function openModal() {
   document.getElementById(OVERLAY_ID).classList.add("is-open");
   document.body.style.overflow = "hidden";
+  // Always open on the filter view.
+  document.getElementById("shade-modal").classList.remove("is-searching");
+  document.getElementById("shade-filters").hidden = false;
+  document.getElementById("shade-search-view").hidden = true;
+  document.getElementById("shade-search").value = "";
   autoSelectDefaults();
 }
 
@@ -160,19 +224,9 @@ function autoSelectDefaults() {
 
   const firstPalette = palettes[0];
   paletteSelect.value = firstPalette;
+  populateTones(firstPalette);
 
-  const tones = Array.from(tonesByPalette[firstPalette] || []);
-  toneSelect.innerHTML = '<option value="">All tones</option>';
-  tones.forEach((tone) => {
-    const opt = document.createElement("option");
-    opt.value = tone;
-    opt.textContent = tone;
-    toneSelect.appendChild(opt);
-  });
-  toneSelect.disabled = false;
-  toneSelect.value = "";
-
-  renderGrid(palette.filter((s) => s.palette === firstPalette));
+  applyFilters();
 }
 
 function closeModal({ clearState = false } = {}) {
@@ -190,19 +244,18 @@ function closeModal({ clearState = false } = {}) {
   }
 }
 
-function onPaletteChange(e) {
-  const selected  = e.target.value;
+// ── FILTERING ───────────────────────────────────────────────────────────────
+
+function populateTones(paletteVal) {
   const toneSelect = document.getElementById("shade-tone-select");
+  toneSelect.innerHTML = '<option value="">All shades</option>';
 
-  toneSelect.innerHTML = '<option value="">All tones</option>';
-
-  if (!selected) {
+  if (!paletteVal) {
     toneSelect.disabled = true;
-    document.getElementById("shade-grid").innerHTML = "";
     return;
   }
 
-  const tones = Array.from(tonesByPalette[selected] || []);
+  const tones = Array.from(tonesByPalette[paletteVal] || []);
   tones.forEach((tone) => {
     const opt = document.createElement("option");
     opt.value = tone;
@@ -211,26 +264,49 @@ function onPaletteChange(e) {
   });
   toneSelect.disabled = false;
   toneSelect.value = "";
-
-  renderGrid(palette.filter((s) => s.palette === selected));
 }
 
-function onToneChange(e) {
+function onPaletteChange(e) {
+  populateTones(e.target.value);
+  applyFilters();
+}
+
+// Renders the grid for whichever view is active. When the NEAR search has a term
+// it matches the colour code across the whole catalog; otherwise the Palette/Tone
+// dropdowns drive the grid.
+function applyFilters() {
+  const term = (document.getElementById("shade-search")?.value || "")
+    .trim()
+    .toLowerCase();
+
+  if (term) {
+    renderGrid(palette.filter((s) => s.code.toLowerCase().includes(term)));
+    return;
+  }
+
   const paletteVal = document.getElementById("shade-palette-select").value;
-  const toneVal    = e.target.value;
+  if (!paletteVal) {
+    document.getElementById("shade-grid").innerHTML = "";
+    return;
+  }
 
-  if (!paletteVal) { document.getElementById("shade-grid").innerHTML = ""; return; }
-
+  const toneVal = document.getElementById("shade-tone-select").value;
   renderGrid(
-    toneVal
-      ? palette.filter((s) => s.palette === paletteVal && s.tone === toneVal)
-      : palette.filter((s) => s.palette === paletteVal),
+    palette.filter(
+      (s) => s.palette === paletteVal && (!toneVal || s.tone === toneVal),
+    ),
   );
 }
 
 function renderGrid(shades) {
   const grid = document.getElementById("shade-grid");
   grid.innerHTML = "";
+
+  if (!shades.length) {
+    grid.innerHTML =
+      '<p class="shade-grid__empty">No colours match your search.</p>';
+    return;
+  }
 
   shades.forEach((shade) => {
     const chip = document.createElement("button");
@@ -279,6 +355,22 @@ function selectShade(shade) {
   }, 300);
 }
 
+// ── ERROR FEEDBACK ────────────────────────────────────────────────────────────
+
+function showError(message) {
+  const el = document.getElementById("pk-error");
+  if (!el) return;
+  el.textContent = message;
+  el.hidden = false;
+}
+
+function clearError() {
+  const el = document.getElementById("pk-error");
+  if (!el) return;
+  el.textContent = "";
+  el.hidden = true;
+}
+
 // ── CART DISPLAY ─────────────────────────────────────────────────────────────
 
 function getContrastColor(hex) {
@@ -294,23 +386,24 @@ function updateColorButtons(shade) {
   if (!whiteBtn || !customBtn) return;
 
   if (shade) {
-    whiteBtn.style.borderColor   = "#d1d5db";
+    // Preview the picked colour on the custom button.
     customBtn.style.background   = shade.hex;
     customBtn.style.color        = getContrastColor(shade.hex);
-    customBtn.style.borderColor  = "#2563eb";
+    customBtn.style.borderColor  = shade.hex;
     customBtn.textContent        = shade.code;
   } else {
-    whiteBtn.style.borderColor   = "#cccccc";
-    customBtn.style.background   = "#1a6faf";
-    customBtn.style.color        = "#fff";
-    customBtn.style.borderColor  = "#1a6faf";
-    customBtn.textContent        = customBtn.dataset.defaultLabel || "Custom Colors";
+    // Reset to the merchant-configured colours. Clearing the inline styles lets
+    // the CSS (driven by the theme-editor variables) take over again.
+    customBtn.style.background   = "";
+    customBtn.style.color        = "";
+    customBtn.style.borderColor  = "";
+    customBtn.textContent        = customBtn.dataset.defaultLabel || "Colored";
   }
 }
 
 // ── BOOT ──────────────────────────────────────────────────────────────────────
 buildModal();
-listenFormatChange();
+listenSizeChange();
 
 const openBtn = document.getElementById("open-shade-modal");
 if (openBtn) openBtn.addEventListener("click", openModal);
@@ -320,12 +413,14 @@ if (whiteBtn) {
   whiteBtn.addEventListener("click", () => {
     if (_resolvingVariant) return;
     window.__paintState = null;
+    clearError();
     document.getElementById("shade-footer").innerHTML =
       '<span class="shade-no-selection">No shade selected</span>';
     document
       .querySelectorAll(".shade-chip--active")
       .forEach((c) => c.classList.remove("shade-chip--active"));
-    const baseInput = document.querySelector('input[value="Base"]');
+    // Tier-1 may be labelled "White" or "Base" depending on the product setup.
+    const baseInput = findOptionInput("White") || findOptionInput("Base");
     if (baseInput && !baseInput.checked) {
       _resolvingVariant = true;
       baseInput.checked = true;
@@ -355,16 +450,29 @@ const form = document.querySelector('form[action*="/cart/add"]');
 if (form) {
   form.addEventListener(
     "submit",
-    () => {
-      if (!window.__paintState?.variantId) return;
+    (e) => {
+      if (!window.__paintState?.shade) return;
+
+      // A colour is chosen but no matching variant resolved — block the add and
+      // surface the reason rather than adding the wrong-priced variant.
+      if (!window.__paintState.variantId) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        showError(
+          "This colour isn't available in the selected size. Please choose another.",
+        );
+        return;
+      }
 
       const idInput = form.querySelector('input[name="id"]');
       if (idInput) idInput.value = window.__paintState.variantId;
 
-      if (window.__paintState.shade) {
-        injectHiddenInput(form, "properties[Shade]", window.__paintState.shade.code);
-        injectHiddenInput(form, "properties[_hex]",  window.__paintState.shade.hex);
-      }
+      const { shade } = window.__paintState;
+      // Visible line-item properties (no leading underscore) so the colour shows
+      // in cart, checkout and on the order for fulfilment. _hex stays hidden.
+      injectHiddenInput(form, "properties[Color Code]", shade.code);
+      injectHiddenInput(form, "properties[Palette]",    shade.palette);
+      injectHiddenInput(form, "properties[_hex]",       shade.hex);
     },
     { capture: true },
   );

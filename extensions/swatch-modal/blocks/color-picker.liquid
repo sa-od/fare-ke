@@ -1,7 +1,12 @@
 {{ 'color-picker.css' | asset_url | stylesheet_tag }}
 
 <style>
-  .cp-btn-row {
+  /* Every colour the picker uses is driven from these block settings. They are
+     set on :root because the shade modal is rendered at <body> level, so it
+     can't inherit variables scoped to the picker element. */
+  :root {
+    --pk-accent:        {{ block.settings.accent_color }};
+    --pk-text:          {{ block.settings.text_color }};
     --pk-btn-white-bg:  {{ block.settings.white_btn_color }};
     --pk-btn-custom-bg: {{ block.settings.custom_btn_color }};
   }
@@ -9,37 +14,56 @@
 
 <script>
   window.__paintData = {
-    variants:     {{ product.variants | json }},
-    productPrice: {{ product.price | default: 0 }}
+    variants: {{ product.variants | json }}
   };
 </script>
 
-<div class="cp-btn-row">
-  <button type="button" id="select-base-color" class="cp-btn cp-btn--white">
-    White
-  </button>
-  <button
-    type="button"
-    id="open-shade-modal"
-    class="cp-btn cp-btn--custom"
-    data-default-label="{{ block.settings.button_label }}"
-  >
-    {{ block.settings.button_label }}
-  </button>
+<div class="cp-picker">
+  {% if block.settings.control_label != blank %}
+    <span class="cp-picker__label">{{ block.settings.control_label }}</span>
+  {% endif %}
+
+  <div class="cp-btn-row">
+    <button type="button" id="select-base-color" class="cp-btn cp-btn--white">
+      {{ block.settings.white_label }}
+    </button>
+    <button
+      type="button"
+      id="open-shade-modal"
+      class="cp-btn cp-btn--custom"
+      data-default-label="{{ block.settings.button_label }}"
+    >
+      {{ block.settings.button_label }}
+    </button>
+  </div>
+
+  <p class="cp-error" id="pk-error" role="alert" hidden></p>
 </div>
 
 <script type="module" src="{{ 'color-picker.js' | asset_url }}"></script>
 
 {% schema %}
 {
-  "name": "Paint Shade Picker",
+  "name": "Paint Colour Picker",
   "target": "section",
   "settings": [
     {
       "type": "text",
+      "id": "control_label",
+      "label": "Control heading",
+      "default": "Color Code"
+    },
+    {
+      "type": "text",
+      "id": "white_label",
+      "label": "Base (white) button label",
+      "default": "White"
+    },
+    {
+      "type": "text",
       "id": "button_label",
-      "label": "Button Label",
-      "default": "Custom Colors"
+      "label": "Colour picker button label",
+      "default": "Colored"
     },
     {
       "type": "color",
@@ -52,6 +76,20 @@
       "id": "custom_btn_color",
       "label": "Colour picker button colour",
       "default": "#1a6faf"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent colour",
+      "info": "Focus rings, selected swatch, checkmark, title highlight.",
+      "default": "#1a6faf"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text colour",
+      "info": "Labels, modal title and the selected colour code.",
+      "default": "#333333"
     }
   ]
 }
