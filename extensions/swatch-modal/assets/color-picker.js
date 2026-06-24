@@ -63,24 +63,110 @@ function resolveVariant() {
   clearError();
   window.__paintState.variantId = variant.id;
 
-  const tierInput = findOptionInput(tier);
-  if (tierInput && !tierInput.checked) {
-    _resolvingVariant = true;
-    tierInput.checked = true;
-    tierInput.dispatchEvent(new Event("change", { bubbles: true }));
-    setTimeout(() => { _resolvingVariant = false; }, 800);
-  }
+  // Drive the theme's Tier picker so the price updates on the page. If the theme
+  // uses a single combined variant <select>, fall back to selecting by id.
+  if (!selectThemeOption(tier)) selectVariantById(variant.id);
 
+  // Attach the colour to the cart form after the tier change above, in case the
+  // theme re-rendered the form in response to it.
+  syncCartProperties();
   updateColorButtons(shade);
 }
 
-// Finds the theme's hidden variant-option radio/input for a given option value.
-// Scoped to the cart form when possible to avoid colliding with unrelated inputs.
-function findOptionInput(value) {
-  if (!value) return null;
+// Selects a variant option value in the theme's own picker so the theme re-prices
+// and tracks the right variant. Handles all three picker styles: radio/pill
+// inputs, <select> dropdowns, and clickable button/label pills. Returns true once
+// a matching control is found. Searches the cart form first, then the whole page.
+function selectThemeOption(value) {
+  if (!value) return false;
   const form = document.querySelector('form[action*="/cart/add"]');
-  const scope = form || document;
-  return scope.querySelector(`input[value="${CSS.escape(value)}"]`);
+  return selectThemeOptionIn(form, value) || selectThemeOptionIn(document, value);
+}
+
+function selectThemeOptionIn(scope, value) {
+  if (!scope) return false;
+
+  // Run the interaction inside the re-entrancy guard so the theme's own variant
+  // handler (which updates history) doesn't loop back into resolveVariant.
+  const guarded = (fn) => {
+    _resolvingVariant = true;
+    fn();
+    setTimeout(() => { _resolvingVariant = false; }, 800);
+  };
+
+  // 1. Radio / pill input.
+  const input = scope.querySelector(`input[value="${CSS.escape(value)}"]`);
+  if (input) {
+    if (!input.checked) {
+      guarded(() => {
+        input.checked = true;
+        input.dispatchEvent(new Event("change", { bubbles: true }));
+      });
+    }
+    return true;
+  }
+
+  // 2. <select> dropdown.
+  for (const select of scope.querySelectorAll("select")) {
+    const option = Array.from(select.options).find(
+      (o) => o.value === value || o.textContent.trim() === value,
+    );
+    if (option) {
+      if (select.value !== option.value) {
+        guarded(() => {
+          select.value = option.value;
+          select.dispatchEvent(new Event("change", { bubbles: true }));
+        });
+      }
+      return true;
+    }
+  }
+
+  // 3. Clickable button / label / swatch pill — click the control that matches by
+  //    visible text or a value/label attribute (covers image swatches with no
+  //    text). Skip our own picker UI so we never click the White/Colored buttons.
+  const matchesValue = (el) =>
+    [
+      el.getAttribute("data-value"),
+      el.getAttribute("data-option-value"),
+      el.getAttribute("value"),
+      el.getAttribute("aria-label"),
+      el.getAttribute("title"),
+      el.textContent,
+    ].some((candidate) => candidate && candidate.trim() === value);
+
+  for (const el of scope.querySelectorAll(
+    'button, label, [role="radio"], [role="button"], a[href]',
+  )) {
+    if (el.closest("#shade-overlay, .cp-picker")) continue;
+    if (matchesValue(el)) {
+      guarded(() => el.click());
+      return true;
+    }
+  }
+
+  return false;
+}
+
+// Fallback for themes with a single combined variant dropdown (<select name="id">
+// whose options are whole variants): select the resolved variant by its id so the
+// theme re-prices on the page. The cart is already covered by the fetch id force.
+function selectVariantById(variantId) {
+  if (!variantId) return false;
+  const form = document.querySelector('form[action*="/cart/add"]');
+  const select = (form || document).querySelector('select[name="id"]');
+  if (!select) return false;
+
+  const option = Array.from(select.options).find(
+    (o) => String(o.value) === String(variantId),
+  );
+  if (option && select.value !== option.value) {
+    _resolvingVariant = true;
+    select.value = option.value;
+    select.dispatchEvent(new Event("change", { bubbles: true }));
+    setTimeout(() => { _resolvingVariant = false; }, 800);
+  }
+  return !!option;
 }
 
 // Re-resolves the variant whenever the customer changes the size through the
@@ -414,26 +500,43 @@ if (whiteBtn) {
     if (_resolvingVariant) return;
     window.__paintState = null;
     clearError();
+    clearCartProperties();
     document.getElementById("shade-footer").innerHTML =
       '<span class="shade-no-selection">No shade selected</span>';
     document
       .querySelectorAll(".shade-chip--active")
       .forEach((c) => c.classList.remove("shade-chip--active"));
     // Tier-1 may be labelled "White" or "Base" depending on the product setup.
-    const baseInput = findOptionInput("White") || findOptionInput("Base");
-    if (baseInput && !baseInput.checked) {
-      _resolvingVariant = true;
-      baseInput.checked = true;
-      baseInput.dispatchEvent(new Event("change", { bubbles: true }));
-      setTimeout(() => { _resolvingVariant = false; }, 800);
-    }
+    if (!selectThemeOption("White")) selectThemeOption("Base");
     updateColorButtons(null);
   });
 }
 
 updateColorButtons(null);
 
-// ── FORM INTERCEPT ────────────────────────────────────────────────────────────
+// ── CART LINE-ITEM PROPERTIES ──────────────────────────────────────────────────
+// The colour is written to the cart as line-item properties. To be reliable
+// across every add path we attach it two ways:
+//   1. Persisted as hidden inputs in the cart form (covers native POST and the
+//      dynamic checkout / Buy-it-now buttons, which serialize the form).
+//   2. Injected into the /cart/add request body (covers AJAX carts, immune to the
+//      theme re-rendering the form on variant change).
+// "Colour" has no leading underscore so it shows in cart, checkout and the order;
+// "_hex" stays hidden for an optional swatch.
+
+function getCartForm() {
+  return document.querySelector('form[action*="/cart/add"]');
+}
+
+// The properties for the current selection, or null when no colour is chosen.
+function currentPaintProperties() {
+  const shade = window.__paintState?.shade;
+  if (!shade) return null;
+  return {
+    Colour: `${shade.palette} — ${shade.code}`,
+    _hex: shade.hex,
+  };
+}
 
 function injectHiddenInput(form, name, value) {
   let input = form.querySelector(`input[name="${name}"]`);
@@ -446,7 +549,94 @@ function injectHiddenInput(form, name, value) {
   input.value = value;
 }
 
-const form = document.querySelector('form[action*="/cart/add"]');
+function removeHiddenInput(form, name) {
+  const input = form.querySelector(`input[name="${name}"]`);
+  if (input) input.remove();
+}
+
+// Mirrors the current selection into the cart form's hidden inputs.
+function syncCartProperties() {
+  const form = getCartForm();
+  if (!form) return;
+  const props = currentPaintProperties();
+  if (!props) {
+    clearCartProperties();
+    return;
+  }
+  Object.entries(props).forEach(([key, value]) =>
+    injectHiddenInput(form, `properties[${key}]`, value),
+  );
+}
+
+function clearCartProperties() {
+  const form = getCartForm();
+  if (!form) return;
+  ["Colour", "_hex"].forEach((key) =>
+    removeHiddenInput(form, `properties[${key}]`),
+  );
+}
+
+// Merges the colour properties (and the resolved variant id) into an outgoing
+// /cart/add request body, whatever shape the theme uses (FormData,
+// URLSearchParams, JSON or url-encoded string). Forcing the id guarantees the
+// correct tier is added even if the on-page variant picker couldn't be driven.
+function mergeBodyProperties(body, props, variantId) {
+  const fields = Object.entries(props).map(([k, v]) => [`properties[${k}]`, v]);
+  if (variantId) fields.push(["id", String(variantId)]);
+
+  if (body instanceof FormData || body instanceof URLSearchParams) {
+    fields.forEach(([k, v]) => body.set(k, v));
+    return body;
+  }
+
+  if (typeof body === "string") {
+    try {
+      const json = JSON.parse(body);
+      // /cart/add.js accepts either a single item or an { items: [...] } batch.
+      const target =
+        Array.isArray(json.items) && json.items.length === 1
+          ? json.items[0]
+          : json;
+      target.properties = { ...(target.properties || {}), ...props };
+      if (variantId) target.id = variantId;
+      return JSON.stringify(json);
+    } catch {
+      const params = new URLSearchParams(body);
+      fields.forEach(([k, v]) => params.set(k, v));
+      return params.toString();
+    }
+  }
+
+  return body;
+}
+
+// Intercepts AJAX adds so the colour rides along even if the theme rebuilt the
+// form (and thus dropped our hidden inputs) on the last variant change.
+function interceptCartAdd() {
+  const isCartAdd = (url) => /\/cart\/add(\.js)?(\?|$)/.test(String(url || ""));
+  const _fetch = window.fetch;
+  if (typeof _fetch !== "function") return;
+
+  window.fetch = function (input, init) {
+    try {
+      const url = typeof input === "string" ? input : input?.url;
+      const props = currentPaintProperties();
+      const variantId = window.__paintState?.variantId;
+      if (props && variantId && isCartAdd(url) && init && init.body != null) {
+        init = { ...init, body: mergeBodyProperties(init.body, props, variantId) };
+      }
+    } catch {
+      /* never let our patch break the theme's add-to-cart */
+    }
+    return _fetch.call(this, input, init);
+  };
+}
+
+// ── FORM INTERCEPT ────────────────────────────────────────────────────────────
+
+interceptCartAdd();
+
+const form = getCartForm();
 if (form) {
   form.addEventListener(
     "submit",
@@ -467,12 +657,8 @@ if (form) {
       const idInput = form.querySelector('input[name="id"]');
       if (idInput) idInput.value = window.__paintState.variantId;
 
-      const { shade } = window.__paintState;
-      // Visible line-item properties (no leading underscore) so the colour shows
-      // in cart, checkout and on the order for fulfilment. _hex stays hidden.
-      injectHiddenInput(form, "properties[Color Code]", shade.code);
-      injectHiddenInput(form, "properties[Palette]",    shade.palette);
-      injectHiddenInput(form, "properties[_hex]",       shade.hex);
+      // Re-sync in case the form was re-rendered since the colour was picked.
+      syncCartProperties();
     },
     { capture: true },
   );
