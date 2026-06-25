@@ -3,6 +3,7 @@ import type {
   LoaderFunctionArgs,
   ActionFunctionArgs,
 } from "react-router";
+import { useState } from "react";
 import { useLoaderData, useNavigate, useSubmit } from "react-router";
 import { boundary } from "@shopify/shopify-app-react-router/server";
 import { useAppBridge } from "@shopify/app-bridge-react";
@@ -79,6 +80,7 @@ export default function Index() {
   const navigate = useNavigate();
   const submit = useSubmit();
   const shopify = useAppBridge();
+  const [pendingRemove, setPendingRemove] = useState<PaintProduct | null>(null);
 
   const numericId = (gid: string) => gid.split("/").pop();
   const themeEditorUrl = `https://${shop}/admin/themes/current/editor?template=product`;
@@ -164,7 +166,10 @@ export default function Index() {
                         </s-button>
                         <s-button
                           variant="tertiary"
-                          onClick={() => removeProduct(product.id)}
+                          tone="critical"
+                          commandFor="remove-modal"
+                          command="--show"
+                          onClick={() => setPendingRemove(product)}
                         >
                           Remove
                         </s-button>
@@ -176,6 +181,41 @@ export default function Index() {
             </s-table>
             </s-section>
           </s-stack>
+
+          <s-modal id="remove-modal" heading="Remove product?">
+            <s-stack direction="block" gap="base">
+              <s-paragraph>
+                This removes{" "}
+                <s-text type="strong">{pendingRemove?.title}</s-text> from the
+                colour picker. The product and its colours are kept — you can
+                add it back anytime.
+              </s-paragraph>
+              <s-banner tone="warning">
+                The colour picker will no longer appear on this product's page.
+              </s-banner>
+            </s-stack>
+            <s-button
+              slot="primary-action"
+              variant="primary"
+              tone="critical"
+              commandFor="remove-modal"
+              command="--hide"
+              onClick={() => {
+                if (pendingRemove) removeProduct(pendingRemove.id);
+                setPendingRemove(null);
+              }}
+            >
+              Remove
+            </s-button>
+            <s-button
+              slot="secondary-actions"
+              commandFor="remove-modal"
+              command="--hide"
+              onClick={() => setPendingRemove(null)}
+            >
+              Cancel
+            </s-button>
+          </s-modal>
         </>
       )}
     </s-page>
