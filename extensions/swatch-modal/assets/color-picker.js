@@ -18,51 +18,85 @@ const TONES_BY_PALETTE = SHADES.reduce((acc, s) => {
 
 // ── STATE ─────────────────────────────────────────────────────────────────────
 // window.__paintState = { shade, variantId } — cleared on "White" click
-// window.__paintData  = { variants } — injected by Liquid
+// window.__paintData  = { variants, optionNames, shades, tierConfig } — from Liquid
 
 const OVERLAY_ID = "shade-overlay";
 let _resolvingVariant = false;
 
+// Per-product tier/size mapping set in the admin (which option is the tier, which
+// is the size, and each tier's actual option value). When absent we fall back to
+// the legacy assumption: option1 = size, option2 = tier, values Base/Light/…/Dark.
+const tierConfig = window.__paintData?.tierConfig || null;
+const optionNames = window.__paintData?.optionNames || [];
+const tierIndex = tierConfig ? optionNames.indexOf(tierConfig.tierOption) : -1;
+const sizeIndex =
+  tierConfig && tierConfig.sizeOption
+    ? optionNames.indexOf(tierConfig.sizeOption)
+    : -1;
+const useConfig = !!tierConfig && tierIndex >= 0;
+
 // ── VARIANT RESOLUTION ────────────────────────────────────────────────────────
 
-// Reads the size (option1) the customer has selected via the theme's own
-// variant picker, so the colour resolves to the correctly-priced size × tier
-// variant. Falls back to the first variant for single-size products.
-function getSelectedSize() {
+// The variant the theme currently has selected (from ?variant= or the form's id).
+function currentVariant() {
+  const variants = window.__paintData?.variants || [];
   const urlId = parseInt(
     new URLSearchParams(window.location.search).get("variant"),
     10,
   );
   if (urlId) {
-    const v = (window.__paintData?.variants || []).find((v) => v.id === urlId);
-    if (v) return v.option1;
+    const v = variants.find((v) => v.id === urlId);
+    if (v) return v;
   }
-
   const hidden = document.querySelector(
     'form[action*="/cart/add"] input[name="id"]',
   );
   if (hidden?.value) {
-    const v = (window.__paintData?.variants || []).find(
-      (v) => v.id === parseInt(hidden.value, 10),
-    );
-    if (v) return v.option1;
+    const v = variants.find((v) => v.id === parseInt(hidden.value, 10));
+    if (v) return v;
   }
+  return variants[0] || null;
+}
 
-  return window.__paintData?.variants?.[0]?.option1 ?? null;
+// The selected size value — by option name when configured, else legacy option1.
+function getSelectedSize() {
+  const v = currentVariant();
+  if (!v) return null;
+  if (useConfig && sizeIndex >= 0) return v.options?.[sizeIndex] ?? null;
+  return v.option1 ?? null;
 }
 
 function resolveVariant() {
   if (_resolvingVariant) return;
 
   const shade = window.__paintState?.shade;
-  const size  = getSelectedSize();
-  const tier  = shade ? tierMapping[shade.tier] : null;
+  if (!shade) return;
 
-  if (!shade || !size) return;
+  const tierValue = useConfig
+    ? tierConfig.tierValues?.[shade.tier]
+    : tierMapping[shade.tier];
+  if (!tierValue) {
+    window.__paintState.variantId = null;
+    showError(`“${shade.code}” has no matching price tier on this product.`);
+    return;
+  }
 
-  const variant = (window.__paintData?.variants || []).find(
-    (v) => v.option1 === size && v.option2 === tier,
-  );
+  // Size only matters when the product actually has a size option.
+  const hasSize = useConfig ? sizeIndex >= 0 : true;
+  const size = hasSize ? getSelectedSize() : null;
+  if (hasSize && !size) return;
+
+  const variant = (window.__paintData?.variants || []).find((v) => {
+    const tierOk = useConfig
+      ? v.options?.[tierIndex] === tierValue
+      : v.option2 === tierValue;
+    const sizeOk = !hasSize
+      ? true
+      : useConfig
+        ? v.options?.[sizeIndex] === size
+        : v.option1 === size;
+    return tierOk && sizeOk;
+  });
 
   if (!variant) {
     // The colour's tier has no variant in the chosen size — tell the customer
@@ -79,7 +113,7 @@ function resolveVariant() {
 
   // Drive the theme's Tier picker so the price updates on the page. If the theme
   // uses a single combined variant <select>, fall back to selecting by id.
-  if (!selectThemeOption(tier)) selectVariantById(variant.id);
+  if (!selectThemeOption(tierValue)) selectVariantById(variant.id);
 
   // Attach the colour to the cart form after the tier change above, in case the
   // theme re-rendered the form in response to it.
@@ -183,22 +217,41 @@ function selectVariantById(variantId) {
   return !!option;
 }
 
+// Best-effort: hide the theme's tier selector from customers (it's driven by the
+// picker). We still programmatically click it, which works on hidden elements.
+// Only hides a control whose label/legend text exactly matches the tier option.
+function hideTierOption() {
+  if (!useConfig || !tierConfig.tierOption) return;
+  const scope = document.querySelector('form[action*="/cart/add"]') || document;
+  const name = tierConfig.tierOption.trim().toLowerCase();
+  scope.querySelectorAll("legend, label").forEach((el) => {
+    if (el.textContent.trim().toLowerCase() !== name) return;
+    const container = el.closest("fieldset, .product-form__input");
+    if (container) container.style.display = "none";
+  });
+}
+
 // Re-resolves the variant whenever the customer changes the size through the
 // theme's own variant picker (which updates the URL / browser history).
 function listenSizeChange() {
+  const onThemeUpdate = () => {
+    resolveVariant();
+    hideTierOption();
+  };
+
   const _replace = history.replaceState.bind(history);
   history.replaceState = function (...args) {
     _replace(...args);
-    resolveVariant();
+    onThemeUpdate();
   };
 
   const _push = history.pushState.bind(history);
   history.pushState = function (...args) {
     _push(...args);
-    resolveVariant();
+    onThemeUpdate();
   };
 
-  window.addEventListener("popstate", resolveVariant);
+  window.addEventListener("popstate", onThemeUpdate);
 }
 
 // ── MODAL UI ──────────────────────────────────────────────────────────────────
@@ -504,6 +557,7 @@ function updateColorButtons(shade) {
 // ── BOOT ──────────────────────────────────────────────────────────────────────
 buildModal();
 listenSizeChange();
+hideTierOption();
 
 const openBtn = document.getElementById("open-shade-modal");
 if (openBtn) openBtn.addEventListener("click", openModal);
@@ -520,8 +574,11 @@ if (whiteBtn) {
     document
       .querySelectorAll(".shade-chip--active")
       .forEach((c) => c.classList.remove("shade-chip--active"));
-    // Tier-1 may be labelled "White" or "Base" depending on the product setup.
-    if (!selectThemeOption("White")) selectThemeOption("Base");
+    // Tier-1 is the configured base value, falling back to "White"/"Base".
+    const baseValue = useConfig ? tierConfig.tierValues?.base : null;
+    if (!(baseValue && selectThemeOption(baseValue))) {
+      if (!selectThemeOption("White")) selectThemeOption("Base");
+    }
     updateColorButtons(null);
   });
 }

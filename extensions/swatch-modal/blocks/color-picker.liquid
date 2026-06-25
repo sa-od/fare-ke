@@ -19,8 +19,10 @@
 
 <script>
   window.__paintData = {
-    variants: {{ product.variants | json }},
-    shades:   {{ product.metafields["$app"].palette.value | json }}
+    variants:    {{ product.variants | json }},
+    optionNames: {{ product.options | json }},
+    shades:      {{ product.metafields["$app"].palette.value | json }},
+    tierConfig:  {{ product.metafields["$app"].variant_config.value | json }}
   };
 </script>
 
