@@ -9,8 +9,11 @@ generator client {
 // enough when changing adapters.
 // See https://www.prisma.io/docs/orm/reference/prisma-schema-reference#string for more information
 datasource db {
-  provider = "sqlite"
-  url      = "file:dev.sqlite"
+  provider  = "postgresql"
+  // Pooled connection for the app at runtime (serverless-friendly).
+  url       = env("DATABASE_URL")
+  // Direct (unpooled) connection used for migrations.
+  directUrl = env("DIRECT_URL")
 }
 
 model Session {
@@ -31,17 +34,4 @@ model Session {
   emailVerified Boolean?  @default(false)
   refreshToken        String?
   refreshTokenExpires DateTime?
-}
-
-model Shade {
-  id        Int      @id @default(autoincrement())
-  shop      String
-  code      String
-  hex       String
-  palette   String
-  tone      String
-  tier      String
-  createdAt DateTime @default(now())
-
-  @@unique([shop, code])
 }
