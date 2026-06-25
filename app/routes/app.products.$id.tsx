@@ -421,7 +421,7 @@ export const action = async ({ request, params }: ActionFunctionArgs) => {
 
   // ── Update tier variant prices ────────────────────────────────────────────
   if (intent === "prices") {
-    let updates: Array<{ id: string; price: string }>;
+    let updates: Array<{ id: string; price: string; inventoryPolicy?: string }>;
     try {
       updates = JSON.parse((form.get("prices") as string) || "[]");
     } catch {
@@ -443,7 +443,12 @@ export const action = async ({ request, params }: ActionFunctionArgs) => {
       {
         variables: {
           productId: ownerId,
-          variants: updates.map((u) => ({ id: u.id, price: String(u.price) })),
+          variants: updates.map((u) => ({
+            id: u.id,
+            price: String(u.price),
+            // Tier variants are sold to order — keep them buyable at 0 stock.
+            ...(u.inventoryPolicy ? { inventoryPolicy: u.inventoryPolicy } : {}),
+          })),
         },
       },
     );
@@ -463,15 +468,12 @@ export const action = async ({ request, params }: ActionFunctionArgs) => {
     const MULT: Record<string, number> = { light: 1.1, medium: 1.2, dark: 1.4 };
     const round2 = (n: number) => (Math.round(n * 100) / 100).toFixed(2);
 
-    // Read current options + variants (+ inventory to mirror).
+    // Read current options to validate before adding the Tier option.
     const setupRes = await admin.graphql(
       `#graphql
         query ProductSetup($id: ID!) {
           product(id: $id) {
             options { name }
-            variants(first: 100) {
-              nodes { id price selectedOptions { name value } inventoryPolicy inventoryItem { tracked } }
-            }
           }
         }
       `,
@@ -526,13 +528,13 @@ export const action = async ({ request, params }: ActionFunctionArgs) => {
         error: addErr.map((e: { message: string }) => e.message).join(" "),
       };
 
-    // 2. Re-read the now-Base variants for ids, size, price, inventory to mirror.
+    // 2. Re-read the now-Base variants for ids, size and price.
     const baseRes = await admin.graphql(
       `#graphql
         query BaseVariants($id: ID!) {
           product(id: $id) {
             variants(first: 100) {
-              nodes { id price selectedOptions { name value } inventoryPolicy inventoryItem { tracked } }
+              nodes { id price selectedOptions { name value } }
             }
           }
         }
@@ -545,10 +547,9 @@ export const action = async ({ request, params }: ActionFunctionArgs) => {
       v: { selectedOptions: Array<{ name: string; value: string }> },
       name: string,
     ) => v.selectedOptions.find((o) => o.name === name)?.value;
-    const tracked = baseVariants[0]?.inventoryItem?.tracked ?? false;
-    const policy = baseVariants[0]?.inventoryPolicy ?? "DENY";
 
-    // 3. Create Light/Medium/Dark per base variant, priced +10/+20/+40%, inventory mirrored.
+    // 3. Create Light/Medium/Dark per base variant, priced +10/+20/+40%.
+    //    They're sold to order, so keep them buyable regardless of stock.
     const TIER_LABEL: Record<string, string> = {
       light: "Light",
       medium: "Medium",
@@ -565,8 +566,7 @@ export const action = async ({ request, params }: ActionFunctionArgs) => {
         newVariants.push({
           optionValues,
           price: round2(Number(bv.price) * MULT[tier]),
-          inventoryPolicy: policy,
-          inventoryItem: { tracked },
+          inventoryPolicy: "CONTINUE",
         });
       }
     }
@@ -778,190 +778,195 @@ export default function ProductColours() {
         Paint products
       </s-link>
 
-      {actionData && "error" in actionData && actionData.error ? (
-        <s-banner tone="critical" heading="Couldn't save colours">
-          {actionData.error}
-        </s-banner>
-      ) : null}
+      <s-stack direction="block" gap="large-500">
+        {actionData && "error" in actionData && actionData.error ? (
+          <s-banner tone="critical" heading="Couldn't save colours">
+            {actionData.error}
+          </s-banner>
+        ) : null}
 
-      {actionData && "ok" in actionData && actionData.ok ? (
-        <s-banner tone="success" heading="Saved">
-          Your changes have been saved.
-        </s-banner>
-      ) : null}
+        {actionData && "ok" in actionData && actionData.ok ? (
+          <s-banner tone="success" heading="Saved">
+            Your changes have been saved.
+          </s-banner>
+        ) : null}
 
-      <TierPricing options={options} variants={variants} config={config} />
+        <TierPricing options={options} variants={variants} config={config} />
 
-      <s-stack direction="block" gap="base">
-        <s-heading>Import from CSV</s-heading>
-        <s-section accessibilityLabel="Import from CSV">
-          <s-stack gap="base">
-            <s-paragraph>
-              Upload a CSV with the columns{" "}
-              <s-text type="strong">code, hex, palette, tone, tier</s-text>.
-              Comma and semicolon files are both accepted.
-            </s-paragraph>
-
-            <s-drop-zone
-              ref={dropRef}
-              label="Upload CSV"
-              accept=".csv,text/csv"
-            ></s-drop-zone>
-
-            {preview ? (
-              <s-stack gap="base">
-                {preview.rows.length > 0 ? (
-                  <s-banner tone="success" heading={preview.fileName}>
-                    {`${preview.rows.length} colours ready to import` +
-                      (preview.errors.length > 0
-                        ? `, ${preview.errors.length} row(s) skipped.`
-                        : ".")}
-                  </s-banner>
-                ) : (
-                  <s-banner tone="critical" heading={preview.fileName}>
-                    No valid colours found in this file.
-                  </s-banner>
-                )}
-
-                {preview.errors.length > 0 ? (
-                  <s-banner tone="warning" heading="Some rows were skipped">
-                    <s-unordered-list>
-                      {preview.errors.slice(0, 8).map((message, i) => (
-                        <s-list-item key={i}>{message}</s-list-item>
-                      ))}
-                    </s-unordered-list>
-                  </s-banner>
-                ) : null}
-
-                {preview.rows.length > 0 ? (
-                  <s-choice-list label="When importing" ref={modeRef}>
-                    <s-choice value="replace" selected>
-                      Replace all current colours
-                    </s-choice>
-                    <s-choice value="append">
-                      Add to the current colours
-                    </s-choice>
-                  </s-choice-list>
-                ) : null}
-
-                {preview.rows.length > 0 ? (
-                  <s-table>
-                    <s-table-header-row>
-                      <s-table-header listSlot="primary">Code</s-table-header>
-                      <s-table-header>Hex</s-table-header>
-                      <s-table-header>Palette</s-table-header>
-                      <s-table-header>Tone</s-table-header>
-                      <s-table-header>Tier</s-table-header>
-                    </s-table-header-row>
-                    <s-table-body>
-                      {preview.rows.slice(0, 100).map((shade, i) => (
-                        <s-table-row key={`${shade.code}-${i}`}>
-                          <s-table-cell>{shade.code}</s-table-cell>
-                          <s-table-cell>{shade.hex}</s-table-cell>
-                          <s-table-cell>{shade.palette}</s-table-cell>
-                          <s-table-cell>{shade.tone}</s-table-cell>
-                          <s-table-cell>{shade.tier}</s-table-cell>
-                        </s-table-row>
-                      ))}
-                    </s-table-body>
-                  </s-table>
-                ) : null}
-
-                <s-stack direction="inline" gap="base">
-                  <s-button
-                    variant="primary"
-                    loading={saving}
-                    disabled={preview.rows.length === 0}
-                    onClick={saveImport}
-                  >
-                    Save import
-                  </s-button>
-                  <s-button variant="tertiary" onClick={() => setPreview(null)}>
-                    Cancel
-                  </s-button>
-                </s-stack>
-              </s-stack>
-            ) : null}
-          </s-stack>
-        </s-section>
-      </s-stack>
-
-      <s-stack direction="block" gap="base">
-        <s-heading>Current colours</s-heading>
-        <s-section accessibilityLabel="Current colours" padding="none">
-          <s-box padding="base">
+        <s-stack direction="block" gap="base">
+          <s-heading>Import from CSV</s-heading>
+          <s-section accessibilityLabel="Import from CSV">
             <s-stack gap="base">
-              <s-button
-                variant="secondary"
-                icon="plus"
-                commandFor="edit-colour-modal"
-                command="--show"
-                onClick={openAdd}
-              >
-                Add colour
-              </s-button>
-              {palette.length > 0 ? (
-                <s-search-field
-                  ref={searchRef}
-                  label="Search colours"
-                  labelAccessibilityVisibility="exclusive"
-                  placeholder="Search by code, palette or tone"
-                ></s-search-field>
+              <s-paragraph>
+                Upload a CSV with the columns{" "}
+                <s-text type="strong">code, hex, palette, tone, tier</s-text>.
+                Comma and semicolon files are both accepted.
+              </s-paragraph>
+
+              <s-drop-zone
+                ref={dropRef}
+                label="Upload CSV"
+                accept=".csv,text/csv"
+              ></s-drop-zone>
+
+              {preview ? (
+                <s-stack gap="base">
+                  {preview.rows.length > 0 ? (
+                    <s-banner tone="success" heading={preview.fileName}>
+                      {`${preview.rows.length} colours ready to import` +
+                        (preview.errors.length > 0
+                          ? `, ${preview.errors.length} row(s) skipped.`
+                          : ".")}
+                    </s-banner>
+                  ) : (
+                    <s-banner tone="critical" heading={preview.fileName}>
+                      No valid colours found in this file.
+                    </s-banner>
+                  )}
+
+                  {preview.errors.length > 0 ? (
+                    <s-banner tone="warning" heading="Some rows were skipped">
+                      <s-unordered-list>
+                        {preview.errors.slice(0, 8).map((message, i) => (
+                          <s-list-item key={i}>{message}</s-list-item>
+                        ))}
+                      </s-unordered-list>
+                    </s-banner>
+                  ) : null}
+
+                  {preview.rows.length > 0 ? (
+                    <s-choice-list label="When importing" ref={modeRef}>
+                      <s-choice value="replace" selected>
+                        Replace all current colours
+                      </s-choice>
+                      <s-choice value="append">
+                        Add to the current colours
+                      </s-choice>
+                    </s-choice-list>
+                  ) : null}
+
+                  {preview.rows.length > 0 ? (
+                    <s-table>
+                      <s-table-header-row>
+                        <s-table-header listSlot="primary">Code</s-table-header>
+                        <s-table-header>Hex</s-table-header>
+                        <s-table-header>Palette</s-table-header>
+                        <s-table-header>Tone</s-table-header>
+                        <s-table-header>Tier</s-table-header>
+                      </s-table-header-row>
+                      <s-table-body>
+                        {preview.rows.slice(0, 100).map((shade, i) => (
+                          <s-table-row key={`${shade.code}-${i}`}>
+                            <s-table-cell>{shade.code}</s-table-cell>
+                            <s-table-cell>{shade.hex}</s-table-cell>
+                            <s-table-cell>{shade.palette}</s-table-cell>
+                            <s-table-cell>{shade.tone}</s-table-cell>
+                            <s-table-cell>{shade.tier}</s-table-cell>
+                          </s-table-row>
+                        ))}
+                      </s-table-body>
+                    </s-table>
+                  ) : null}
+
+                  <s-stack direction="inline" gap="base">
+                    <s-button
+                      variant="primary"
+                      loading={saving}
+                      disabled={preview.rows.length === 0}
+                      onClick={saveImport}
+                    >
+                      Save import
+                    </s-button>
+                    <s-button
+                      variant="tertiary"
+                      onClick={() => setPreview(null)}
+                    >
+                      Cancel
+                    </s-button>
+                  </s-stack>
+                </s-stack>
               ) : null}
             </s-stack>
-          </s-box>
+          </s-section>
+        </s-stack>
 
-          {palette.length === 0 ? (
+        <s-stack direction="block" gap="base">
+          <s-heading>Current colours</s-heading>
+          <s-section accessibilityLabel="Current colours" padding="none">
             <s-box padding="base">
-              <s-paragraph>
-                No colours yet. Add one above, or upload a CSV.
-              </s-paragraph>
+              <s-stack gap="base">
+                <s-button
+                  variant="secondary"
+                  icon="plus"
+                  commandFor="edit-colour-modal"
+                  command="--show"
+                  onClick={openAdd}
+                >
+                  Add colour
+                </s-button>
+                {palette.length > 0 ? (
+                  <s-search-field
+                    ref={searchRef}
+                    label="Search colours"
+                    labelAccessibilityVisibility="exclusive"
+                    placeholder="Search by code, palette or tone"
+                  ></s-search-field>
+                ) : null}
+              </s-stack>
             </s-box>
-          ) : (
-            <s-table>
-              <s-table-header-row>
-                <s-table-header listSlot="primary">Code</s-table-header>
-                <s-table-header>Hex</s-table-header>
-                <s-table-header>Palette</s-table-header>
-                <s-table-header>Tone</s-table-header>
-                <s-table-header>Tier</s-table-header>
-                <s-table-header>Actions</s-table-header>
-              </s-table-header-row>
-              <s-table-body>
-                {visibleColours.slice(0, 200).map((shade, i) => (
-                  <s-table-row key={`${shade.code}-${i}`}>
-                    <s-table-cell>{shade.code}</s-table-cell>
-                    <s-table-cell>{shade.hex}</s-table-cell>
-                    <s-table-cell>{shade.palette}</s-table-cell>
-                    <s-table-cell>{shade.tone}</s-table-cell>
-                    <s-table-cell>{shade.tier}</s-table-cell>
-                    <s-table-cell>
-                      <s-stack direction="inline" gap="small">
-                        <s-button
-                          icon="edit"
-                          variant="tertiary"
-                          accessibilityLabel={`Edit ${shade.code}`}
-                          commandFor="edit-colour-modal"
-                          command="--show"
-                          onClick={() => openEdit(shade)}
-                        ></s-button>
-                        <s-button
-                          icon="delete"
-                          variant="tertiary"
-                          tone="critical"
-                          accessibilityLabel={`Remove ${shade.code}`}
-                          commandFor="delete-colour-modal"
-                          command="--show"
-                          onClick={() => setDeleting(shade)}
-                        ></s-button>
-                      </s-stack>
-                    </s-table-cell>
-                  </s-table-row>
-                ))}
-              </s-table-body>
-            </s-table>
-          )}
-        </s-section>
+
+            {palette.length === 0 ? (
+              <s-box padding="base">
+                <s-paragraph>
+                  No colours yet. Add one above, or upload a CSV.
+                </s-paragraph>
+              </s-box>
+            ) : (
+              <s-table>
+                <s-table-header-row>
+                  <s-table-header listSlot="primary">Code</s-table-header>
+                  <s-table-header>Hex</s-table-header>
+                  <s-table-header>Palette</s-table-header>
+                  <s-table-header>Tone</s-table-header>
+                  <s-table-header>Tier</s-table-header>
+                  <s-table-header>Actions</s-table-header>
+                </s-table-header-row>
+                <s-table-body>
+                  {visibleColours.slice(0, 200).map((shade, i) => (
+                    <s-table-row key={`${shade.code}-${i}`}>
+                      <s-table-cell>{shade.code}</s-table-cell>
+                      <s-table-cell>{shade.hex}</s-table-cell>
+                      <s-table-cell>{shade.palette}</s-table-cell>
+                      <s-table-cell>{shade.tone}</s-table-cell>
+                      <s-table-cell>{shade.tier}</s-table-cell>
+                      <s-table-cell>
+                        <s-stack direction="inline" gap="small">
+                          <s-button
+                            icon="edit"
+                            variant="tertiary"
+                            accessibilityLabel={`Edit ${shade.code}`}
+                            commandFor="edit-colour-modal"
+                            command="--show"
+                            onClick={() => openEdit(shade)}
+                          ></s-button>
+                          <s-button
+                            icon="delete"
+                            variant="tertiary"
+                            tone="critical"
+                            accessibilityLabel={`Remove ${shade.code}`}
+                            commandFor="delete-colour-modal"
+                            command="--show"
+                            onClick={() => setDeleting(shade)}
+                          ></s-button>
+                        </s-stack>
+                      </s-table-cell>
+                    </s-table-row>
+                  ))}
+                </s-table-body>
+              </s-table>
+            )}
+          </s-section>
+        </s-stack>
       </s-stack>
 
       <s-modal
@@ -1071,6 +1076,13 @@ function guessValue(values: string[], tier: string): string {
   );
 }
 
+// Pick the option that looks like the tier (its values resemble base/light/…).
+function guessTierOption(options: OptionInfo[]): string {
+  const tierish = /base|white|bianco|light|chiaro|medium|medio|dark|scuro/i;
+  const hit = options.find((o) => o.values.some((v) => tierish.test(v)));
+  return hit?.name || options[0]?.name || "";
+}
+
 function TierPricing({
   options,
   variants,
@@ -1102,10 +1114,11 @@ function TierPricing({
   const [editingMap, setEditingMap] = useState(false);
   const [setupMode, setSetupMode] = useState<"map" | "create" | null>(null);
   const [tierOptionName, setTierOptionName] = useState(
-    config?.tierOption || options[0]?.name || "",
+    config?.tierOption || guessTierOption(options),
   );
 
-  // Tier-option select change → repopulate the value selects.
+  // Tier-option select change → repopulate the value selects. Re-runs when the
+  // map form appears (via setupMode/editingMap) so the listener actually attaches.
   useEffect(() => {
     const el = tierOptRef.current;
     if (!el) return;
@@ -1113,7 +1126,7 @@ function TierPricing({
       setTierOptionName((e.currentTarget as { value?: string }).value || "");
     el.addEventListener("change", onChange);
     return () => el.removeEventListener("change", onChange);
-  }, [editingMap, config]);
+  }, [editingMap, config, setupMode]);
 
   const showMap = editingMap || !config;
   const tierOptionValues =
@@ -1321,10 +1334,19 @@ function TierPricing({
   };
 
   function savePrices() {
-    const updates: Array<{ id: string; price: string }> = [];
-    for (const [id, el] of Object.entries(priceRefs.current)) {
-      if (el && el.value != null && el.value !== "") {
-        updates.push({ id, price: String(el.value) });
+    const updates: Array<{ id: string; price: string; inventoryPolicy?: string }> = [];
+    for (const size of sizes) {
+      for (const tier of TIER_KEYS) {
+        const v = findVariant(size, tier);
+        if (!v) continue;
+        const el = priceRefs.current[v.id];
+        if (!el || el.value == null || el.value === "") continue;
+        updates.push({
+          id: v.id,
+          price: String(el.value),
+          // Keep the surcharge tiers buyable at 0 stock (sold to order).
+          ...(tier === "base" ? {} : { inventoryPolicy: "CONTINUE" }),
+        });
       }
     }
     submit(
