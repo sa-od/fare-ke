@@ -12,8 +12,9 @@ datasource db {
   provider  = "postgresql"
   // Pooled connection for the app at runtime (serverless-friendly).
   url       = env("DATABASE_URL")
-  // Direct (unpooled) connection used for migrations.
-  directUrl = env("DIRECT_URL")
+  // Direct (unpooled) connection used for migrations. Both vars are created by
+  // the Neon/Vercel integration, so nothing extra needs adding on Vercel.
+  directUrl = env("DATABASE_URL_UNPOOLED")
 }
 
 model Session {
