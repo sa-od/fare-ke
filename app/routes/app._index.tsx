@@ -155,9 +155,18 @@ export default function Index() {
                       )}
                     </s-table-cell>
                     <s-table-cell>
-                      <s-stack direction="inline" gap="small">
+                      <s-button
+                        icon="menu-vertical"
+                        variant="tertiary"
+                        accessibilityLabel="Actions"
+                        commandFor={`actions-${numericId(product.id)}`}
+                      ></s-button>
+                      <s-menu
+                        id={`actions-${numericId(product.id)}`}
+                        accessibilityLabel="Product actions"
+                      >
                         <s-button
-                          variant="secondary"
+                          icon="edit"
                           onClick={() =>
                             navigate(`/app/products/${numericId(product.id)}`)
                           }
@@ -165,7 +174,7 @@ export default function Index() {
                           Edit colours
                         </s-button>
                         <s-button
-                          variant="tertiary"
+                          icon="delete"
                           tone="critical"
                           commandFor="remove-modal"
                           command="--show"
@@ -173,7 +182,7 @@ export default function Index() {
                         >
                           Remove
                         </s-button>
-                      </s-stack>
+                      </s-menu>
                     </s-table-cell>
                   </s-table-row>
                 ))}
