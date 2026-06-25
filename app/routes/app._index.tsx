@@ -15,7 +15,7 @@ type PaintProduct = {
 };
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
-  const { admin } = await authenticate.admin(request);
+  const { admin, session } = await authenticate.admin(request);
 
   const response = await admin.graphql(`#graphql
     query PaintProducts {
@@ -41,7 +41,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
         : 0,
     }));
 
-  return { products };
+  return { products, shop: session.shop };
 };
 
 export const action = async ({ request }: ActionFunctionArgs) => {
@@ -75,12 +75,17 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 };
 
 export default function Index() {
-  const { products } = useLoaderData<typeof loader>();
+  const { products, shop } = useLoaderData<typeof loader>();
   const navigate = useNavigate();
   const submit = useSubmit();
   const shopify = useAppBridge();
 
   const numericId = (gid: string) => gid.split("/").pop();
+  const themeEditorUrl = `https://${shop}/admin/themes/current/editor?template=product`;
+
+  function openThemeEditor() {
+    window.open(themeEditorUrl, "_blank", "noopener,noreferrer");
+  }
 
   async function addProducts() {
     const selected = await shopify.resourcePicker({
@@ -108,6 +113,9 @@ export default function Index() {
       <s-button slot="primary-action" variant="primary" onClick={addProducts}>
         Add products
       </s-button>
+      <s-button slot="secondary-actions" onClick={openThemeEditor}>
+        Open theme editor
+      </s-button>
 
       {products.length === 0 ? (
         <s-section accessibilityLabel="No products yet">
@@ -124,14 +132,10 @@ export default function Index() {
         </s-section>
       ) : (
         <>
-          <s-section>
-            <s-paragraph>
-              Click <s-text type="strong">Edit colours</s-text> on a product to
-              add or update the colours shown in its picker.
-            </s-paragraph>
-          </s-section>
-          <s-section heading="Products with the picker" padding="none">
-            <s-table>
+          <s-stack direction="block" gap="base">
+            <s-heading>Products with the picker</s-heading>
+            <s-section accessibilityLabel="Products with the picker" padding="none">
+              <s-table>
               <s-table-header-row>
                 <s-table-header listSlot="primary">Product</s-table-header>
                 <s-table-header>Colours</s-table-header>
@@ -170,7 +174,8 @@ export default function Index() {
                 ))}
               </s-table-body>
             </s-table>
-          </s-section>
+            </s-section>
+          </s-stack>
         </>
       )}
     </s-page>
