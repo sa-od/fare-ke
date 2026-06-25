@@ -1,15 +1,12 @@
 // ── PALETTE DATA ──────────────────────────────────────────────────────────────
-import { palette as bundledPalette } from "./ncs-palette.js";
 import { tierMapping } from "./utils.js";
 
 // Shades are injected per product from its $app.palette metafield via Liquid
-// (window.__paintData.shades). Fall back to the bundled sample palette only when
-// the metafield is empty (e.g. while the merchant is still adding colours).
+// (window.__paintData.shades). If the product has no colours yet, the picker
+// renders with an empty palette — we never fall back to sample data, since that
+// would show wrong colours on a live product.
 const _injectedShades = window.__paintData?.shades;
-const SHADES =
-  Array.isArray(_injectedShades) && _injectedShades.length
-    ? _injectedShades
-    : bundledPalette;
+const SHADES = Array.isArray(_injectedShades) ? _injectedShades : [];
 const PALETTES = [...new Set(SHADES.map((s) => s.palette))];
 const TONES_BY_PALETTE = SHADES.reduce((acc, s) => {
   (acc[s.palette] = acc[s.palette] || new Set()).add(s.tone);
