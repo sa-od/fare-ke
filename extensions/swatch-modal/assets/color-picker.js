@@ -214,18 +214,170 @@ function selectVariantById(variantId) {
   return !!option;
 }
 
-// Best-effort: hide the theme's tier selector from customers (it's driven by the
-// picker). We still programmatically click it, which works on hidden elements.
-// Only hides a control whose label/legend text exactly matches the tier option.
+const _norm = (s) => (s || "").replace(/\s+/g, " ").trim().toLowerCase();
+
+// The readable text a control/pill represents (covers <select>, radios, and the
+// button/label/anchor swatch pills custom themes use).
+const _controlText = (el) =>
+  _norm(
+    el.value ||
+      el.getAttribute?.("data-value") ||
+      el.getAttribute?.("aria-label") ||
+      el.textContent,
+  );
+
+// An element's own direct text only (ignores text inside descendants), so a big
+// wrapper that merely *contains* the word "Tier" deep down doesn't match.
+const _ownText = (el) =>
+  _norm(
+    Array.from(el.childNodes)
+      .filter((n) => n.nodeType === 3)
+      .map((n) => n.textContent)
+      .join(" "),
+  );
+
+// Hide the theme's tier selector from customers (it's driven by the picker). We
+// still programmatically click it, which works on hidden elements. Themes vary a
+// lot in how they mark up variant options — labels vs legends vs plain divs,
+// selects vs radios vs custom button pills — so we match by several signals,
+// strongest first, and hide the smallest group that wraps just that one option.
 function hideTierOption() {
   if (!useConfig || !tierConfig.tierOption) return;
-  const scope = document.querySelector('form[action*="/cart/add"]') || document;
-  const name = tierConfig.tierOption.trim().toLowerCase();
-  scope.querySelectorAll("legend, label").forEach((el) => {
-    if (el.textContent.trim().toLowerCase() !== name) return;
-    const container = el.closest("fieldset, .product-form__input");
-    if (container) container.style.display = "none";
+  const form = document.querySelector('form[action*="/cart/add"]');
+  const scope = form || document;
+  const name = _norm(tierConfig.tierOption);
+
+  // The tier option's possible values (Base/Light/Medium/Dark as configured).
+  // Used to recognise the option's group on themes with no helpful markup.
+  const tierValues = Object.values(tierConfig.tierValues || {})
+    .filter(Boolean)
+    .map(_norm);
+
+  // The size option's values — so we can refuse to hide a container that also
+  // holds the size selector (hiding the size option would break purchasing; a
+  // still-visible tier is the safer failure).
+  const sizeValues =
+    sizeIndex >= 0
+      ? [
+          ...new Set(
+            (window.__paintData?.variants || [])
+              .map((v) => _norm(v.options?.[sizeIndex]))
+              .filter(Boolean),
+          ),
+        ]
+      : [];
+
+  const holdsAny = (root, values) => {
+    if (!values.length) return false;
+    let found = false;
+    root
+      .querySelectorAll("button, label, [role='radio'], [role='button'], input, a, option")
+      .forEach((c) => {
+        if (values.includes(_controlText(c))) found = true;
+      });
+    return found;
+  };
+
+  // Containers common themes use to wrap a single variant option.
+  const CONTAINERS =
+    "fieldset, .product-form__input, .product-form__option, .product-options," +
+    " .variant-input-wrap, .selector-wrapper, [data-option-index], [data-option-name]";
+
+  // The option name as a leading whole word: "Tier", "Tier: Light", "Tier Light"
+  // match; "Tiers" / "Material" don't.
+  const labelMatches = (text) => {
+    const t = _norm(text);
+    return t === name || (t.startsWith(name) && /[\s:]/.test(t[name.length] || ""));
+  };
+
+  // Does this subtree hold at least two distinct tier values? (Distinguishes the
+  // tier group from the size group, whose values are different.)
+  const holdsTierValues = (root) => {
+    if (tierValues.length < 2) return false;
+    const seen = new Set();
+    root
+      .querySelectorAll("button, label, [role='radio'], [role='button'], input, a, option")
+      .forEach((c) => {
+        const t = _controlText(c);
+        if (tierValues.includes(t)) seen.add(t);
+      });
+    return seen.size >= 2;
+  };
+
+  // Hide the nearest sensible wrapper around `el`. Prefer a known container class;
+  // otherwise climb to the smallest ancestor that holds the tier values, never
+  // reaching the whole form. Refuse to hide anything that also holds the size
+  // values, so the size selector is never collateral damage.
+  const hideGroup = (el) => {
+    let box = el.closest(CONTAINERS);
+    if (!box) {
+      // Climb from el to the smallest ancestor that holds the tier values — stop
+      // as soon as the current node already contains them (don't overshoot).
+      box = el;
+      let guard = 0;
+      while (
+        !holdsTierValues(box) &&
+        box.parentElement &&
+        box.parentElement !== form &&
+        box.parentElement !== document.body &&
+        guard++ < 8
+      ) {
+        box = box.parentElement;
+      }
+    }
+    if (!box || box === form || box === document.body) return false;
+    if (holdsAny(box, sizeValues)) return false;
+    box.style.display = "none";
+    return true;
+  };
+
+  // 1) Strongest: a control named options[Tier] or carrying data-option-name.
+  let hidden = false;
+  scope
+    .querySelectorAll("select, input[type='radio'], [data-option-name]")
+    .forEach((ctrl) => {
+      const nm = (ctrl.getAttribute("name") || "").toLowerCase();
+      const dn = _norm(ctrl.getAttribute("data-option-name"));
+      if ((nm.includes(`[${name}]`) || dn === name) && hideGroup(ctrl)) {
+        hidden = true;
+      }
+    });
+
+  // 2) Any element whose own text is the option name — covers themes that render
+  //    the option heading as a plain div/span/legend above custom button pills.
+  if (!hidden) {
+    scope
+      .querySelectorAll("legend, label, .form__label, span, div, p, h2, h3, h4")
+      .forEach((el) => {
+        if (labelMatches(_ownText(el)) && hideGroup(el)) {
+          hidden = true;
+        }
+      });
+  }
+}
+
+// Themes often render the variant picker after our module runs, and re-render it
+// on variant change. Run the hide now, again on a few short delays, and once more
+// whenever the cart form's subtree mutates — so the tier option stays hidden.
+let _tierHideObserver = null;
+function keepTierHidden() {
+  hideTierOption();
+  [150, 500, 1200].forEach((ms) => setTimeout(hideTierOption, ms));
+
+  if (_tierHideObserver || typeof MutationObserver === "undefined") return;
+  const target =
+    document.querySelector('form[action*="/cart/add"]') || document.body;
+  if (!target) return;
+  let scheduled = false;
+  _tierHideObserver = new MutationObserver(() => {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(() => {
+      scheduled = false;
+      hideTierOption();
+    });
   });
+  _tierHideObserver.observe(target, { childList: true, subtree: true });
 }
 
 // Re-resolves the variant whenever the customer changes the size through the
@@ -554,7 +706,7 @@ function updateColorButtons(shade) {
 // ── BOOT ──────────────────────────────────────────────────────────────────────
 buildModal();
 listenSizeChange();
-hideTierOption();
+keepTierHidden();
 
 const openBtn = document.getElementById("open-shade-modal");
 if (openBtn) openBtn.addEventListener("click", openModal);
