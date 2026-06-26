@@ -1,4 +1,4 @@
-# Fare.ke — Current-State Understanding & Improvement Map
+# Paint Picker — Current-State Understanding & Improvement Map
 
 > Working analysis covering the three focus areas: **(1) Storefront picker UX**,
 > **(2) Admin app**, **(3) Pricing / variant logic**. Captures how things work
@@ -126,8 +126,8 @@ any DB-driven shade management (§2).
 
 ## 5. Confirmed against the client spec (factual record)
 
-Source: client spec "Paint Colour Picker with Shade-Based Pricing", reference
-store **fareke.com** (e.g. *Caparol CapaWeiss Ultra*).
+Source: client spec "Paint Colour Picker with Shade-Based Pricing", the client's
+reference store (e.g. *Caparol CapaWeiss Ultra*).
 
 **The core mechanic matches the spec.** 4 hidden tier variants
 (White/Light/Medium/Dark), native Shopify variant pricing (no scripts), pick
@@ -140,10 +140,10 @@ compute prices.
 - **Sizes = YES** → variant model is **Size × Tier**; size comes from the theme's
   own native picker.
 - **Colour data** → the existing dummy `ncs-palette.js` is the current source;
-  real Fareke data is a later pass.
+  real reference data is a later pass.
 - **NEAR** → a search input that filters swatches by colour **code**.
 - **Line-item properties** must be **visible** in cart/checkout/order.
 
 **Still open (facts, not yet decided):**
-- Tier classification source for the real Fareke data.
+- Tier classification source for the real reference data.
 - Final product list + who creates the tier variants on products.

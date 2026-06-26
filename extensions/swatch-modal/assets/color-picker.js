@@ -1,6 +1,10 @@
 // ── PALETTE DATA ──────────────────────────────────────────────────────────────
 import { tierMapping } from "./utils.js";
 
+// Build marker — lets us confirm from the console whether the latest asset is the
+// one the browser actually loaded (theme-editor/CDN caching can serve a stale one).
+window.__cpHideVersion = 3;
+
 // Shades are injected per product from its $app.palette metafield via Liquid
 // (window.__paintData.shades). If the product has no colours yet, the picker
 // renders with an empty palette — we never fall back to sample data, since that
@@ -242,14 +246,24 @@ const _ownText = (el) =>
 // selects vs radios vs custom button pills — so we match by several signals,
 // strongest first, and hide the smallest group that wraps just that one option.
 function hideTierOption() {
-  if (!useConfig || !tierConfig.tierOption) return;
+  // Works with or without a saved tier mapping. With a mapping we know exactly
+  // which option is the tier; without one we use the same legacy assumption the
+  // rest of the picker relies on — the 2nd option is the tier, the 1st the size.
+  const tierName = useConfig ? tierConfig.tierOption : optionNames[1];
+  if (!tierName) return;
+  const sIdx = useConfig ? sizeIndex : optionNames.length > 1 ? 0 : -1;
+
   const form = document.querySelector('form[action*="/cart/add"]');
   const scope = form || document;
-  const name = _norm(tierConfig.tierOption);
+  const name = _norm(tierName);
 
-  // The tier option's possible values (Base/Light/Medium/Dark as configured).
-  // Used to recognise the option's group on themes with no helpful markup.
-  const tierValues = Object.values(tierConfig.tierValues || {})
+  // The tier option's possible values (Base/Light/Medium/Dark). Used to
+  // recognise the option's group on themes with no helpful markup.
+  const tierValues = (
+    useConfig
+      ? Object.values(tierConfig.tierValues || {})
+      : Object.values(tierMapping)
+  )
     .filter(Boolean)
     .map(_norm);
 
@@ -257,11 +271,11 @@ function hideTierOption() {
   // holds the size selector (hiding the size option would break purchasing; a
   // still-visible tier is the safer failure).
   const sizeValues =
-    sizeIndex >= 0
+    sIdx >= 0
       ? [
           ...new Set(
             (window.__paintData?.variants || [])
-              .map((v) => _norm(v.options?.[sizeIndex]))
+              .map((v) => _norm(v.options?.[sIdx]))
               .filter(Boolean),
           ),
         ]

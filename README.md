@@ -1,4 +1,4 @@
-# Fare.ke — Paint Color Picker
+# Paint Picker
 
 Shopify app that lets customers pick a paint shade (NCS, RAL, Caparol) on the product page. The app automatically finds the right priced variant based on the color's tier and attaches the shade code to the cart item.
 

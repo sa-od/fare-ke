@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "afaa1818b41f7b8c26d66b8f709106de"
-name = "fare-ke"
+name = "Paint Picker"
 application_url = "https://fare-ke.vercel.app"
 embedded = true
 

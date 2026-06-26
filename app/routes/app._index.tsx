@@ -156,9 +156,9 @@ export default function Index() {
                     </s-table-cell>
                     <s-table-cell>
                       <s-button
-                        icon="menu-vertical"
+                        icon="menu-horizontal"
                         variant="tertiary"
-                        accessibilityLabel="Actions"
+                        accessibilityLabel="More actions"
                         commandFor={`actions-${numericId(product.id)}`}
                       ></s-button>
                       <s-menu
