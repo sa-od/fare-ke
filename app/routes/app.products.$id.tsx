@@ -24,6 +24,34 @@ type Shade = {
 const VALID_TIERS = ["base", "white", "light", "medium", "dark"];
 const gidFor = (id: string) => `gid://shopify/Product/${id}`;
 
+// A correctly-formatted sample merchants can download to test the importer.
+const SAMPLE_CSV = `code,hex,palette,tone,tier
+S 0500-N,#f3f3f3,NCS 2050,Grays,light
+S 4000-N,#999999,NCS 2050,Grays,medium
+S 8000-N,#333333,NCS 2050,Grays,dark
+S 0560-Y,#f5e420,NCS 2050,Yellows,light
+RAL 3015,#e8a0a0,RAL CLASSIC,Reds,light
+RAL 3000,#ab2524,RAL CLASSIC,Reds,medium
+RAL 3007,#2e1014,RAL CLASSIC,Reds,dark
+RAL 5015,#1f83bb,RAL CLASSIC,Blues,medium
+CAP-G-10-20,#b8d8a0,CAPAROL 3D SYSTEM PLUS,Greens,light
+CAP-G-55-50,#3a6830,CAPAROL 3D SYSTEM PLUS,Greens,medium
+CAP-G-75-60,#163a10,CAPAROL 3D SYSTEM PLUS,Greens,dark
+CAP-N-10-00,#ebebeb,CAPAROL 3D SYSTEM PLUS,Grays,light
+`;
+
+function downloadSampleCsv() {
+  const blob = new Blob([SAMPLE_CSV], { type: "text/csv;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "sample-colours.csv";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+
 // ── CSV PARSING (client-side, lenient) ─────────────────────────────────────────
 
 const HEADER_ALIASES: Record<string, string[]> = {
@@ -802,6 +830,16 @@ export default function ProductColours() {
                 <s-text type="strong">code, hex, palette, tone, tier</s-text>.
                 Comma and semicolon files are both accepted.
               </s-paragraph>
+
+              <s-stack direction="inline" gap="base">
+                <s-button
+                  variant="secondary"
+                  icon="download"
+                  onClick={downloadSampleCsv}
+                >
+                  Download sample CSV
+                </s-button>
+              </s-stack>
 
               <s-drop-zone
                 ref={dropRef}
