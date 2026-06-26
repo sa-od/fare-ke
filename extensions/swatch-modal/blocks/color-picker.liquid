@@ -17,6 +17,38 @@
   }
 </style>
 
+{%- comment -%}
+  Hide the theme's tier option from customers — it's driven silently by the
+  colour picker. We read the product's ACTUAL tier option (from the saved
+  variant_config mapping, or the legacy "2nd option is the tier" assumption),
+  take that option's real values, and hide whichever option group contains
+  them. Matching value / data-value / data-option-value covers selects,
+  radios and custom button pills, and using the real values (not a hardcoded
+  Base/Light/Medium/Dark) means it works however the merchant named the tiers.
+{%- endcomment -%}
+{%- liquid
+  assign tier_cfg = product.metafields["$app"].variant_config.value
+  assign tier_name = tier_cfg.tierOption
+  if tier_name == blank and product.options.size > 1
+    assign tier_name = product.options[1]
+  endif
+  assign tier_opt = null
+  for opt in product.options_with_values
+    if opt.name == tier_name
+      assign tier_opt = opt
+      break
+    endif
+  endfor
+-%}
+{%- if tier_opt and tier_opt.values.size > 0 -%}
+<style>
+  {%- for v in tier_opt.values -%}
+  {%- assign ev = v | strip | replace: '"', '\"' -%}
+  :is(fieldset,.variant-option,.product-form__input,.product-form__input--pill,.product-form__option,.variant-input-wrap,.selector-wrapper,[data-option-index],[data-option-name],[data-fieldset-index]):has(:is([value="{{ ev }}"],[data-value="{{ ev }}"],[data-option-value="{{ ev }}"])){display:none!important;}
+  {%- endfor -%}
+</style>
+{%- endif -%}
+
 <script>
   window.__paintData = {
     variants:    {{ product.variants | json }},
