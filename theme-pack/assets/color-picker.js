@@ -5,10 +5,9 @@ import { tierMapping } from "./color-picker-utils.js";
 // one the browser actually loaded (theme-editor/CDN caching can serve a stale one).
 window.__cpHideVersion = 3;
 
-// Shades are injected per product from its $app.palette metafield via Liquid
-// (window.__paintData.shades). If the product has no colours yet, the picker
-// renders with an empty palette — we never fall back to sample data, since that
-// would show wrong colours on a live product.
+// Shades are injected per product via Liquid (window.__paintData.shades). If the
+// product has no colours yet, the picker renders with an empty palette — we never
+// fall back to sample data, since that would show wrong colours on a live product.
 const _injectedShades = window.__paintData?.shades;
 const SHADES = Array.isArray(_injectedShades) ? _injectedShades : [];
 const PALETTES = [...new Set(SHADES.map((s) => s.palette))];
@@ -534,18 +533,12 @@ function openModal() {
 
 function autoSelectDefaults() {
   const paletteSelect = document.getElementById("shade-palette-select");
-  const toneSelect    = document.getElementById("shade-tone-select");
 
   if (window.__paintState?.shade) return;
 
   const firstPalette = PALETTES[0];
   paletteSelect.value = firstPalette;
   populateTones(firstPalette);
-
-  // Default to the first tone (not "all") so the grid opens with a small set
-  // instead of rendering an entire 600+ colour palette at once.
-  const tones = Array.from(TONES_BY_PALETTE[firstPalette] || []);
-  if (tones.length > 1) toneSelect.value = tones[0];
 
   applyFilters();
 }
@@ -619,11 +612,6 @@ function applyFilters() {
   );
 }
 
-// Cap how many chips we build at once so huge filters (e.g. a 650-colour
-// palette, or a broad NEAR search) can't freeze the page. The check mark is
-// drawn in CSS, and chips use content-visibility, so rendering stays cheap.
-const MAX_RENDER = 300;
-
 function renderGrid(shades) {
   const grid = document.getElementById("shade-grid");
   grid.innerHTML = "";
@@ -634,10 +622,7 @@ function renderGrid(shades) {
     return;
   }
 
-  const list = shades.length > MAX_RENDER ? shades.slice(0, MAX_RENDER) : shades;
-  const frag = document.createDocumentFragment();
-
-  list.forEach((shade) => {
+  shades.forEach((shade) => {
     const chip = document.createElement("button");
     chip.type = "button";
     chip.className = "shade-chip";
@@ -649,17 +634,8 @@ function renderGrid(shades) {
       <span class="shade-chip__check" aria-hidden="true"></span>
     `;
     chip.addEventListener("click", () => selectShade(shade));
-    frag.appendChild(chip);
+    grid.appendChild(chip);
   });
-
-  grid.appendChild(frag);
-
-  if (shades.length > MAX_RENDER) {
-    const note = document.createElement("p");
-    note.className = "shade-grid__empty";
-    note.textContent = `Showing first ${MAX_RENDER} of ${shades.length}. Use the Tone filter or search to narrow down.`;
-    grid.appendChild(note);
-  }
 }
 
 function selectShade(shade) {
