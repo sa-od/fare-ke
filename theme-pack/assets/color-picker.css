@@ -316,6 +316,9 @@
     border-color 0.15s,
     transform 0.1s,
     box-shadow 0.15s;
+  /* Skip layout/paint for off-screen chips — keeps big grids cheap to render. */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 92px;
 }
 
 .shade-chip:hover {
@@ -358,6 +361,16 @@
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+}
+
+/* Checkmark drawn in CSS (no per-chip inline SVG). */
+.shade-chip__check::after {
+  content: "";
+  width: 5px;
+  height: 9px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: translateY(-1px) rotate(45deg);
 }
 
 .shade-chip--active .shade-chip__check {

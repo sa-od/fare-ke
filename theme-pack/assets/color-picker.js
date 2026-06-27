@@ -542,6 +542,11 @@ function autoSelectDefaults() {
   paletteSelect.value = firstPalette;
   populateTones(firstPalette);
 
+  // Default to the first tone (not "all") so the grid opens with a small set
+  // instead of rendering an entire 600+ colour palette at once.
+  const tones = Array.from(TONES_BY_PALETTE[firstPalette] || []);
+  if (tones.length > 1) toneSelect.value = tones[0];
+
   applyFilters();
 }
 
@@ -614,6 +619,11 @@ function applyFilters() {
   );
 }
 
+// Cap how many chips we build at once so huge filters (e.g. a 650-colour
+// palette, or a broad NEAR search) can't freeze the page. The check mark is
+// drawn in CSS, and chips use content-visibility, so rendering stays cheap.
+const MAX_RENDER = 300;
+
 function renderGrid(shades) {
   const grid = document.getElementById("shade-grid");
   grid.innerHTML = "";
@@ -624,27 +634,32 @@ function renderGrid(shades) {
     return;
   }
 
-  shades.forEach((shade) => {
+  const list = shades.length > MAX_RENDER ? shades.slice(0, MAX_RENDER) : shades;
+  const frag = document.createDocumentFragment();
+
+  list.forEach((shade) => {
     const chip = document.createElement("button");
     chip.type = "button";
     chip.className = "shade-chip";
     chip.setAttribute("role", "option");
     chip.dataset.code = shade.code;
-    chip.dataset.hex  = shade.hex;
     chip.innerHTML = `
       <span class="shade-chip__swatch" style="background:${shade.hex}"></span>
       <span class="shade-chip__label">${shade.code}</span>
-      <span class="shade-chip__check" aria-hidden="true">
-        <svg width="10" height="8" viewBox="0 0 10 8" fill="none"
-             stroke="#fff" stroke-width="2"
-             stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="1,4 4,7 9,1"/>
-        </svg>
-      </span>
+      <span class="shade-chip__check" aria-hidden="true"></span>
     `;
     chip.addEventListener("click", () => selectShade(shade));
-    grid.appendChild(chip);
+    frag.appendChild(chip);
   });
+
+  grid.appendChild(frag);
+
+  if (shades.length > MAX_RENDER) {
+    const note = document.createElement("p");
+    note.className = "shade-grid__empty";
+    note.textContent = `Showing first ${MAX_RENDER} of ${shades.length}. Use the Tone filter or search to narrow down.`;
+    grid.appendChild(note);
+  }
 }
 
 function selectShade(shade) {
