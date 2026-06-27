@@ -1,0 +1,4552 @@
+[
+  {
+    "code": "S 0300-N",
+    "hex": "#f6f5f2",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0500-N",
+    "hex": "#f1efeb",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1000-N",
+    "hex": "#e1e0de",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1500-N",
+    "hex": "#d3d3cf",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2000-N",
+    "hex": "#c9c8c5",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2500-N",
+    "hex": "#babab8",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3000-N",
+    "hex": "#b1b1af",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3500-N",
+    "hex": "#a6a4a2",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 4000-N",
+    "hex": "#999998",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 4500-N",
+    "hex": "#8e8e8d",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0502-Y",
+    "hex": "#f3efe3",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0502-Y50R",
+    "hex": "#f3ede5",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0502-R",
+    "hex": "#f1eae8",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0502-R50B",
+    "hex": "#eceaed",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0502-B",
+    "hex": "#e8edef",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0502-B50G",
+    "hex": "#e8eeee",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0502-G",
+    "hex": "#e9edea",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0502-G50Y",
+    "hex": "#eeefe7",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1002-Y",
+    "hex": "#dedcd2",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1002-Y50R",
+    "hex": "#e3ddd6",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1002-R",
+    "hex": "#e1dcdb",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1002-R50B",
+    "hex": "#dedcdf",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1002-B",
+    "hex": "#d9dee0",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1002-B50G",
+    "hex": "#dadfde",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1002-G",
+    "hex": "#dbdfdb",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1002-G50Y",
+    "hex": "#dfe1da",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1502-Y",
+    "hex": "#d2d1c8",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1502-Y50R",
+    "hex": "#d4cfc8",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1502-R",
+    "hex": "#d2cecd",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1502-R50B",
+    "hex": "#d0ced1",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1502-B",
+    "hex": "#cbd1d2",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1502-B50G",
+    "hex": "#cdd2d2",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1502-G",
+    "hex": "#ccd0cd",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1502-G50Y",
+    "hex": "#d0d2cb",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2002-Y",
+    "hex": "#c6c3bb",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2002-Y50R",
+    "hex": "#c8c2bb",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2002-R",
+    "hex": "#c5c1c0",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2002-R50B",
+    "hex": "#c3c2c5",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2002-B",
+    "hex": "#bec2c3",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2002-B50G",
+    "hex": "#c0c5c5",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2002-G",
+    "hex": "#c0c3c0",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2002-G50Y",
+    "hex": "#c3c5c0",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2502-Y",
+    "hex": "#bbb8af",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 3502-Y",
+    "hex": "#a5a39b",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 4502-Y",
+    "hex": "#908e86",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2502-R",
+    "hex": "#bdb9b9",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 3502-R",
+    "hex": "#a5a1a1",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 4502-R",
+    "hex": "#918c8c",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2502-B",
+    "hex": "#b3b8ba",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 3502-B",
+    "hex": "#9ca1a3",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 4502-B",
+    "hex": "#878c90",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2502-G",
+    "hex": "#b3b8b5",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 3502-G",
+    "hex": "#9ba19f",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 4502-G",
+    "hex": "#898e8c",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0505-Y20R",
+    "hex": "#f7eed6",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-Y20R",
+    "hex": "#e5dac5",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-Y20R",
+    "hex": "#cac3b3",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 3005-Y20R",
+    "hex": "#b3a998",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 4005-Y20R",
+    "hex": "#9f9586",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 5005-Y20R",
+    "hex": "#8d8275",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0505-Y50R",
+    "hex": "#f6e5d4",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-Y50R",
+    "hex": "#e6d9ca",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-Y50R",
+    "hex": "#c9bfb2",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 3005-Y50R",
+    "hex": "#b3a59a",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 4005-Y50R",
+    "hex": "#9e9288",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 0505-Y80R",
+    "hex": "#f6e9e3",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-Y80R",
+    "hex": "#e4d7d0",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-Y80R",
+    "hex": "#c8bcb7",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 3005-Y80R",
+    "hex": "#b7a9a3",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 4005-Y80R",
+    "hex": "#a0938e",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 5005-Y80R",
+    "hex": "#897e7a",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0505-R20B",
+    "hex": "#f0e5e8",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-R20B",
+    "hex": "#dfd5d7",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-R20B",
+    "hex": "#c7bcbf",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 3005-R20B",
+    "hex": "#b3aaac",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 4005-R20B",
+    "hex": "#9c9295",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0505-R50B",
+    "hex": "#e9e6eb",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-R50B",
+    "hex": "#dbd8de",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-R50B",
+    "hex": "#c0bdc3",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 3005-R50B",
+    "hex": "#aba8af",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 4005-R50B",
+    "hex": "#959298",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 5005-R50B",
+    "hex": "#827f86",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0505-R80B",
+    "hex": "#e3e9ee",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-R80B",
+    "hex": "#d6dbe1",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-R80B",
+    "hex": "#bec3c8",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 3005-R80B",
+    "hex": "#a5acb2",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 4005-R80B",
+    "hex": "#8f959c",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0505-B20G",
+    "hex": "#e0edef",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-B20G",
+    "hex": "#cedbdd",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-B20G",
+    "hex": "#b8c4c5",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 3005-B20G",
+    "hex": "#9eaaad",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 4005-B20G",
+    "hex": "#889497",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 0505-B80G",
+    "hex": "#e5efeb",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-B80G",
+    "hex": "#d2deda",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-B80G",
+    "hex": "#b8c4c0",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 3005-B80G",
+    "hex": "#a0aca9",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 4005-B80G",
+    "hex": "#8c9795",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 5005-B80G",
+    "hex": "#798583",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0505-G20Y",
+    "hex": "#e6ede2",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-G20Y",
+    "hex": "#d8e0d5",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-G20Y",
+    "hex": "#bcc5bd",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 3005-G20Y",
+    "hex": "#a6afa6",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 4005-G20Y",
+    "hex": "#909890",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0505-G50Y",
+    "hex": "#f0f2e0",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-G50Y",
+    "hex": "#dbdece",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-G50Y",
+    "hex": "#c0c4b7",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 3005-G50Y",
+    "hex": "#a9ada0",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 4005-G50Y",
+    "hex": "#94978a",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0505-G80Y",
+    "hex": "#f0eedc",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-G80Y",
+    "hex": "#e2e1d0",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-G80Y",
+    "hex": "#c8c8b5",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "S 3005-G80Y",
+    "hex": "#b2b1a1",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 4005-G80Y",
+    "hex": "#989887",
+    "palette": "NCS 2050",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0603-G80Y",
+    "hex": "#ecece0",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0804-G90Y",
+    "hex": "#e9e6d5",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0804-Y10R",
+    "hex": "#ece7d7",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0603-Y20R",
+    "hex": "#f0eadb",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0804-Y30R",
+    "hex": "#ede4d4",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0603-Y40R",
+    "hex": "#f1e9dd",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0804-Y50R",
+    "hex": "#ede2d5",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0603-Y60R",
+    "hex": "#f1e9e0",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0804-Y70R",
+    "hex": "#ece2db",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-G90Y",
+    "hex": "#f6f2de",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-Y",
+    "hex": "#f4f0db",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-Y10R",
+    "hex": "#f4edd8",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-Y30R",
+    "hex": "#f8ead4",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-Y40R",
+    "hex": "#f9ebd7",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-Y60R",
+    "hex": "#f7e9dd",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-Y70R",
+    "hex": "#f5e7de",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0507-G80Y",
+    "hex": "#f0efd6",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0907-G90Y",
+    "hex": "#e6e1c9",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0507-Y",
+    "hex": "#f5efd4",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0907-Y10R",
+    "hex": "#ebe1c6",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0507-Y20R",
+    "hex": "#f7ebcf",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0907-Y30R",
+    "hex": "#ecddc4",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0507-Y40R",
+    "hex": "#f8e7d0",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0907-Y50R",
+    "hex": "#eddac8",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0507-Y60R",
+    "hex": "#f9e5d5",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0907-Y70R",
+    "hex": "#ebd8cd",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-G80Y",
+    "hex": "#f0efcc",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-G90Y",
+    "hex": "#f5f0ce",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-Y",
+    "hex": "#f3e9c6",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-Y10R",
+    "hex": "#faecc5",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-Y20R",
+    "hex": "#fae8c4",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-Y30R",
+    "hex": "#fae6c7",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-Y40R",
+    "hex": "#fce3c5",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-Y50R",
+    "hex": "#fbe3cd",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-Y60R",
+    "hex": "#fde2cf",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-Y70R",
+    "hex": "#fcdfcf",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 0515-G80Y",
+    "hex": "#f0eec0",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 0515-G90Y",
+    "hex": "#f5edbd",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 0515-Y",
+    "hex": "#faedbc",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 0515-Y10R",
+    "hex": "#fbe8b8",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 0515-Y20R",
+    "hex": "#fce4b6",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 0515-Y30R",
+    "hex": "#fcddb3",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 0515-Y40R",
+    "hex": "#fedbb8",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 0515-Y50R",
+    "hex": "#fed8bb",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 0515-Y60R",
+    "hex": "#fdd6c0",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 0515-Y70R",
+    "hex": "#fcd4c2",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1005-G90Y",
+    "hex": "#e3e0cc",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-Y",
+    "hex": "#e4e0cb",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-Y10R",
+    "hex": "#e4ddca",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-Y30R",
+    "hex": "#e3d9c6",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-Y40R",
+    "hex": "#e6daca",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-Y60R",
+    "hex": "#e5d7cc",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-Y70R",
+    "hex": "#e4d6cd",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-G80Y",
+    "hex": "#e0ddbe",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1010-G90Y",
+    "hex": "#e3dcbb",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1010-Y",
+    "hex": "#e5dbb9",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1010-Y10R",
+    "hex": "#e7dab7",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1010-Y20R",
+    "hex": "#e9d7b7",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1010-Y30R",
+    "hex": "#ebd6b9",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1010-Y40R",
+    "hex": "#ead2b7",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1010-Y50R",
+    "hex": "#ecd0b9",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1010-Y60R",
+    "hex": "#ead0be",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1010-Y70R",
+    "hex": "#ebcebe",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1015-G80Y",
+    "hex": "#e1deb3",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1015-G90Y",
+    "hex": "#e7deb0",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1015-Y",
+    "hex": "#e8dbaf",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1015-Y10R",
+    "hex": "#ecd9ad",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1015-Y20R",
+    "hex": "#eed6a9",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1015-Y30R",
+    "hex": "#f1d2aa",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1015-Y40R",
+    "hex": "#f0cdac",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1015-Y50R",
+    "hex": "#f0cbaf",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1015-Y60R",
+    "hex": "#efc9b3",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1015-Y70R",
+    "hex": "#eec7b6",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1505-G80Y",
+    "hex": "#d3d3c2",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1505-G90Y",
+    "hex": "#d5d2c0",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S1501 -Y",
+    "hex": "#d5d2c1",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1505-Y10R",
+    "hex": "#d8d1be",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1505-Y20R",
+    "hex": "#d9d1bf",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1505-Y30R",
+    "hex": "#dbcfbd",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1505-Y40R",
+    "hex": "#d9cdbd",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1505-Y50R",
+    "hex": "#d9ccbf",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1505-Y60R",
+    "hex": "#d8cbc0",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1505-Y70R",
+    "hex": "#d7cbc4",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1510-G80Y",
+    "hex": "#d4d2b4",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1510-G90Y",
+    "hex": "#d6d0b1",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1510-Y",
+    "hex": "#d8cfb0",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1510-Y10R",
+    "hex": "#dbcdad",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1510-Y20R",
+    "hex": "#ddccac",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1510-Y30R",
+    "hex": "#dec9ac",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1510-Y40R",
+    "hex": "#dfc7ae",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1510-Y50R",
+    "hex": "#e0c5b0",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1510-Y60R",
+    "hex": "#dcc3b3",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1510-Y70R",
+    "hex": "#dcc2b5",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-G80Y",
+    "hex": "#d2cfa6",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-G90Y",
+    "hex": "#d7cea3",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-Y",
+    "hex": "#dbcea3",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-Y10R",
+    "hex": "#ddcba1",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-Y20R",
+    "hex": "#e0c89f",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-Y30R",
+    "hex": "#e2c39f",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-Y40R",
+    "hex": "#e4c1a1",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-Y50R",
+    "hex": "#e2bda2",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-Y60R",
+    "hex": "#e2bca7",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-Y70R",
+    "hex": "#dfb9a9",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2005-G90Y",
+    "hex": "#c8c6b6",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-Y",
+    "hex": "#cac5b4",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-Y10R",
+    "hex": "#cbc4b1",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-Y30R",
+    "hex": "#cbc1b1",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2005-Y40R",
+    "hex": "#cdbfae",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2005-Y60R",
+    "hex": "#ccc0b6",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2005-Y70R",
+    "hex": "#cdbeb6",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2010-G80Y",
+    "hex": "#c6c4a6",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2010-G90Y",
+    "hex": "#c9c2a2",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2010-Y",
+    "hex": "#c9c0a3",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2010-Y10R",
+    "hex": "#cbbea1",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2010-Y20R",
+    "hex": "#cbbb9f",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2010-Y30R",
+    "hex": "#d4c0a5",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2010-Y40R",
+    "hex": "#d1b79e",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2010-Y50R",
+    "hex": "#d3b8a3",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2010-Y60R",
+    "hex": "#d1b7a7",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2010-Y70R",
+    "hex": "#d2b7aa",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0520-Y20R",
+    "hex": "#ffdfa7",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0520-Y30R",
+    "hex": "#fdd8aa",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1020-G80Y",
+    "hex": "#e0dba4",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1020-G90Y",
+    "hex": "#e8dea6",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1020-Y",
+    "hex": "#ead9a3",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1020-Y10R",
+    "hex": "#e9d3a0",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1020-Y20R",
+    "hex": "#edcf9e",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1020-Y30R",
+    "hex": "#f3cb9c",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1020-Y40R",
+    "hex": "#f2c49c",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1020-Y50R",
+    "hex": "#f3c2a1",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1020-Y60R",
+    "hex": "#edbda3",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1020-Y70R",
+    "hex": "#f0beaa",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1030-G80Y",
+    "hex": "#ddd88c",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1030-G90Y",
+    "hex": "#e5d98d",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1030-Y",
+    "hex": "#e6d188",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1030-Y10R",
+    "hex": "#edcb87",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1030-Y20R",
+    "hex": "#f5c988",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1030-Y30R",
+    "hex": "#f5c187",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1030-Y40R",
+    "hex": "#f7ba89",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1030-Y50R",
+    "hex": "#f9b58d",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1030-Y60R",
+    "hex": "#f3b08f",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1030-Y70R",
+    "hex": "#f3af95",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3010-G80Y",
+    "hex": "#adab93",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3010-G90Y",
+    "hex": "#b1a98e",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3010-Y",
+    "hex": "#b5aa8d",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3010-Y10R",
+    "hex": "#b7a88c",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3010-Y20R",
+    "hex": "#b6a68d",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3010-Y30R",
+    "hex": "#bba68d",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3010-Y40R",
+    "hex": "#baa18c",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3010-Y50R",
+    "hex": "#bda492",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3010-Y60R",
+    "hex": "#b89e8f",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3010-Y70R",
+    "hex": "#b89e93",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3020-G80Y",
+    "hex": "#aca678",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3020-G90Y",
+    "hex": "#b2a778",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3020-Y",
+    "hex": "#b5a477",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3020-Y10R",
+    "hex": "#bca379",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3020-Y20R",
+    "hex": "#ba9c73",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3020-Y30R",
+    "hex": "#bd9973",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3020-Y40R",
+    "hex": "#bb9476",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3020-Y50R",
+    "hex": "#c5977c",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3020-Y60R",
+    "hex": "#bc917b",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3020-Y70R",
+    "hex": "#c09281",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3030-G80Y",
+    "hex": "#a9a062",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3030-G90Y",
+    "hex": "#b2a261",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3030-Y",
+    "hex": "#b59e63",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3030-Y10R",
+    "hex": "#bd9d64",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3030-Y20R",
+    "hex": "#bb945e",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3030-Y30R",
+    "hex": "#c09062",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3030-Y40R",
+    "hex": "#c18960",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3030-Y50R",
+    "hex": "#c48764",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3030-Y60R",
+    "hex": "#c18368",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3030-Y70R",
+    "hex": "#bf7e6a",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3040-G80Y",
+    "hex": "#a89d4c",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3040-G90Y",
+    "hex": "#ae9b4c",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3040-Y",
+    "hex": "#b3974b",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3040-Y10R",
+    "hex": "#bb934b",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3040-Y20R",
+    "hex": "#be8d4a",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3040-Y30R",
+    "hex": "#be844c",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3040-Y40R",
+    "hex": "#c07e4d",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3040-Y50R",
+    "hex": "#bf7750",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3040-Y60R",
+    "hex": "#c07454",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3040-Y70R",
+    "hex": "#bb6e56",
+    "palette": "NCS 2050",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0603-Y80R",
+    "hex": "#efe9e5",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0804-Y90R",
+    "hex": "#ebe1de",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0804-R10B",
+    "hex": "#ebe1e1",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0603-R20B",
+    "hex": "#eee6e8",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0804-R30B",
+    "hex": "#e7e0e3",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0603-R40B",
+    "hex": "#ece7eb",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0804-R50B",
+    "hex": "#e6e2e8",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0603-R60B",
+    "hex": "#e7e7eb",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0804-R70B",
+    "hex": "#e0e2e7",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-Y90R",
+    "hex": "#f4e7e2",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-R",
+    "hex": "#f3e8e5",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-R10B",
+    "hex": "#f0e5e5",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-R30B",
+    "hex": "#f2e9ed",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-R40B",
+    "hex": "#ece5ea",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-R60B",
+    "hex": "#eae9f0",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-R70B",
+    "hex": "#e5e9ee",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0507-Y80R",
+    "hex": "#f8e5dd",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0907-Y90R",
+    "hex": "#ead9d4",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0507-R",
+    "hex": "#f5e4e1",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0907-R10B",
+    "hex": "#e7d7d8",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0507-R20B",
+    "hex": "#f1e2e6",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0907-R30B",
+    "hex": "#e6dadf",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0507-R40B",
+    "hex": "#eee4eb",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0907-R50B",
+    "hex": "#e0dae3",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0507-R60B",
+    "hex": "#e8e7f0",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0907-R70B",
+    "hex": "#dadde5",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-Y80R",
+    "hex": "#fcdfd4",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-Y90R",
+    "hex": "#f9dfd7",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-R",
+    "hex": "#f6dddb",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-R10B",
+    "hex": "#f5dfdf",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-R20B",
+    "hex": "#f2dee1",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-R30B",
+    "hex": "#f1dfe6",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-R40B",
+    "hex": "#ede1e9",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-R50B",
+    "hex": "#eae3eb",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-R60B",
+    "hex": "#e3e2ed",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-R70B",
+    "hex": "#dce1ec",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0515-Y80R",
+    "hex": "#fdd6ca",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0515-Y90R",
+    "hex": "#f9d5cd",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0515-R",
+    "hex": "#f8d5d3",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0515-R10B",
+    "hex": "#f4d5d8",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0515-R20B",
+    "hex": "#f3d6dd",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0515-R40B",
+    "hex": "#eddaea",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0515-R60B",
+    "hex": "#dbdaed",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-Y90R",
+    "hex": "#e3d7d2",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-R",
+    "hex": "#e0d6d3",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-R10B",
+    "hex": "#e3d8d9",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-R30B",
+    "hex": "#e1d8dc",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-R40B",
+    "hex": "#e0dadf",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-R60B",
+    "hex": "#d9dae0",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-R70B",
+    "hex": "#d9dce2",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-Y80R",
+    "hex": "#e9cfc6",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-Y90R",
+    "hex": "#ead1cb",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-R",
+    "hex": "#e0ccc9",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-R10B",
+    "hex": "#e3cecf",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-R20B",
+    "hex": "#e1ced2",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-R30B",
+    "hex": "#e5d2da",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-R40B",
+    "hex": "#ded1db",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-R50B",
+    "hex": "#d8d2dc",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-R60B",
+    "hex": "#d4d2dd",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-R70B",
+    "hex": "#cfd3de",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1015-Y80R",
+    "hex": "#edc6ba",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1015-Y90R",
+    "hex": "#ebc5be",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1015-R",
+    "hex": "#e7c4c2",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1015-R10B",
+    "hex": "#e6c5c8",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1015-R20B",
+    "hex": "#e4c7ce",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1015-R40B",
+    "hex": "#ddcbd9",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1015-R60B",
+    "hex": "#d0cee0",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1510-Y80R",
+    "hex": "#dbc2b9",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1510-Y90R",
+    "hex": "#d8bfb9",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1510-R",
+    "hex": "#d8c1bf",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1510-R10B",
+    "hex": "#d7c2c4",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1510-R20B",
+    "hex": "#d6c2c7",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1510-R40B",
+    "hex": "#cfc3cd",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1510-R60B",
+    "hex": "#c8c8d4",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1505-Y80R",
+    "hex": "#d7cbc5",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1505-Y90R",
+    "hex": "#d5cac6",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1515-Y80R",
+    "hex": "#dfbaaf",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1515-Y90R",
+    "hex": "#dcb8b1",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1515-R",
+    "hex": "#dbb9b7",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1515-R10B",
+    "hex": "#d8b8bc",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1515-R20B",
+    "hex": "#d6b9c1",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1515-R40B",
+    "hex": "#cfbdcc",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1515-R60B",
+    "hex": "#c2c1d4",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-Y90R",
+    "hex": "#c9bdba",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-R",
+    "hex": "#cabfbd",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-R10B",
+    "hex": "#c8bebf",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-R30B",
+    "hex": "#c6bfc3",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-R40B",
+    "hex": "#c5bfc4",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-R60B",
+    "hex": "#c0c1c7",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-R70B",
+    "hex": "#bdc0c7",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2010-Y80R",
+    "hex": "#cbb2a9",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2010-Y90R",
+    "hex": "#cbb3ad",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2010-R",
+    "hex": "#cab5b4",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2010-R10B",
+    "hex": "#cab4b6",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2010-R20B",
+    "hex": "#c7b4b9",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2010-R30B",
+    "hex": "#c5b4bc",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2010-R40B",
+    "hex": "#c3b7c2",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2010-R50B",
+    "hex": "#c0b8c4",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2010-R60B",
+    "hex": "#bbbac6",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2010-R70B",
+    "hex": "#b6bcca",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0520-Y80R",
+    "hex": "#ffcdbf",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0520-Y90R",
+    "hex": "#fdcbc3",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0520-R",
+    "hex": "#f9c9c7",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0520-R10B",
+    "hex": "#f6cbce",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0520-R20B",
+    "hex": "#f3cdd7",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0520-R30B",
+    "hex": "#f4d1df",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0520-R40B",
+    "hex": "#ebd0e4",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0520-R50B",
+    "hex": "#dfcfe6",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0520-R60B",
+    "hex": "#d5d3ea",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0520-R70B",
+    "hex": "#cdd5ec",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0530-Y80R",
+    "hex": "#ffbbab",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0530-Y90R",
+    "hex": "#ffb9b0",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0530-R",
+    "hex": "#fbb7b7",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0530-R10B",
+    "hex": "#f9b9c2",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0530-R20B",
+    "hex": "#f8becf",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0530-R30B",
+    "hex": "#efbad2",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0530-R40B",
+    "hex": "#e6bfdd",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0530-R50B",
+    "hex": "#d7bde2",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0525-R60B",
+    "hex": "#cdc9e9",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0525-R70B",
+    "hex": "#c4ceec",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1020-Y80R",
+    "hex": "#edbcaf",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1020-Y90R",
+    "hex": "#ebbdb6",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1020-R",
+    "hex": "#ebbbbb",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1020-R10B",
+    "hex": "#e6bcc1",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1020-R20B",
+    "hex": "#e3bcc7",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1020-R30B",
+    "hex": "#e1bdcc",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1020-R40B",
+    "hex": "#d9bfd2",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1020-R50B",
+    "hex": "#d2c2d9",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1020-R60B",
+    "hex": "#cac7e1",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1020-R70B",
+    "hex": "#bdc8e1",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1030-Y80R",
+    "hex": "#eea799",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1030-Y90R",
+    "hex": "#e9a69f",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1030-R",
+    "hex": "#eaa9ab",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1030-R10B",
+    "hex": "#e9aab2",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1030-R20B",
+    "hex": "#e3aaba",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1030-R30B",
+    "hex": "#e1aec4",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1030-R40B",
+    "hex": "#d9aecd",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1030-R50B",
+    "hex": "#cdb3d4",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1030-R60B",
+    "hex": "#bcb7df",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1030-R70B",
+    "hex": "#afbce1",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2020-Y80R",
+    "hex": "#d0a398",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2020-Y90R",
+    "hex": "#d4a39d",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2020-R",
+    "hex": "#cda3a3",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2020-R10B",
+    "hex": "#cca4a9",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2020-R20B",
+    "hex": "#c8a2ad",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2020-R30B",
+    "hex": "#c8a6b5",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2020-R40B",
+    "hex": "#c1a6ba",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2020-R50B",
+    "hex": "#b9a8c2",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2020-R60B",
+    "hex": "#afabc7",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2020-R70B",
+    "hex": "#a6aec8",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2030-Y80R",
+    "hex": "#d79182",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2030-Y90R",
+    "hex": "#d39089",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2030-R",
+    "hex": "#d08e8f",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2030-R10B",
+    "hex": "#cd909a",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2030-R20B",
+    "hex": "#c991a3",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2030-R30B",
+    "hex": "#ca94ac",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2030-R40B",
+    "hex": "#bb92b3",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2030-R50B",
+    "hex": "#b699bd",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2030-R60B",
+    "hex": "#a69ec5",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2030-R70B",
+    "hex": "#949fc5",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3010-Y80R",
+    "hex": "#b79e96",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3010-Y90R",
+    "hex": "#b59e99",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3010-R",
+    "hex": "#b29a98",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3010-R10B",
+    "hex": "#b39fa0",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3010-R20B",
+    "hex": "#b09ea3",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3010-R30B",
+    "hex": "#af9da5",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3010-R40B",
+    "hex": "#aa9da8",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3010-R50B",
+    "hex": "#aaa1af",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3010-R60B",
+    "hex": "#a3a2b0",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3010-R70B",
+    "hex": "#a2a7b3",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3020-Y80R",
+    "hex": "#b98d83",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3020-Y90R",
+    "hex": "#b98b86",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3020-R",
+    "hex": "#b38b8c",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3020-R10B",
+    "hex": "#b58c92",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3020-R20B",
+    "hex": "#b08b96",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3020-R30B",
+    "hex": "#aa8b9b",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3020-R40B",
+    "hex": "#a88ca1",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3020-R50B",
+    "hex": "#a493ab",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3020-R60B",
+    "hex": "#9893ae",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3020-R70B",
+    "hex": "#8d95ad",
+    "palette": "NCS 2050",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0603-R80B",
+    "hex": "#e5e8ec",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 0507-R80B",
+    "hex": "#dfe7f0",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 0804-R90B",
+    "hex": "#dee3e7",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 0907-R90B",
+    "hex": "#d4dde4",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 0507-B",
+    "hex": "#dceaf0",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 0507-B20G",
+    "hex": "#dcecee",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 0907-B20G",
+    "hex": "#cfdfe1",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 0804-B50G",
+    "hex": "#dde5e4",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-R80B",
+    "hex": "#d9e4ee",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-R90B",
+    "hex": "#e3e9ee",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-R90B",
+    "hex": "#d9e7f1",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-B",
+    "hex": "#dee9ed",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-B",
+    "hex": "#d2e4eb",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-B10G",
+    "hex": "#d0e6ea",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-B30G",
+    "hex": "#cfe8e9",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-B50G",
+    "hex": "#d7ecea",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-R80B",
+    "hex": "#cad6df",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-R90B",
+    "hex": "#d4dbe0",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-R90B",
+    "hex": "#c6d5df",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-B",
+    "hex": "#d4dde0",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-B",
+    "hex": "#c3d6dd",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-B10G",
+    "hex": "#c5d7db",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-B30G",
+    "hex": "#c4dbdd",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-B50G",
+    "hex": "#c6dddc",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "light"
+  },
+  {
+    "code": "S 0515-R80B",
+    "hex": "#ccdded",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1015-R80B",
+    "hex": "#c1d1e2",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 0515-R90B",
+    "hex": "#cadeec",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1015-R90B",
+    "hex": "#bcd1df",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 0515-B",
+    "hex": "#c5e1eb",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1015-B",
+    "hex": "#b9d4df",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 0515-B20G",
+    "hex": "#c2e4e8",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1015-B20G",
+    "hex": "#b5d6db",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 0515-B50G",
+    "hex": "#c6e8e6",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1015-B50G",
+    "hex": "#b8d9d7",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1510-R80B",
+    "hex": "#bec9d5",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-R80B",
+    "hex": "#b3c3d4",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1510-R90B",
+    "hex": "#bcc9d3",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-R90B",
+    "hex": "#b0c4d3",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1510-B",
+    "hex": "#b8cad1",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-B",
+    "hex": "#acc6d2",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1510-B20G",
+    "hex": "#b6cccf",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-B20G",
+    "hex": "#a8c9ce",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1510-B50G",
+    "hex": "#b8cdcc",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-B50G",
+    "hex": "#aacbca",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2010-R80B",
+    "hex": "#b0bbc8",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2005-R90B",
+    "hex": "#bbc3c8",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2010-R90B",
+    "hex": "#b1bfc9",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2005-B",
+    "hex": "#b8c2c6",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2010-B",
+    "hex": "#abbcc4",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2010-B10G",
+    "hex": "#acbcc1",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2010-B30G",
+    "hex": "#a8bfc1",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2010-B50G",
+    "hex": "#aac0bf",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "medium"
+  },
+  {
+    "code": "S 3010-R80B",
+    "hex": "#98a2af",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3010-R90B",
+    "hex": "#96a5b0",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3010-B",
+    "hex": "#95a7af",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3010-B10G",
+    "hex": "#94a6ac",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3010-B30G",
+    "hex": "#93aaad",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3010-B50G",
+    "hex": "#93a8a8",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3010-B70G",
+    "hex": "#97aba8",
+    "palette": "NCS 2050",
+    "tone": "Blu",
+    "tier": "dark"
+  },
+  {
+    "code": "S 0507-B80G",
+    "hex": "#e0f0eb",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0907-B80G",
+    "hex": "#d3e3de",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0507-G",
+    "hex": "#e3f1e7",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0804-G20Y",
+    "hex": "#dfe4dc",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0907-G20Y",
+    "hex": "#d8e2d5",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0603-G40Y",
+    "hex": "#e9ece4",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0507-G40Y",
+    "hex": "#eaf0dd",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0804-G60Y",
+    "hex": "#e5e6da",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0907-G60Y",
+    "hex": "#e1e4cf",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-B50G",
+    "hex": "#e2edec",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-G",
+    "hex": "#e5eee7",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-G10Y",
+    "hex": "#ebf1ea",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-G30Y",
+    "hex": "#e8eee2",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-G40Y",
+    "hex": "#eef2e3",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-G60Y",
+    "hex": "#f0f1e0",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0505-G70Y",
+    "hex": "#eeefde",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-B70G",
+    "hex": "#d4ece7",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-B90G",
+    "hex": "#d8eee4",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-G",
+    "hex": "#dbefe1",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-G10Y",
+    "hex": "#dff0df",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-G20Y",
+    "hex": "#e1eddc",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-G30Y",
+    "hex": "#e4efd8",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-G40Y",
+    "hex": "#eaf2d7",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-G50Y",
+    "hex": "#e9eed5",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-G60Y",
+    "hex": "#eaeed1",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0510-G70Y",
+    "hex": "#f0f2ce",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 0515-B80G",
+    "hex": "#c8eae0",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1015-B80G",
+    "hex": "#badcd2",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 0515-G",
+    "hex": "#d0edda",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1015-G",
+    "hex": "#bedcc9",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 0515-G20Y",
+    "hex": "#d4ead0",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1015-G20Y",
+    "hex": "#c5dbc1",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 0515-G40Y",
+    "hex": "#e3efcc",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1015-G40Y",
+    "hex": "#d1ddbc",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 0515-G60Y",
+    "hex": "#e7edc3",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1015-G60Y",
+    "hex": "#d9deb7",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1005-B50G",
+    "hex": "#d2dedd",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-G",
+    "hex": "#d7dfd9",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-G10Y",
+    "hex": "#d7e0d8",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-G30Y",
+    "hex": "#dae0d4",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-G40Y",
+    "hex": "#dbe0d4",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-G60Y",
+    "hex": "#dee1d2",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1005-G70Y",
+    "hex": "#e1e2d3",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-B70G",
+    "hex": "#c6dbd7",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-B90G",
+    "hex": "#c9ded5",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-G",
+    "hex": "#c7dccf",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-G10Y",
+    "hex": "#cadbcb",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-G20Y",
+    "hex": "#cfddcb",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-G30Y",
+    "hex": "#d4dfc8",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-G40Y",
+    "hex": "#d5dec5",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-G50Y",
+    "hex": "#d9dfc4",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-G60Y",
+    "hex": "#dbdfc2",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1010-G70Y",
+    "hex": "#dcdec0",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 1510-B80G",
+    "hex": "#b9cfc9",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-B80G",
+    "hex": "#abcdc4",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1510-G",
+    "hex": "#bccfc3",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-G",
+    "hex": "#afcdbb",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1510-G20Y",
+    "hex": "#c0cfbe",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-G20Y",
+    "hex": "#b8cdb6",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1510-G40Y",
+    "hex": "#c8d0ba",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-G40Y",
+    "hex": "#c2ceae",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1510-G60Y",
+    "hex": "#cdd1b6",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 1515-G60Y",
+    "hex": "#cbd0aa",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2005-B50G",
+    "hex": "#b9c4c3",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2005-G",
+    "hex": "#bac3bd",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "medium"
+  },
+  {
+    "code": "S 2005-G10Y",
+    "hex": "#bac3bc",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-G30Y",
+    "hex": "#bdc4ba",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-G40Y",
+    "hex": "#c2c7bc",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-G60Y",
+    "hex": "#c2c5b8",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2005-G70Y",
+    "hex": "#c2c4b5",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "light"
+  },
+  {
+    "code": "S 2010-B70G",
+    "hex": "#aac1bd",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2010-B90G",
+    "hex": "#acc5bb",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2010-G",
+    "hex": "#afc2b6",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2010-G10Y",
+    "hex": "#b2c4b5",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2010-G20Y",
+    "hex": "#b1c1b0",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2010-G30Y",
+    "hex": "#b5c1af",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2010-G40Y",
+    "hex": "#bbc2ae",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2010-G50Y",
+    "hex": "#bfc4ae",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2010-G60Y",
+    "hex": "#bec1aa",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2010-G70Y",
+    "hex": "#c0c2a6",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1020-B90G",
+    "hex": "#add8c7",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1020-G",
+    "hex": "#aed8c0",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1020-G10Y",
+    "hex": "#b7dabd",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1020-G20Y",
+    "hex": "#bbd9b7",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1020-G30Y",
+    "hex": "#c2dab5",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1020-G40Y",
+    "hex": "#c7d7ac",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1020-G50Y",
+    "hex": "#d3deae",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1020-G60Y",
+    "hex": "#d6dcaa",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1020-G70Y",
+    "hex": "#dbddaa",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1030-B90G",
+    "hex": "#94d4bd",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1030-G",
+    "hex": "#97d3b3",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1030-G10Y",
+    "hex": "#9fd2aa",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1030-G20Y",
+    "hex": "#a7d2a4",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1030-G30Y",
+    "hex": "#aed09c",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1030-G40Y",
+    "hex": "#bcd399",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1030-G50Y",
+    "hex": "#c7d594",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1030-G60Y",
+    "hex": "#d0d890",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 1030-G70Y",
+    "hex": "#d6d98f",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2020-B90G",
+    "hex": "#95bdaf",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2020-G",
+    "hex": "#98bfaa",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2020-G10Y",
+    "hex": "#9ebfa4",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2020-G20Y",
+    "hex": "#9fbd9f",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2020-G30Y",
+    "hex": "#a9bf9c",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2020-G40Y",
+    "hex": "#b0be97",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2020-G50Y",
+    "hex": "#b3bd93",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2020-G60Y",
+    "hex": "#babe91",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 2020-G70Y",
+    "hex": "#bfc18f",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3010-B90G",
+    "hex": "#9aaea7",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3010-G",
+    "hex": "#98aca1",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3010-G10Y",
+    "hex": "#97aa9b",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3010-G20Y",
+    "hex": "#9cab9b",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3010-G30Y",
+    "hex": "#a2af9c",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3010-G40Y",
+    "hex": "#a3ac96",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3010-G50Y",
+    "hex": "#a4ab93",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3010-G60Y",
+    "hex": "#a9ac94",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "S 3010-G70Y",
+    "hex": "#abab92",
+    "palette": "NCS 2050",
+    "tone": "Verdi",
+    "tier": "dark"
+  }
+]

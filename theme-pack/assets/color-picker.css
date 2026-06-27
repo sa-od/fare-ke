@@ -1,0 +1,436 @@
+:root {
+  --pk-muted: #9ca3af; /* placeholder / muted text */
+  --pk-border: #e5e7eb; /* hairline dividers & outlines */
+}
+
+/* ── PRODUCT-PAGE CONTROL ────────────────────────────────────── */
+
+.cp-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cp-picker__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--pk-text);
+}
+
+.cp-error {
+  margin: 0;
+  font-size: 13px;
+  color: #b42318;
+  background: #fef3f2;
+  border: 1px solid #fda29b;
+  border-radius: 3px;
+  padding: 8px 12px;
+}
+
+/* ── COLOR BUTTONS ───────────────────────────────────────────── */
+
+.cp-btn-row {
+  display: flex;
+  gap: 8px;
+}
+
+.cp-btn {
+  flex: 1;
+  padding: 8px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid transparent;
+  transition:
+    filter 0.15s,
+    background 0.15s;
+  white-space: nowrap;
+}
+
+.cp-btn:hover {
+  filter: brightness(0.92);
+}
+
+/* Colours come from the theme editor: the block injects --pk-btn-white-bg and
+   --pk-btn-custom-bg onto .cp-btn-row. These rules are the only consumers, so
+   editing the colour in the editor takes effect immediately. The fallbacks keep
+   the buttons styled if a variable is ever empty. */
+.cp-btn--white {
+  background: var(--pk-btn-white-bg, #ffffff);
+  color: var(--pk-text);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.cp-btn--custom {
+  background: var(--pk-btn-custom-bg, var(--pk-accent));
+  color: #ffffff;
+}
+
+/* ── SHADE MODAL ─────────────────────────────────────────────── */
+
+#shade-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 10000;
+  padding: 16px;
+}
+
+#shade-overlay.is-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#shade-modal {
+  background: #fff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 980px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.shade-modal__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 24px 28px 20px;
+  border-bottom: 1px solid var(--pk-border);
+  flex-shrink: 0;
+}
+
+/* In search mode the search view supplies its own divider above the grid, so the
+   header's divider (which would sit above the search bar) is removed. */
+#shade-modal.is-searching .shade-modal__header {
+  border-bottom: none;
+}
+
+.shade-modal__title {
+  flex: 1;
+}
+
+.shade-modal__title h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  line-height: 1.3;
+  color: var(--pk-text);
+}
+
+.shade-modal__title h2 .cp-blue {
+  color: var(--pk-accent);
+}
+
+.shade-modal__title p {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.shade-modal__controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* `display: flex` above would otherwise override the [hidden] attribute, so the
+   filter row wouldn't disappear in search mode. */
+.shade-modal__controls[hidden] {
+  display: none;
+}
+
+.shade-modal__select-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.shade-modal__select-group label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--pk-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.shade-modal__select-group select {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 9px 36px 9px 12px;
+  font-size: 14px;
+  min-width: 175px;
+  color: #111;
+  cursor: pointer;
+  background: #fff
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236b7280' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    no-repeat right 12px center;
+}
+
+.shade-modal__select-group select:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.shade-modal__select-group select:focus {
+  outline: none;
+  border-color: var(--pk-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--pk-accent) 15%, transparent);
+}
+
+/* NEAR button — switches the modal into search mode. */
+.shade-near-btn {
+  align-self: flex-end;
+  border: none;
+  border-radius: 999px;
+  background: var(--pk-accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 11px 30px;
+  cursor: pointer;
+}
+
+.shade-near-btn:hover {
+  filter: brightness(0.95);
+}
+
+/* NEAR search view: Back link + search bar + START. */
+.shade-modal__search {
+  padding: 16px 28px;
+  border-bottom: 1px solid var(--pk-border);
+  flex-shrink: 0;
+}
+
+.shade-back-btn {
+  display: block;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0 0 12px;
+  color: var(--pk-accent);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.shade-search-row {
+  display: flex;
+  gap: 12px;
+}
+
+#shade-search {
+  flex: 1;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #111;
+}
+
+#shade-search:focus {
+  outline: none;
+  border-color: var(--pk-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--pk-accent) 15%, transparent);
+}
+
+.shade-search-start {
+  border: none;
+  border-radius: 999px;
+  background: var(--pk-accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 12px 34px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.shade-search-start:hover {
+  filter: brightness(0.95);
+}
+
+#shade-close {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--pk-muted);
+  cursor: pointer;
+  padding: 2px 4px;
+  margin-top: -2px;
+}
+#shade-close:hover {
+  color: #111;
+}
+
+#shade-grid {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+  gap: 10px;
+  align-content: start;
+}
+
+#shade-grid:empty::after,
+.shade-grid__empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--pk-muted);
+  font-size: 14px;
+  padding: 40px 0;
+  margin: 0;
+}
+
+#shade-grid:empty::after {
+  content: "Select a palette to see shades";
+  display: block;
+}
+
+.shade-chip {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+  transition:
+    border-color 0.15s,
+    transform 0.1s,
+    box-shadow 0.15s;
+}
+
+.shade-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.shade-chip--active {
+  border-color: var(--pk-accent) !important;
+}
+
+.shade-chip__swatch {
+  display: block;
+  height: 60px;
+  width: 100%;
+}
+
+.shade-chip__label {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: #374151;
+  background: #f9fafb;
+  padding: 5px 6px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-top: 1px solid var(--pk-border);
+}
+
+.shade-chip__check {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 18px;
+  height: 18px;
+  background: var(--pk-accent);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.shade-chip--active .shade-chip__check {
+  display: flex;
+}
+
+.shade-modal__footer {
+  padding: 14px 24px;
+  border-top: 1px solid var(--pk-border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 60px;
+  flex-shrink: 0;
+}
+
+.shade-swatch-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--pk-border);
+  flex-shrink: 0;
+}
+
+.shade-selected-code {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--pk-text);
+}
+
+.shade-no-selection {
+  font-size: 14px;
+  color: var(--pk-muted);
+  font-style: italic;
+}
+
+/* ── MOBILE ──────────────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  #shade-modal {
+    max-height: 95vh;
+  }
+
+  .shade-modal__header {
+    flex-direction: column;
+    padding: 20px 16px 16px;
+  }
+
+  .shade-modal__controls {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .shade-modal__select-group {
+    flex: 1;
+    min-width: 0;
+  }
+  .shade-modal__select-group select {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .shade-near-btn {
+    width: 100%;
+  }
+
+  .shade-modal__search {
+    padding: 16px;
+  }
+
+  #shade-grid {
+    padding: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+    gap: 8px;
+  }
+}

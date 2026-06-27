@@ -1,0 +1,78 @@
+{% comment %}
+  Paint Picker — no-app theme section.
+
+  Reads the product's linked palette "packs" (paint_palette metaobjects) and
+  renders the colour picker. Requires:
+    - the paint_palette metaobject + paint.* product metafields
+      (see theme-pack/setup/definitions.graphql)
+    - the assets color-picker.js, color-picker-utils.js and color-picker.css
+      copied into the theme's /assets folder.
+
+  Renders only on products where paint.enabled is true.
+{% endcomment %}
+
+{% if product.metafields.paint.enabled.value %}
+  {{ 'color-picker.css' | asset_url | stylesheet_tag }}
+
+  <style>
+    :root {
+      --pk-accent:        {{ section.settings.accent_color }};
+      --pk-text:          {{ section.settings.text_color }};
+      --pk-btn-white-bg:  {{ section.settings.white_btn_color }};
+      --pk-btn-custom-bg: {{ section.settings.custom_btn_color }};
+    }
+  </style>
+
+  {% assign packs = product.metafields.paint.palettes.value %}
+  <script>
+    window.__paintData = {
+      variants:    {{ product.variants | json }},
+      optionNames: {{ product.options | json }},
+      tierConfig:  {{ product.metafields.paint.variant_config.value | json }},
+      // Flatten each linked pack's colours JSON into one list of shades.
+      shades: [
+        {% for pack in packs %}{{ pack.colours.value | json }}{% unless forloop.last %},{% endunless %}{% endfor %}
+      ].flat()
+    };
+  </script>
+
+  <div class="cp-picker">
+    {% if section.settings.control_label != blank %}
+      <span class="cp-picker__label">{{ section.settings.control_label }}</span>
+    {% endif %}
+
+    <div class="cp-btn-row">
+      <button type="button" id="select-base-color" class="cp-btn cp-btn--white">
+        {{ section.settings.white_label }}
+      </button>
+      <button
+        type="button"
+        id="open-shade-modal"
+        class="cp-btn cp-btn--custom"
+        data-default-label="{{ section.settings.button_label }}"
+      >
+        {{ section.settings.button_label }}
+      </button>
+    </div>
+
+    <p class="cp-error" id="pk-error" role="alert" hidden></p>
+  </div>
+
+  <script type="module" src="{{ 'color-picker.js' | asset_url }}"></script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Paint Picker",
+  "settings": [
+    { "type": "text", "id": "control_label", "label": "Control heading", "default": "Color Code" },
+    { "type": "text", "id": "white_label", "label": "Base (white) button label", "default": "White" },
+    { "type": "text", "id": "button_label", "label": "Colour picker button label", "default": "Colored" },
+    { "type": "color", "id": "white_btn_color", "label": "Base button colour", "default": "#ffffff" },
+    { "type": "color", "id": "custom_btn_color", "label": "Colour picker button colour", "default": "#1a6faf" },
+    { "type": "color", "id": "accent_color", "label": "Accent colour", "default": "#1a6faf" },
+    { "type": "color", "id": "text_color", "label": "Text colour", "default": "#333333" }
+  ],
+  "presets": [{ "name": "Paint Picker" }]
+}
+{% endschema %}

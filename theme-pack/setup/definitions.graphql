@@ -1,0 +1,74 @@
+# One-time setup — run these against the store's Admin GraphQL API once
+# (e.g. via a throwaway custom-app token or the Shopify CLI). Nothing is hosted
+# afterwards. Required scopes: write_metaobject_definitions, write_products.
+
+# 1) The palette "pack" metaobject. Colours live in ONE json field (not one
+#    metaobject per colour) so Liquid never hits the ~50-entries-per-loop cap.
+mutation CreatePaletteDefinition {
+  metaobjectDefinitionCreate(
+    definition: {
+      name: "Paint palette"
+      type: "paint_palette"
+      access: { storefront: PUBLIC_READ }
+      fieldDefinitions: [
+        { key: "name", name: "Name", type: "single_line_text_field" }
+        { key: "colours", name: "Colours", type: "json" }
+      ]
+    }
+  ) {
+    metaobjectDefinition { id type }
+    userErrors { field message }
+  }
+}
+
+# 2) Product → palettes link. Paste the MetaobjectDefinition id returned above
+#    into the validation value below.
+mutation CreatePalettesMetafield {
+  metafieldDefinitionCreate(
+    definition: {
+      name: "Palettes"
+      namespace: "paint"
+      key: "palettes"
+      ownerType: PRODUCT
+      type: "list.metaobject_reference"
+      access: { storefront: PUBLIC_READ }
+      validations: [
+        { name: "metaobject_definition_id", value: "gid://shopify/MetaobjectDefinition/REPLACE_ME" }
+      ]
+    }
+  ) {
+    createdDefinition { id }
+    userErrors { field message }
+  }
+}
+
+# 3) Per-product flags/config the picker reads.
+mutation CreatePaintMetafields {
+  enabled: metafieldDefinitionCreate(
+    definition: {
+      name: "Paint picker enabled"
+      namespace: "paint"
+      key: "enabled"
+      ownerType: PRODUCT
+      type: "boolean"
+      access: { storefront: PUBLIC_READ }
+    }
+  ) {
+    createdDefinition { id }
+    userErrors { field message }
+  }
+
+  variantConfig: metafieldDefinitionCreate(
+    definition: {
+      name: "Tier variant config"
+      namespace: "paint"
+      key: "variant_config"
+      ownerType: PRODUCT
+      type: "json"
+      access: { storefront: PUBLIC_READ }
+    }
+  ) {
+    createdDefinition { id }
+    userErrors { field message }
+  }
+}

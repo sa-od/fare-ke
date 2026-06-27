@@ -1,0 +1,310 @@
+[
+  {
+    "code": "1000",
+    "hex": "#c9bb88",
+    "palette": "RAL CLASSIC",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "1001",
+    "hex": "#ccb083",
+    "palette": "RAL CLASSIC",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "1002",
+    "hex": "#cdaa6d",
+    "palette": "RAL CLASSIC",
+    "tone": "Gialli",
+    "tier": "dark"
+  },
+  {
+    "code": "1013",
+    "hex": "#e1dac7",
+    "palette": "RAL CLASSIC",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "1014",
+    "hex": "#d9c59a",
+    "palette": "RAL CLASSIC",
+    "tone": "Gialli",
+    "tier": "medium"
+  },
+  {
+    "code": "1015",
+    "hex": "#e3d3b5",
+    "palette": "RAL CLASSIC",
+    "tone": "Gialli",
+    "tier": "light"
+  },
+  {
+    "code": "3012",
+    "hex": "#c2856d",
+    "palette": "RAL CLASSIC",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "3014",
+    "hex": "#c97375",
+    "palette": "RAL CLASSIC",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "3015",
+    "hex": "#d7a0a6",
+    "palette": "RAL CLASSIC",
+    "tone": "Rossi",
+    "tier": "medium"
+  },
+  {
+    "code": "3022",
+    "hex": "#cc6955",
+    "palette": "RAL CLASSIC",
+    "tone": "Rossi",
+    "tier": "dark"
+  },
+  {
+    "code": "4009",
+    "hex": "#9d8592",
+    "palette": "RAL CLASSIC",
+    "tone": "Violetti",
+    "tier": "dark"
+  },
+  {
+    "code": "5014",
+    "hex": "#687c96",
+    "palette": "RAL CLASSIC",
+    "tone": "Blu",
+    "tier": "dark"
+  },
+  {
+    "code": "6019",
+    "hex": "#b7ceac",
+    "palette": "RAL CLASSIC",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "6021",
+    "hex": "#879a77",
+    "palette": "RAL CLASSIC",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "6034",
+    "hex": "#7cadac",
+    "palette": "RAL CLASSIC",
+    "tone": "Verdi",
+    "tier": "dark"
+  },
+  {
+    "code": "7000",
+    "hex": "#7b888e",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "7001",
+    "hex": "#8e969d",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "7002",
+    "hex": "#7f7863",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "7003",
+    "hex": "#787769",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "7004",
+    "hex": "#9b9b9b",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "7005",
+    "hex": "#6b6e6b",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "7023",
+    "hex": "#7f8076",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "7030",
+    "hex": "#918e85",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "7031",
+    "hex": "#5d686d",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "7032",
+    "hex": "#b4b0a1",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "7033",
+    "hex": "#7e8274",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "7034",
+    "hex": "#90886f",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "7035",
+    "hex": "#c5c7c4",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "7036",
+    "hex": "#979392",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "7037",
+    "hex": "#7a7b7a",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "7038",
+    "hex": "#afb1a9",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "7039",
+    "hex": "#6a665e",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "7040",
+    "hex": "#989ea1",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "7042",
+    "hex": "#8e9291",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "7044",
+    "hex": "#b6b3a8",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "7045",
+    "hex": "#8e9295",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "medium"
+  },
+  {
+    "code": "7046",
+    "hex": "#7f868a",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "dark"
+  },
+  {
+    "code": "7047",
+    "hex": "#c8c8c7",
+    "palette": "RAL CLASSIC",
+    "tone": "Grigi",
+    "tier": "light"
+  },
+  {
+    "code": "9001",
+    "hex": "#e7e1d2",
+    "palette": "RAL CLASSIC",
+    "tone": "Bianco/Nero",
+    "tier": "light"
+  },
+  {
+    "code": "9002",
+    "hex": "#d6d5cb",
+    "palette": "RAL CLASSIC",
+    "tone": "Bianco/Nero",
+    "tier": "light"
+  },
+  {
+    "code": "9003",
+    "hex": "#ecece7",
+    "palette": "RAL CLASSIC",
+    "tone": "Bianco/Nero",
+    "tier": "light"
+  },
+  {
+    "code": "9010",
+    "hex": "#f0ede1",
+    "palette": "RAL CLASSIC",
+    "tone": "Bianco/Nero",
+    "tier": "light"
+  },
+  {
+    "code": "9016",
+    "hex": "#f0f1ea",
+    "palette": "RAL CLASSIC",
+    "tone": "Bianco/Nero",
+    "tier": "light"
+  },
+  {
+    "code": "9018",
+    "hex": "#c7cbc4",
+    "palette": "RAL CLASSIC",
+    "tone": "Bianco/Nero",
+    "tier": "medium"
+  }
+]

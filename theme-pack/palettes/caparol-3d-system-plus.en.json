@@ -1,0 +1,4566 @@
+[
+  {
+    "code": "Porzellanweiß",
+    "hex": "#efecec",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Kühlweiß",
+    "hex": "#eae6e4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Marmorweiß",
+    "hex": "#e9e8e8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Off White 50",
+    "hex": "#ecebe9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Granit 60",
+    "hex": "#e0dedb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Verkehrsweiß",
+    "hex": "#f2f0eb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Grauweiß",
+    "hex": "#eee9e4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Signalweiß",
+    "hex": "#efedeb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Off White 40",
+    "hex": "#e5eee8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Granit 55",
+    "hex": "#d1cdcb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Muschelweiß",
+    "hex": "#f5f1ed",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Hellweiß",
+    "hex": "#f3efea",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Reinweiß",
+    "hex": "#f2eee6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Off White 30",
+    "hex": "#f2f1e4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Granit 50",
+    "hex": "#c4c0be",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Altweiß",
+    "hex": "#f4f0e8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Naturweiß",
+    "hex": "#eee8e0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Samtweiß",
+    "hex": "#f3ece2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Off White 25",
+    "hex": "#f5efdf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Granit 45",
+    "hex": "#bab5b5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Antikweiß",
+    "hex": "#f5f0e9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Umbraweiß",
+    "hex": "#e9e3d9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Cremeweiß",
+    "hex": "#eae2d3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Off White 20",
+    "hex": "#f3ecdc",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Granit 40",
+    "hex": "#aaa4a3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Indeko-plus weiß",
+    "hex": "#f6f4f1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lichtweiß",
+    "hex": "#f7f2ec",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Warmweiß",
+    "hex": "#e8e1db",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Perlmuttweiß",
+    "hex": "#ede4e1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Off White 15",
+    "hex": "#f6eae3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Granit 35",
+    "hex": "#989795",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Ferro 30",
+    "hex": "#918a87",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Ferro 60",
+    "hex": "#e1dcd9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Jura 30",
+    "hex": "#8f8c86",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Jura 60",
+    "hex": "#e0dcd8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Venato 30",
+    "hex": "#8a8c8e",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Venato 60",
+    "hex": "#dedede",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Rose 30",
+    "hex": "#efe9e5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Ferro 25",
+    "hex": "#827b7a",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Ferro 55",
+    "hex": "#d4cfcc",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Jura 25",
+    "hex": "#7f7c78",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Jura 55",
+    "hex": "#d2cfca",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Venato 55",
+    "hex": "#cfcfce",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Rose 25",
+    "hex": "#eae1dd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Ferro 50",
+    "hex": "#c9c2bf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Jura 50",
+    "hex": "#c5c3be",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Venato 50",
+    "hex": "#c1c2c2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Rose 20",
+    "hex": "#ebe0dd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Ferro 45",
+    "hex": "#bab3af",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Jura 45",
+    "hex": "#b8b4ae",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Venato 45",
+    "hex": "#b2b4b3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Rose 15",
+    "hex": "#eddcda",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Venato 40",
+    "hex": "#a4a7a7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Rose 10",
+    "hex": "#d6cecb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Venato 35",
+    "hex": "#959798",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Rose 5",
+    "hex": "#c0b5b3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Rose 60",
+    "hex": "#fae5e4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Rose 90",
+    "hex": "#fcdedf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Rose 120",
+    "hex": "#e3abb2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Baccara 30",
+    "hex": "#fdd3d4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Barolo 30",
+    "hex": "#d6ccc9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Barolo 60",
+    "hex": "#e1d1cf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Barolo 90",
+    "hex": "#e8d6d4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Rose 55",
+    "hex": "#dfc8c7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Rose 85",
+    "hex": "#d6acb1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Rose 115",
+    "hex": "#dc7e8d",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Baccara 25",
+    "hex": "#f4a1a9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Barolo 25",
+    "hex": "#b8a7a6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Barolo 55",
+    "hex": "#c4aba9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Barolo 85",
+    "hex": "#cfaeac",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Rose 50",
+    "hex": "#c8b2b4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Rose 80",
+    "hex": "#bc8e93",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Barolo 20",
+    "hex": "#9f8b89",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Barolo 50",
+    "hex": "#ab8d8a",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Barolo 80",
+    "hex": "#b98f8c",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Rose 45",
+    "hex": "#b8a6a7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Rose 40",
+    "hex": "#bda0a0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Barolo 120",
+    "hex": "#f0d9d6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Barolo 150",
+    "hex": "#fadfdd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Venezia 30",
+    "hex": "#fee1dd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Grenadin 30",
+    "hex": "#d8cdcb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Grenadin 60",
+    "hex": "#e0d2ce",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Grenadin 90",
+    "hex": "#ead6d3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Grenadin 120",
+    "hex": "#ead6d3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Barolo 115",
+    "hex": "#dcb4b1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Barolo 145",
+    "hex": "#e7b5b3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Venezia 25",
+    "hex": "#fbdad6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Grenadin 25",
+    "hex": "#b8aaa6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Grenadin 55",
+    "hex": "#c7ada9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Grenadin 85",
+    "hex": "#d1b1ac",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Grenadin 115",
+    "hex": "#dfb4ae",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Barolo 110",
+    "hex": "#c98d8e",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Barolo 140",
+    "hex": "#d79293",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Venezia 20",
+    "hex": "#fbb0af",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Grenadin 20",
+    "hex": "#a08a88",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Grenadin 50",
+    "hex": "#ae8e8b",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Grenadin 80",
+    "hex": "#be918b",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Grenadin 110",
+    "hex": "#ce958e",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Grenadin 150",
+    "hex": "#f7deda",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Bordeaux 30",
+    "hex": "#f0e4e0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Bordeaux 60",
+    "hex": "#edc1ba",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Bordeaux 90",
+    "hex": "#ffdad2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Magma 30",
+    "hex": "#d9cdc9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Magma 60",
+    "hex": "#e4d2ce",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Magma 90",
+    "hex": "#ecd5cf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Grenadin 145",
+    "hex": "#e9b8b2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Bordeaux 25",
+    "hex": "#ddd0cd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Bordeaux 55",
+    "hex": "#d39d96",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Bordeaux 85",
+    "hex": "#ff9b8d",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Magma 25",
+    "hex": "#baaaa6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Magma 55",
+    "hex": "#c9afa9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Magma 85",
+    "hex": "#d6b2ab",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Grenadin 140",
+    "hex": "#db958e",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Bordeaux 20",
+    "hex": "#c6b0ac",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Magma 50",
+    "hex": "#b19189",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Magma 80",
+    "hex": "#c0958a",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Bordeaux 15",
+    "hex": "#bba19c",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Bordeaux 10",
+    "hex": "#b9928a",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Magma 120",
+    "hex": "#f6dad3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Magma 150",
+    "hex": "#feddd5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Cameo 30",
+    "hex": "#f1eae7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Cameo 60",
+    "hex": "#faece9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Cameo 90",
+    "hex": "#fce2db",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Cameo 120",
+    "hex": "#ffdfd5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Cameo 150",
+    "hex": "#ffe4dc",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Magma 115",
+    "hex": "#e2b5ad",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Magma 145",
+    "hex": "#f3bbb1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Cameo 25",
+    "hex": "#eae2e0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Cameo 55",
+    "hex": "#e5d1ce",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Cameo 85",
+    "hex": "#edcfc9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Cameo 115",
+    "hex": "#f0c4bb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Cameo 145",
+    "hex": "#f7b6a5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Magma 110",
+    "hex": "#d1998c",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Magma 140",
+    "hex": "#e49e90",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Cameo 20",
+    "hex": "#ddcdc8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Cameo 50",
+    "hex": "#c6aea7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Cameo 80",
+    "hex": "#dbb9af",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Cameo 110",
+    "hex": "#dfaa9c",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Cameo 140",
+    "hex": "#f7a48f",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Magma 105",
+    "hex": "#c17f70",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Cameo 15",
+    "hex": "#ccc3c0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Cameo 45",
+    "hex": "#bca098",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Cameo 180",
+    "hex": "#ffc7b6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lachs 30",
+    "hex": "#fee7de",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lachs 60",
+    "hex": "#ffd9cb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lachs 90",
+    "hex": "#ffd2be",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lachs 120",
+    "hex": "#ffa082",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Aprico 30",
+    "hex": "#f0e8e5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Aprico 60",
+    "hex": "#fee2d4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Cameo 175",
+    "hex": "#ff9f88",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Lachs 25",
+    "hex": "#faded5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lachs 55",
+    "hex": "#eebaad",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lachs 85",
+    "hex": "#ffc2aa",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Aprico 25",
+    "hex": "#ece3e0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Aprico 55",
+    "hex": "#f1cfc2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lachs 20",
+    "hex": "#efcdc1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Lachs 50",
+    "hex": "#dea18e",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Aprico 20",
+    "hex": "#ddd1cb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Aprico 50",
+    "hex": "#e0c0b3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lachs 15",
+    "hex": "#e2beb1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Lachs 45",
+    "hex": "#cca092",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Aprico 15",
+    "hex": "#d4c4bc",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Aprico 45",
+    "hex": "#d7ad9f",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Lachs 10",
+    "hex": "#d4ada0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Lachs 40",
+    "hex": "#c09080",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Lachs 5",
+    "hex": "#be988c",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Aprico 90",
+    "hex": "#f9cdbd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Aprico 120",
+    "hex": "#eeaa8e",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Aprico 150",
+    "hex": "#ffb490",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Aprico 180",
+    "hex": "#fde4d8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Papaya 30",
+    "hex": "#decdc7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Papaya 60",
+    "hex": "#e7d1c6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Papaya 90",
+    "hex": "#f2d7c9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Aprico 85",
+    "hex": "#e7bcab",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Aprico 115",
+    "hex": "#f1a785",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Aprico 175",
+    "hex": "#ffd8c6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Papaya 25",
+    "hex": "#c1afa8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Papaya 55",
+    "hex": "#d2b4a6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Papaya 85",
+    "hex": "#e2bba8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Aprico 80",
+    "hex": "#eabaa6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Aprico 110",
+    "hex": "#e39977",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Aprico 170",
+    "hex": "#ffbf9e",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Aprico 75",
+    "hex": "#e7ae94",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Aprico 70",
+    "hex": "#bd9382",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Papaya 120",
+    "hex": "#fcdac9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Papaya 150",
+    "hex": "#ffddc9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Ceramic 30",
+    "hex": "#d7c5bd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Ceramic 60",
+    "hex": "#fbe0d1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Ceramic 90",
+    "hex": "#f9ebe5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Amber 30",
+    "hex": "#decfc8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Amber 60",
+    "hex": "#e8d3c6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Papaya 115",
+    "hex": "#f4c2a6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Papaya 145",
+    "hex": "#ffc9a9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Ceramic 25",
+    "hex": "#c7b4a9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Ceramic 55",
+    "hex": "#e0c4b3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Ceramic 85",
+    "hex": "#fbdfcf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Amber 25",
+    "hex": "#bfb1a7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Amber 55",
+    "hex": "#d2b7a6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Papaya 110",
+    "hex": "#eaac89",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Ceramic 20",
+    "hex": "#bba598",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Ceramic 50",
+    "hex": "#e1bca5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Ceramic 80",
+    "hex": "#fed6bb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Amber 20",
+    "hex": "#aa978c",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Amber 50",
+    "hex": "#c19f89",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Ceramic 15",
+    "hex": "#bfa291",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Ceramic 45",
+    "hex": "#e1b9a3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Ceramic 75",
+    "hex": "#f5ccb0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Amber 90",
+    "hex": "#f2d7c5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Amber 120",
+    "hex": "#fddbc3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Amber 150",
+    "hex": "#ffdfc2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Siena 30",
+    "hex": "#ebe4e0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Siena 60",
+    "hex": "#faeade",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Siena 90",
+    "hex": "#eccdb7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Siena 120",
+    "hex": "#f9e2d0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Amber 85",
+    "hex": "#e2bea2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Amber 115",
+    "hex": "#f3c5a0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Amber 145",
+    "hex": "#ffcb9e",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Siena 25",
+    "hex": "#dcd3cf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Siena 55",
+    "hex": "#e6d2c3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Siena 85",
+    "hex": "#cfb4a0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Siena 115",
+    "hex": "#f6d8c1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Amber 80",
+    "hex": "#d7a885",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Amber 110",
+    "hex": "#ecb283",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Amber 140",
+    "hex": "#ffbd80",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Siena 20",
+    "hex": "#c1b5af",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Siena 50",
+    "hex": "#d9c9bd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Siena 80",
+    "hex": "#b29279",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Siena 110",
+    "hex": "#f0c6ab",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Amber 75",
+    "hex": "#cc946a",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Siena 15",
+    "hex": "#a6988e",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Siena 45",
+    "hex": "#c1ac9e",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Siena 105",
+    "hex": "#ddb89e",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Siena 100",
+    "hex": "#dcb499",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Siena 150",
+    "hex": "#ffe5d5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Siena 180",
+    "hex": "#ffd09a",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Onyx 30",
+    "hex": "#e3dddb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Onyx 60",
+    "hex": "#f3ebe3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Onyx 90",
+    "hex": "#faecde",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Onyx 120",
+    "hex": "#fbe9d8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Onyx 150",
+    "hex": "#ffe4ce",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Siena 145",
+    "hex": "#fedbbf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Siena 175",
+    "hex": "#ffc38d",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Onyx 25",
+    "hex": "#d4cbc7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Onyx 55",
+    "hex": "#e3dad1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Onyx 85",
+    "hex": "#eee1d5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Onyx 115",
+    "hex": "#ebd2ba",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Onyx 145",
+    "hex": "#f6d8ba",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Siena 140",
+    "hex": "#ffcba0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Siena 170",
+    "hex": "#ffb670",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Onyx 20",
+    "hex": "#d5cac4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Onyx 50",
+    "hex": "#ded2c8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Onyx 80",
+    "hex": "#e6d2c0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Onyx 110",
+    "hex": "#dfc2a4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Onyx 140",
+    "hex": "#ecc9a4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Siena 135",
+    "hex": "#e0ad82",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Onyx 15",
+    "hex": "#c7beb9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Onyx 75",
+    "hex": "#e3cab6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Onyx 135",
+    "hex": "#e2b88d",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Onyx 10",
+    "hex": "#c1b7b0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Onyx 70",
+    "hex": "#cebcab",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Onyx 180",
+    "hex": "#ffdfbe",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Onyx 210",
+    "hex": "#f9eee5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Onyx 240",
+    "hex": "#ffd093",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Marill 30",
+    "hex": "#ded4c9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Marill 60",
+    "hex": "#e8d9c9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Marill 90",
+    "hex": "#f1dec7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Marill 120",
+    "hex": "#ffe3c3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Onyx 175",
+    "hex": "#fbcd9d",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Onyx 205",
+    "hex": "#ffd39e",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Marill 25",
+    "hex": "#c1b4a8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Marill 55",
+    "hex": "#cdb9a2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Marill 85",
+    "hex": "#e2c5a1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Marill 115",
+    "hex": "#f3ce9d",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Onyx 170",
+    "hex": "#f2be85",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Marill 150",
+    "hex": "#ffe4b8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Palazzo 30",
+    "hex": "#ebe5e0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Palazzo 60",
+    "hex": "#f0e6de",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Palazzo 90",
+    "hex": "#f6ecdf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Palazzo 120",
+    "hex": "#eddfce",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Palazzo 150",
+    "hex": "#e0ceb6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Palazzo 180",
+    "hex": "#fcead2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Marill 145",
+    "hex": "#ffd99a",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Palazzo 25",
+    "hex": "#dad4ce",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Palazzo 55",
+    "hex": "#e2d7cd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Palazzo 85",
+    "hex": "#c3b8ab",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Palazzo 115",
+    "hex": "#d8cdc1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Palazzo 145",
+    "hex": "#c5b49f",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Palazzo 175",
+    "hex": "#e9d2b2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Marill 140",
+    "hex": "#ffd387",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Palazzo 20",
+    "hex": "#c8c3be",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Palazzo 50",
+    "hex": "#d1c8bd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Palazzo 80",
+    "hex": "#9f968a",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Palazzo 110",
+    "hex": "#b4a99c",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Palazzo 140",
+    "hex": "#ac9b85",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Palazzo 170",
+    "hex": "#cebb9c",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Palazzo 15",
+    "hex": "#bbb7b1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Palazzo 45",
+    "hex": "#bcb5ac",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Palazzo 10",
+    "hex": "#aea9a2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Palazzo 40",
+    "hex": "#ada59d",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Palazzo 210",
+    "hex": "#fae6c6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Palazzo 240",
+    "hex": "#faeedb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Palazzo 270",
+    "hex": "#ffde9f",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Palazzo 300",
+    "hex": "#ffdc91",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Palazzo 330",
+    "hex": "#ffd97c",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Curcuma 30",
+    "hex": "#e2dacf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Palazzo 205",
+    "hex": "#e1c299",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Palazzo 235",
+    "hex": "#fddeb2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Palazzo 265",
+    "hex": "#f9ce8c",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Curcuma 25",
+    "hex": "#c6baaa",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Palazzo 200",
+    "hex": "#c4aa85",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Palazzo 230",
+    "hex": "#f5d19d",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Palazzo 260",
+    "hex": "#e0b97c",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Palazzo 220",
+    "hex": "#c8ab7b",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Curcuma 60",
+    "hex": "#e9decc",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Curcuma 90",
+    "hex": "#f0e1c8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Curcuma 120",
+    "hex": "#ffe9c2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Ginster 30",
+    "hex": "#f2ebe4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Ginster 60",
+    "hex": "#f6e6cf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Ginster 90",
+    "hex": "#fdeed2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Ginster 120",
+    "hex": "#ffebc3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Curcuma 55",
+    "hex": "#d6c6a9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Curcuma 85",
+    "hex": "#e9d1a6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Curcuma 115",
+    "hex": "#fddfa0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Ginster 25",
+    "hex": "#ece4db",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Ginster 55",
+    "hex": "#e3d5be",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Ginster 85",
+    "hex": "#f1deb9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Ginster 115",
+    "hex": "#f5dcad",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Curcuma 50",
+    "hex": "#c5b087",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Ginster 20",
+    "hex": "#dcd3c8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Ginster 50",
+    "hex": "#d3c5ad",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Ginster 80",
+    "hex": "#dfcba4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Ginster 110",
+    "hex": "#f2d492",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Ginster 100",
+    "hex": "#e6c37e",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Ginster 95",
+    "hex": "#d9bb88",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Ginster 150",
+    "hex": "#ffe399",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Curry 30",
+    "hex": "#fbf3e1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Curry 60",
+    "hex": "#fcf3dc",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Curry 90",
+    "hex": "#fff1c8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Curry 120",
+    "hex": "#ffebb0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Curry 150",
+    "hex": "#ffec9b",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Citrus 30",
+    "hex": "#e6e0d1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Curry 25",
+    "hex": "#f3eada",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Curry 55",
+    "hex": "#f7eacf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Curry 85",
+    "hex": "#fbeabf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Curry 115",
+    "hex": "#f7de90",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Curry 20",
+    "hex": "#e6ddce",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Curry 50",
+    "hex": "#e8dbb9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Curry 80",
+    "hex": "#f0dcaf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Curry 110",
+    "hex": "#efd591",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Curry 15",
+    "hex": "#ddd4c1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Curry 45",
+    "hex": "#d8c79a",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Curry 75",
+    "hex": "#e2ce99",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Curry 10",
+    "hex": "#cbc1a8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Curry 40",
+    "hex": "#bfab7a",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Curry 70",
+    "hex": "#d3bf7d",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Citrus 60",
+    "hex": "#f0e5c7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Citrus 90",
+    "hex": "#fbeebf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Citrus 120",
+    "hex": "#ffefaf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Melisse 30",
+    "hex": "#f9f1dd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Melisse 60",
+    "hex": "#f7f2e5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Melisse 90",
+    "hex": "#faf0d3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Melisse 120",
+    "hex": "#fbefc3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Citrus 55",
+    "hex": "#dbcfa5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Citrus 85",
+    "hex": "#f3e3a0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Citrus 115",
+    "hex": "#fbe894",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Melisse 25",
+    "hex": "#f2e9d9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Melisse 55",
+    "hex": "#f2e9d4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Melisse 85",
+    "hex": "#f9e9b2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Citrus 50",
+    "hex": "#c9bc88",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Citrus 80",
+    "hex": "#ebd886",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Melisse 20",
+    "hex": "#ede7e2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Melisse 50",
+    "hex": "#e7dfc5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Melisse 80",
+    "hex": "#dacd97",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Melisse 15",
+    "hex": "#eae4db",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Melisse 45",
+    "hex": "#ded6bc",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Melisse 10",
+    "hex": "#dad4cb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Melisse 40",
+    "hex": "#ccc6aa",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Melisse 5",
+    "hex": "#cac4ba",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Soja 30",
+    "hex": "#faf1df",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Tundra 30",
+    "hex": "#f4ece0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Tundra 60",
+    "hex": "#f9f4e7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Tundra 90",
+    "hex": "#e4dbba",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Tundra 120",
+    "hex": "#d6cd91",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Tundra 150",
+    "hex": "#f7f0b9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Mai 30",
+    "hex": "#f6efe5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Soja 25",
+    "hex": "#f5efd9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Tundra 25",
+    "hex": "#e4ded0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Tundra 55",
+    "hex": "#f1e9d5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Mai 25",
+    "hex": "#ddd8cd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Soja 20",
+    "hex": "#f5eed1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Tundra 20",
+    "hex": "#bbb6a9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Tundra 50",
+    "hex": "#dbd6c5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Mai 20",
+    "hex": "#c4bfb5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Soja 15",
+    "hex": "#eae3cc",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Soja 10",
+    "hex": "#ccc6b6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Tundra 40",
+    "hex": "#bdb799",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Soja 5",
+    "hex": "#bbb39d",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Mai 60",
+    "hex": "#f8f1da",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Jade 30",
+    "hex": "#f2ece8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Jade 60",
+    "hex": "#f1ece1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Jade 90",
+    "hex": "#f1edd8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Jade 120",
+    "hex": "#e7eda7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Pinie 30",
+    "hex": "#dcdbd0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Mai 55",
+    "hex": "#e7dfc7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Jade 25",
+    "hex": "#e1dcd7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Jade 55",
+    "hex": "#d9d5cd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Jade 85",
+    "hex": "#e0dfc4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Jade 115",
+    "hex": "#dae1ab",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Pinie 25",
+    "hex": "#bdbdaf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Mai 50",
+    "hex": "#cbc7b0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Jade 20",
+    "hex": "#d8d4ce",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Jade 50",
+    "hex": "#c9c6bd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Jade 80",
+    "hex": "#cbd0af",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Jade 110",
+    "hex": "#d6d9a9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Jade 15",
+    "hex": "#d0cdc6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Jade 45",
+    "hex": "#bcbaac",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Jade 75",
+    "hex": "#b8b8a0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Jade 5",
+    "hex": "#aaa9a3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Pinie 60",
+    "hex": "#e0e1ca",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Pinie 90",
+    "hex": "#dfe6c8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Pinie 120",
+    "hex": "#e4ecc1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Moos 30",
+    "hex": "#ece7e1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Moos 60",
+    "hex": "#e0e1d3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Moos 90",
+    "hex": "#efeedd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Oase 30",
+    "hex": "#e7e6df",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Pinie 55",
+    "hex": "#c2c7aa",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Pinie 85",
+    "hex": "#c6d0a5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Moos 25",
+    "hex": "#d4d3cd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Moos 55",
+    "hex": "#cfcec6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Moos 85",
+    "hex": "#d2d7be",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Oase 25",
+    "hex": "#d7d7cd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Moos 50",
+    "hex": "#bbbaaf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Moos 80",
+    "hex": "#c2c8b2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Oase 20",
+    "hex": "#c3c7bd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Moos 45",
+    "hex": "#b5b4ad",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Moos 75",
+    "hex": "#aaae99",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Oase 15",
+    "hex": "#a5a89d",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Oase 60",
+    "hex": "#edeee6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Oase 90",
+    "hex": "#e7e9dc",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Oase 120",
+    "hex": "#e7f3d7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Agave 30",
+    "hex": "#f0eee6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Agave 60",
+    "hex": "#f4f2eb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Agave 90",
+    "hex": "#e5e9e1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Oase 55",
+    "hex": "#d5d7cd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Oase 85",
+    "hex": "#d1d8c7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Agave 25",
+    "hex": "#d4d5cf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Agave 55",
+    "hex": "#e8eae3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Agave 85",
+    "hex": "#cfd9ca",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Oase 50",
+    "hex": "#adb9a3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Oase 80",
+    "hex": "#c1c9b6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Agave 20",
+    "hex": "#c5c5bf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Agave 50",
+    "hex": "#dbded4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Agave 80",
+    "hex": "#c2dbc1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Agave 45",
+    "hex": "#c2c7bd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Agave 75",
+    "hex": "#abbca7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Agave 70",
+    "hex": "#9dbe97",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Agave 65",
+    "hex": "#899e82",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Agave 120",
+    "hex": "#e8f2e4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Malachit 30",
+    "hex": "#d2d8d1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Malachit 60",
+    "hex": "#d2dfd5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Malachit 90",
+    "hex": "#d2e6d7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Malachit 120",
+    "hex": "#d3eedb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Mint 30",
+    "hex": "#f0ede8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Agave 115",
+    "hex": "#ddedd6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Mint 25",
+    "hex": "#e1e1dc",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Agave 110",
+    "hex": "#c6e7c1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Mint 20",
+    "hex": "#d1d4ce",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Mint 15",
+    "hex": "#bfc7bf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Mint 10",
+    "hex": "#9ea69f",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Mint 60",
+    "hex": "#e2e8de",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Patina 30",
+    "hex": "#efedea",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Patina 60",
+    "hex": "#c4d9d3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Patina 90",
+    "hex": "#e7ede8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Verona 30",
+    "hex": "#eeede8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Verona 60",
+    "hex": "#e1e6e2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Mint 55",
+    "hex": "#b9c9be",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Patina 25",
+    "hex": "#d0d5d2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Patina 55",
+    "hex": "#a7bdb8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Verona 25",
+    "hex": "#e5e4df",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Verona 55",
+    "hex": "#d0d6d5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Mint 50",
+    "hex": "#9cafa6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Patina 20",
+    "hex": "#bac7c2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Verona 20",
+    "hex": "#d5d5d3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Verona 50",
+    "hex": "#bcbfbd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Mint 45",
+    "hex": "#849e8e",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Patina 15",
+    "hex": "#aab9b4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Verona 15",
+    "hex": "#ced0cc",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Verona 45",
+    "hex": "#acb2b1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Verona 10",
+    "hex": "#c5c5c2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Verona 40",
+    "hex": "#88908f",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Verona 5",
+    "hex": "#a7a9a8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Verona 90",
+    "hex": "#e0ede9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Verona 120",
+    "hex": "#d1eae8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Verona 150",
+    "hex": "#aadddf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Arctis 30",
+    "hex": "#e5e5e4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Arctis 60",
+    "hex": "#e3e8e7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Arctis 90",
+    "hex": "#cadade",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Arctis 120",
+    "hex": "#bbdfec",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Verona 85",
+    "hex": "#c8d6d3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Arctis 25",
+    "hex": "#d2d6d7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Arctis 55",
+    "hex": "#bfc7c8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Arctis 85",
+    "hex": "#bbd6de",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Arctis 115",
+    "hex": "#a2c9d5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Verona 80",
+    "hex": "#a0acac",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Arctis 20",
+    "hex": "#b1b7ba",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Arctis 50",
+    "hex": "#9ea9ac",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Arctis 80",
+    "hex": "#b6c8cd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Arctis 75",
+    "hex": "#9abac5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Coelin 30",
+    "hex": "#f1f1f2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Coelin 60",
+    "hex": "#e7eef2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Coelin 90",
+    "hex": "#d3e8ef",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Coelin 120",
+    "hex": "#b1d3e2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Pacific 30",
+    "hex": "#dadcdc",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Pacific 60",
+    "hex": "#e2e4e4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Pacific 90",
+    "hex": "#e7eded",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Coelin 25",
+    "hex": "#e8e8ea",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Coelin 55",
+    "hex": "#dfe4e7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Coelin 85",
+    "hex": "#b8d6e5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Coelin 115",
+    "hex": "#8ccae6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Pacific 25",
+    "hex": "#c5c4c5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Pacific 55",
+    "hex": "#cbced0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Pacific 85",
+    "hex": "#dbe3e4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Coelin 20",
+    "hex": "#dedddc",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Coelin 50",
+    "hex": "#ced4d9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Coelin 80",
+    "hex": "#a7c9d9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Pacific 50",
+    "hex": "#b8bdc0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Pacific 80",
+    "hex": "#b8c5cc",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Coelin 15",
+    "hex": "#cdcdcf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Coelin 45",
+    "hex": "#bdc7cc",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Pacific 75",
+    "hex": "#9daab3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Coelin 10",
+    "hex": "#bdc0c3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Coelin 40",
+    "hex": "#afb9bf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Coelin 5",
+    "hex": "#adb0b4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Coelin 35",
+    "hex": "#9da9b2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Pacific 120",
+    "hex": "#b8cad5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Pacific 150",
+    "hex": "#abcadc",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Pacific 180",
+    "hex": "#9acce7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Lago 30",
+    "hex": "#cdcfd1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Lago 60",
+    "hex": "#d1d8df",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lago 90",
+    "hex": "#d1dee8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lago 120",
+    "hex": "#d5e6f4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Pacific 115",
+    "hex": "#afc7d5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Pacific 145",
+    "hex": "#90a9ba",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Lago 25",
+    "hex": "#a9adb1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Lago 55",
+    "hex": "#acb7c0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Lago 85",
+    "hex": "#aabdcc",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Lago 115",
+    "hex": "#a9c4d9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Pacific 110",
+    "hex": "#7b8c9a",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Lago 50",
+    "hex": "#8c99a5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Lago 80",
+    "hex": "#879fb1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Lago 110",
+    "hex": "#86a7c2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Pacific 105",
+    "hex": "#7c91a2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Lazur 30",
+    "hex": "#e9e7e5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lazur 60",
+    "hex": "#f1efee",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lazur 90",
+    "hex": "#c2c9d6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Lazur 120",
+    "hex": "#bac8da",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Lazur 150",
+    "hex": "#9caac0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Lazur 180",
+    "hex": "#9fb5d2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Lazur 25",
+    "hex": "#d4d3d3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lazur 55",
+    "hex": "#ebeaea",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lazur 85",
+    "hex": "#9ea7b4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Lazur 115",
+    "hex": "#a6b5c8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Lazur 145",
+    "hex": "#95a8c5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Lazur 20",
+    "hex": "#c3c3c5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Lazur 50",
+    "hex": "#e6e4e4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lazur 80",
+    "hex": "#7f8a9c",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Lazur 15",
+    "hex": "#a6a9af",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Lazur 45",
+    "hex": "#dfe1e5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lazur 10",
+    "hex": "#8e939a",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Lazur 40",
+    "hex": "#d0d4db",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lazur 35",
+    "hex": "#bfc5cf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Saphir 30",
+    "hex": "#d0d1d4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Saphir 60",
+    "hex": "#d4d7dd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Saphir 90",
+    "hex": "#d9dde7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Saphir 120",
+    "hex": "#dce1f0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Aquarell 30",
+    "hex": "#efeae8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Aquarell 60",
+    "hex": "#eceaeb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Aquarell 90",
+    "hex": "#e4e8ef",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Saphir 25",
+    "hex": "#acadb4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Saphir 55",
+    "hex": "#b0b3c0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Saphir 85",
+    "hex": "#b4bbcc",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Saphir 115",
+    "hex": "#b5c0d7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Aquarell 25",
+    "hex": "#e7e4e3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Aquarell 55",
+    "hex": "#e3e2e6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Aquarell 85",
+    "hex": "#cdd0e3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Saphir 20",
+    "hex": "#8e9199",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Aquarell 20",
+    "hex": "#d6d4d5",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Aquarell 50",
+    "hex": "#d4d4d9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Aquarell 80",
+    "hex": "#bcc2d6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Saphir 15",
+    "hex": "#72767f",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Aquarell 15",
+    "hex": "#c7c5cb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Aquarell 45",
+    "hex": "#c3c5ce",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Aquarell 75",
+    "hex": "#9fa7bd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Aquarell 10",
+    "hex": "#b8b8bd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Aquarell 40",
+    "hex": "#acaeb9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Aquarell 5",
+    "hex": "#979aa4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Aquarell 35",
+    "hex": "#a2a5b7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Aquarell 65",
+    "hex": "#6a7088",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Aquarell 120",
+    "hex": "#eeecee",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lavendel 30",
+    "hex": "#e8e4e7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lavendel 60",
+    "hex": "#e8e5ec",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lavendel 90",
+    "hex": "#a5a7c0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Lavendel 120",
+    "hex": "#e3e1ed",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lavendel 150",
+    "hex": "#cfd0eb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Aquarell 115",
+    "hex": "#e1e2ea",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lavendel 25",
+    "hex": "#d7d4d8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lavendel 55",
+    "hex": "#c7c6d2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Lavendel 85",
+    "hex": "#9899b1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Lavendel 115",
+    "hex": "#d3d0df",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Lavendel 145",
+    "hex": "#cacbe2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Aquarell 110",
+    "hex": "#b3c1e1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Lavendel 20",
+    "hex": "#c7c4ca",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Lavendel 50",
+    "hex": "#9c9ba7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Lavendel 140",
+    "hex": "#bfc0e2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Aquarell 105",
+    "hex": "#9ab1dd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Lavendel 15",
+    "hex": "#b7b5bf",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Lavendel 105",
+    "hex": "#afb1cc",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Lavendel 10",
+    "hex": "#a9a7b2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Lavendel 130",
+    "hex": "#a5a8c8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Velvet 30",
+    "hex": "#d3cfd3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Velvet 60",
+    "hex": "#dad4db",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Velvet 90",
+    "hex": "#e0d9e3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Velvet 120",
+    "hex": "#e7dfea",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Viola 30",
+    "hex": "#f0ebe7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Viola 60",
+    "hex": "#f5e9eb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Viola 90",
+    "hex": "#e7d0df",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Velvet 25",
+    "hex": "#b2aeb4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Velvet 55",
+    "hex": "#b9b3bd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Velvet 85",
+    "hex": "#beb8c7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Viola 25",
+    "hex": "#e8e3e0",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Viola 55",
+    "hex": "#dfd0d7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Viola 85",
+    "hex": "#c8adc6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Velvet 20",
+    "hex": "#958c98",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Velvet 50",
+    "hex": "#9a93a3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Velvet 80",
+    "hex": "#a098af",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Viola 20",
+    "hex": "#d9d2d4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Viola 50",
+    "hex": "#c3b2bd",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Viola 15",
+    "hex": "#bcb4b9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Viola 45",
+    "hex": "#a794a4",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Flamenco 30",
+    "hex": "#f2eae6",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Flamenco 60",
+    "hex": "#f0e5e2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Flamenco 90",
+    "hex": "#f9e9e7",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Flamenco 120",
+    "hex": "#fadfe2",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Flamenco 150",
+    "hex": "#fbcdd9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Flamenco 25",
+    "hex": "#e3dcdb",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "medium"
+  },
+  {
+    "code": "Flamenco 55",
+    "hex": "#d6c5c8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Flamenco 20",
+    "hex": "#ddd3d1",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "light"
+  },
+  {
+    "code": "Flamenco 50",
+    "hex": "#baa7ac",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Flamenco 80",
+    "hex": "#c0a4a8",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Flamenco 15",
+    "hex": "#cfc3c3",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Flamenco 45",
+    "hex": "#ad969b",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  },
+  {
+    "code": "Flamenco 10",
+    "hex": "#b4a6a9",
+    "palette": "CAPAROL 3D SYSTEM PLUS",
+    "tone": "Caparol 3D",
+    "tier": "dark"
+  }
+]
