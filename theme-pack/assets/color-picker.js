@@ -3,7 +3,7 @@ import { tierMapping } from "./color-picker-utils.js";
 
 // Build marker — lets us confirm from the console whether the latest asset is the
 // one the browser actually loaded (theme-editor/CDN caching can serve a stale one).
-window.__cpHideVersion = 3;
+window.__cpHideVersion = 4;
 
 // Shades are injected per product via Liquid (window.__paintData.shades). If the
 // product has no colours yet, the picker renders with an empty palette — we never
@@ -569,11 +569,18 @@ function populateTones(paletteVal) {
     return;
   }
 
+  // Colour count per tone, shown in the dropdown as e.g. "Gialli (526)". The
+  // option's value stays the raw tone name so filtering is unaffected.
+  const counts = {};
+  SHADES.forEach((s) => {
+    if (s.palette === paletteVal) counts[s.tone] = (counts[s.tone] || 0) + 1;
+  });
+
   const tones = Array.from(TONES_BY_PALETTE[paletteVal] || []);
   tones.forEach((tone) => {
     const opt = document.createElement("option");
     opt.value = tone;
-    opt.textContent = tone;
+    opt.textContent = `${tone} (${counts[tone] || 0})`;
     toneSelect.appendChild(opt);
   });
   toneSelect.disabled = false;
