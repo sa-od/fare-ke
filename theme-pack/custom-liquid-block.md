@@ -75,10 +75,10 @@ flash before JS runs).
   </script>
 
   <div class="cp-picker">
-    <span class="cp-picker__label">Color Code</span>
+    <span class="cp-picker__label">Codice colore</span>
     <div class="cp-btn-row">
-      <button type="button" id="select-base-color" class="cp-btn cp-btn--white">White</button>
-      <button type="button" id="open-shade-modal" class="cp-btn cp-btn--custom" data-default-label="Colored">Colored</button>
+      <button type="button" id="select-base-color" class="cp-btn cp-btn--white">Bianco</button>
+      <button type="button" id="open-shade-modal" class="cp-btn cp-btn--custom" data-default-label="Colorato">Colorato</button>
     </div>
     <p class="cp-error" id="pk-error" role="alert" hidden></p>
   </div>
@@ -96,7 +96,8 @@ customer never sees the tier selector; the picker drives it behind the scenes.
 
 ## Notes
 - Labels/colours are hardcoded here. For editable settings, use the
-  `sections/paint-picker.liquid` section instead (it uses the `paint` namespace).
+  `sections/paint-picker.liquid` section instead — it reads the same `custom`
+  namespace and also includes the server-rendered tier hiding.
 - Renders only when `custom.enabled` is true.
 - `:has()` is supported in all current major browsers; very old browsers would
   just show the tier selector (the JS in `color-picker.js` also hides it as a

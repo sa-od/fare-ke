@@ -2,16 +2,20 @@
   Paint Picker — no-app theme section.
 
   Reads the product's linked palette "packs" (paint_palette metaobjects) and
-  renders the colour picker. Requires:
-    - the paint_palette metaobject + paint.* product metafields
-      (see theme-pack/setup/definitions.graphql)
+  renders the colour picker. Reads metafields from the "custom" namespace (the
+  one Shopify uses for metafields created by hand in the admin). Requires:
+    - the paint_palette metaobject + custom.* product metafields
+      (palettes, enabled, variant_config — Storefront access ON)
     - the assets color-picker.js, color-picker-utils.js and color-picker.css
       copied into the theme's /assets folder.
 
-  Renders only on products where paint.enabled is true.
+  Renders only on products where custom.enabled is true.
+
+  Also hides the theme's tier selector with server-rendered CSS (driven by the
+  product's real tier values), so there's no flash before the JS runs.
 {% endcomment %}
 
-{% if product.metafields.paint.enabled.value %}
+{% if product.metafields.custom.enabled.value %}
   {{ 'color-picker.css' | asset_url | stylesheet_tag }}
 
   <style>
@@ -23,12 +27,39 @@
     }
   </style>
 
-  {% assign packs = product.metafields.paint.palettes.value %}
+  {%- liquid
+    # Find the tier option (by variant_config.tierOption, falling back to the
+    # 2nd option) so we can hide the theme's tier selector before JS runs.
+    assign tier_cfg = product.metafields.custom.variant_config.value
+    assign tier_name = tier_cfg.tierOption
+    assign tier_opt = null
+    if tier_name != blank
+      for opt in product.options_with_values
+        if opt.name == tier_name
+          assign tier_opt = opt
+          break
+        endif
+      endfor
+    endif
+    if tier_opt == null and product.options.size > 1
+      assign tier_opt = product.options_with_values[1]
+    endif
+  -%}
+  {%- if tier_opt and tier_opt.values.size > 0 -%}
+  <style>
+    {%- for v in tier_opt.values -%}
+    {%- assign ev = v | strip | replace: '"', '\"' -%}
+    :is(fieldset,.variant-option,.product-form__input,.product-form__input--pill,.product-form__option,.variant-input-wrap,.selector-wrapper,[data-option-index],[data-option-name],[data-fieldset-index]):has(:is([value="{{ ev }}"],[data-value="{{ ev }}"],[data-option-value="{{ ev }}"])){display:none!important;}
+    {%- endfor -%}
+  </style>
+  {%- endif -%}
+
+  {% assign packs = product.metafields.custom.palettes.value %}
   <script>
     window.__paintData = {
       variants:    {{ product.variants | json }},
       optionNames: {{ product.options | json }},
-      tierConfig:  {{ product.metafields.paint.variant_config.value | json }},
+      tierConfig:  {{ product.metafields.custom.variant_config.value | json }},
       // Flatten each linked pack's colours JSON into one list of shades.
       shades: [
         {% for pack in packs %}{{ pack.colours.value | json }}{% unless forloop.last %},{% endunless %}{% endfor %}
@@ -63,16 +94,16 @@
 
 {% schema %}
 {
-  "name": "Paint Picker",
+  "name": "Selettore colore vernice",
   "settings": [
-    { "type": "text", "id": "control_label", "label": "Control heading", "default": "Color Code" },
-    { "type": "text", "id": "white_label", "label": "Base (white) button label", "default": "White" },
-    { "type": "text", "id": "button_label", "label": "Colour picker button label", "default": "Colored" },
-    { "type": "color", "id": "white_btn_color", "label": "Base button colour", "default": "#ffffff" },
-    { "type": "color", "id": "custom_btn_color", "label": "Colour picker button colour", "default": "#1a6faf" },
-    { "type": "color", "id": "accent_color", "label": "Accent colour", "default": "#1a6faf" },
-    { "type": "color", "id": "text_color", "label": "Text colour", "default": "#333333" }
+    { "type": "text", "id": "control_label", "label": "Intestazione del controllo", "default": "Codice colore" },
+    { "type": "text", "id": "white_label", "label": "Etichetta pulsante base (bianco)", "default": "Bianco" },
+    { "type": "text", "id": "button_label", "label": "Etichetta pulsante selettore colore", "default": "Colorato" },
+    { "type": "color", "id": "white_btn_color", "label": "Colore pulsante base", "default": "#ffffff" },
+    { "type": "color", "id": "custom_btn_color", "label": "Colore pulsante selettore colore", "default": "#1a6faf" },
+    { "type": "color", "id": "accent_color", "label": "Colore accento", "default": "#1a6faf" },
+    { "type": "color", "id": "text_color", "label": "Colore del testo", "default": "#333333" }
   ],
-  "presets": [{ "name": "Paint Picker" }]
+  "presets": [{ "name": "Selettore colore vernice" }]
 }
 {% endschema %}

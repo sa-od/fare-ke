@@ -304,7 +304,7 @@
 }
 
 #shade-grid:empty::after {
-  content: "Select a palette to see shades";
+  content: "Seleziona una palette per vedere le tonalità";
   display: block;
 }
 

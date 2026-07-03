@@ -77,7 +77,7 @@ function resolveVariant() {
     : tierMapping[shade.tier];
   if (!tierValue) {
     window.__paintState.variantId = null;
-    showError(`“${shade.code}” has no matching price tier on this product.`);
+    showError(`“${shade.code}” non ha una fascia di prezzo corrispondente per questo prodotto.`);
     return;
   }
 
@@ -103,7 +103,7 @@ function resolveVariant() {
     // instead of silently adding the wrong variant on submit.
     window.__paintState.variantId = null;
     showError(
-      `“${shade.code}” isn't available in the selected size. Pick another size or colour.`,
+      `“${shade.code}” non è disponibile nel formato selezionato. Scegli un altro formato o un altro colore.`,
     );
     return;
   }
@@ -430,40 +430,40 @@ function buildModal() {
   const overlay = document.createElement("div");
   overlay.id = OVERLAY_ID;
   overlay.innerHTML = `
-    <div id="shade-modal" role="dialog" aria-modal="true" aria-label="Choose paint shade">
+    <div id="shade-modal" role="dialog" aria-modal="true" aria-label="Scegli la tonalità di vernice">
       <div class="shade-modal__header">
         <div class="shade-modal__title">
-          <h2><span class="cp-blue">Choose the color</span> for your product!</h2>
-          <p>Select the filters you need from the menu on the right and click on a color to apply it to your product.</p>
+          <h2><span class="cp-blue">Scegli il colore</span> per il tuo prodotto!</h2>
+          <p>Seleziona i filtri di cui hai bisogno dal menu a destra e clicca su un colore per applicarlo al tuo prodotto.</p>
         </div>
         <div class="shade-modal__controls" id="shade-filters">
           <div class="shade-modal__select-group">
-            <label for="shade-palette-select">Palette (${paletteCount} Available)</label>
+            <label for="shade-palette-select">Palette (${paletteCount} disponibili)</label>
             <select id="shade-palette-select">
-              <option value="">Select palette</option>
+              <option value="">Seleziona palette</option>
               ${paletteOptions}
             </select>
           </div>
           <div class="shade-modal__select-group">
-            <label for="shade-tone-select">Tone</label>
+            <label for="shade-tone-select">Tonalità</label>
             <select id="shade-tone-select" disabled>
-              <option value="">Select shade</option>
+              <option value="">Seleziona tonalità</option>
             </select>
           </div>
-          <button type="button" id="shade-near-btn" class="shade-near-btn">NEAR</button>
+          <button type="button" id="shade-near-btn" class="shade-near-btn">CERCA</button>
         </div>
-        <button id="shade-close" aria-label="Close modal">&#x2715;</button>
+        <button id="shade-close" aria-label="Chiudi finestra">&#x2715;</button>
       </div>
       <div class="shade-modal__search" id="shade-search-view" hidden>
-        <button type="button" id="shade-back-btn" class="shade-back-btn">&larr; Back to filters</button>
+        <button type="button" id="shade-back-btn" class="shade-back-btn">&larr; Torna ai filtri</button>
         <div class="shade-search-row">
-          <input type="search" id="shade-search" placeholder="What are you looking for?" autocomplete="off" />
-          <button type="button" id="shade-search-start" class="shade-search-start">START</button>
+          <input type="search" id="shade-search" placeholder="Cosa stai cercando?" autocomplete="off" />
+          <button type="button" id="shade-search-start" class="shade-search-start">AVVIA</button>
         </div>
       </div>
-      <div id="shade-grid" role="listbox" aria-label="Color shades"></div>
+      <div id="shade-grid" role="listbox" aria-label="Tonalità di colore"></div>
       <div class="shade-modal__footer" id="shade-footer">
-        <span class="shade-no-selection">No shade selected</span>
+        <span class="shade-no-selection">Nessuna tonalità selezionata</span>
       </div>
     </div>
   `;
@@ -550,7 +550,7 @@ function closeModal({ clearState = false } = {}) {
   if (clearState) {
     window.__paintState = null;
     document.getElementById("shade-footer").innerHTML =
-      '<span class="shade-no-selection">No shade selected</span>';
+      '<span class="shade-no-selection">Nessuna tonalità selezionata</span>';
     document
       .querySelectorAll(".shade-chip--active")
       .forEach((c) => c.classList.remove("shade-chip--active"));
@@ -562,7 +562,7 @@ function closeModal({ clearState = false } = {}) {
 
 function populateTones(paletteVal) {
   const toneSelect = document.getElementById("shade-tone-select");
-  toneSelect.innerHTML = '<option value="">All shades</option>';
+  toneSelect.innerHTML = '<option value="">Tutte le tonalità</option>';
 
   if (!paletteVal) {
     toneSelect.disabled = true;
@@ -618,7 +618,7 @@ function renderGrid(shades) {
 
   if (!shades.length) {
     grid.innerHTML =
-      '<p class="shade-grid__empty">No colours match your search.</p>';
+      '<p class="shade-grid__empty">Nessun colore corrisponde alla tua ricerca.</p>';
     return;
   }
 
@@ -704,7 +704,7 @@ function updateColorButtons(shade) {
     customBtn.style.background   = "";
     customBtn.style.color        = "";
     customBtn.style.borderColor  = "";
-    customBtn.textContent        = customBtn.dataset.defaultLabel || "Colored";
+    customBtn.textContent        = customBtn.dataset.defaultLabel || "Colorato";
   }
 }
 
@@ -724,7 +724,7 @@ if (whiteBtn) {
     clearError();
     clearCartProperties();
     document.getElementById("shade-footer").innerHTML =
-      '<span class="shade-no-selection">No shade selected</span>';
+      '<span class="shade-no-selection">Nessuna tonalità selezionata</span>';
     document
       .querySelectorAll(".shade-chip--active")
       .forEach((c) => c.classList.remove("shade-chip--active"));
@@ -746,7 +746,7 @@ updateColorButtons(null);
 //      dynamic checkout / Buy-it-now buttons, which serialize the form).
 //   2. Injected into the /cart/add request body (covers AJAX carts, immune to the
 //      theme re-rendering the form on variant change).
-// "Colour" has no leading underscore so it shows in cart, checkout and the order;
+// "Colore" has no leading underscore so it shows in cart, checkout and the order;
 // "_hex" stays hidden for an optional swatch.
 
 function getCartForm() {
@@ -758,7 +758,7 @@ function currentPaintProperties() {
   const shade = window.__paintState?.shade;
   if (!shade) return null;
   return {
-    Colour: `${shade.palette} — ${shade.code}`,
+    Colore: `${shade.palette} — ${shade.code}`,
     _hex: shade.hex,
   };
 }
@@ -796,7 +796,7 @@ function syncCartProperties() {
 function clearCartProperties() {
   const form = getCartForm();
   if (!form) return;
-  ["Colour", "_hex"].forEach((key) =>
+  ["Colore", "_hex"].forEach((key) =>
     removeHiddenInput(form, `properties[${key}]`),
   );
 }
@@ -874,7 +874,7 @@ if (form) {
         e.preventDefault();
         e.stopImmediatePropagation();
         showError(
-          "This colour isn't available in the selected size. Please choose another.",
+          "Questo colore non è disponibile nel formato selezionato. Scegline un altro.",
         );
         return;
       }
