@@ -3,7 +3,7 @@ import { tierMapping } from "./color-picker-utils.js";
 
 // Build marker — lets us confirm from the console whether the latest asset is the
 // one the browser actually loaded (theme-editor/CDN caching can serve a stale one).
-window.__cpHideVersion = 4;
+window.__cpHideVersion = 5;
 
 // Shades are injected per product via Liquid (window.__paintData.shades). If the
 // product has no colours yet, the picker renders with an empty palette — we never
@@ -17,7 +17,8 @@ const TONES_BY_PALETTE = SHADES.reduce((acc, s) => {
 }, {});
 
 // ── STATE ─────────────────────────────────────────────────────────────────────
-// window.__paintState = { shade, variantId } — cleared on "White" click
+// window.__paintState = { shade, variantId } — or { white: true } on "White"
+// click, so the base colour still reaches the cart as a line-item property.
 // window.__paintData  = { variants, optionNames, shades, tierConfig } — from Liquid
 
 const OVERLAY_ID = "shade-overlay";
@@ -727,9 +728,9 @@ const whiteBtn = document.getElementById("select-base-color");
 if (whiteBtn) {
   whiteBtn.addEventListener("click", () => {
     if (_resolvingVariant) return;
-    window.__paintState = null;
+    window.__paintState = { white: true };
     clearError();
-    clearCartProperties();
+    syncCartProperties();
     document.getElementById("shade-footer").innerHTML =
       '<span class="shade-no-selection">Nessuna tonalità selezionata</span>';
     document
@@ -760,14 +761,24 @@ function getCartForm() {
   return document.querySelector('form[action*="/cart/add"]');
 }
 
-// The properties for the current selection, or null when no colour is chosen.
+// The properties for the current selection, or null when nothing is chosen yet.
+// The white value mirrors the button's visible label, so renaming the button in
+// the snippet/settings renames the cart property value too.
 function currentPaintProperties() {
-  const shade = window.__paintState?.shade;
-  if (!shade) return null;
-  return {
-    Colore: `${shade.palette} — ${shade.code}`,
-    _hex: shade.hex,
-  };
+  const state = window.__paintState;
+  if (state?.shade) {
+    return {
+      Colore: `${state.shade.palette} — ${state.shade.code}`,
+      _hex: state.shade.hex,
+    };
+  }
+  if (state?.white) {
+    const label = document
+      .getElementById("select-base-color")
+      ?.textContent.trim();
+    return { Colore: label || "Bianco", _hex: "#FFFFFF" };
+  }
+  return null;
 }
 
 function injectHiddenInput(form, name, value) {
@@ -853,8 +864,11 @@ function interceptCartAdd() {
     try {
       const url = typeof input === "string" ? input : input?.url;
       const props = currentPaintProperties();
+      // variantId is only set for shades; for White the theme's own picker
+      // already tracks the right variant, so we merge the properties without
+      // forcing an id.
       const variantId = window.__paintState?.variantId;
-      if (props && variantId && isCartAdd(url) && init && init.body != null) {
+      if (props && isCartAdd(url) && init && init.body != null) {
         init = { ...init, body: mergeBodyProperties(init.body, props, variantId) };
       }
     } catch {
@@ -873,23 +887,27 @@ if (form) {
   form.addEventListener(
     "submit",
     (e) => {
-      if (!window.__paintState?.shade) return;
+      const state = window.__paintState;
+      if (!state) return;
 
-      // A colour is chosen but no matching variant resolved — block the add and
-      // surface the reason rather than adding the wrong-priced variant.
-      if (!window.__paintState.variantId) {
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        showError(
-          "Questo colore non è disponibile nel formato selezionato. Scegline un altro.",
-        );
-        return;
+      if (state.shade) {
+        // A colour is chosen but no matching variant resolved — block the add
+        // and surface the reason rather than adding the wrong-priced variant.
+        if (!state.variantId) {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          showError(
+            "Questo colore non è disponibile nel formato selezionato. Scegline un altro.",
+          );
+          return;
+        }
+
+        const idInput = form.querySelector('input[name="id"]');
+        if (idInput) idInput.value = state.variantId;
       }
 
-      const idInput = form.querySelector('input[name="id"]');
-      if (idInput) idInput.value = window.__paintState.variantId;
-
-      // Re-sync in case the form was re-rendered since the colour was picked.
+      // Re-sync (covers White too) in case the form was re-rendered since the
+      // selection was made.
       syncCartProperties();
     },
     { capture: true },
