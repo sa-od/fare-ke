@@ -3,7 +3,7 @@ import { tierMapping } from "./color-picker-utils.js";
 
 // Build marker — lets us confirm from the console whether the latest asset is the
 // one the browser actually loaded (theme-editor/CDN caching can serve a stale one).
-window.__cpHideVersion = 5;
+window.__cpHideVersion = 6;
 
 // Shades are injected per product via Liquid (window.__paintData.shades). If the
 // product has no colours yet, the picker renders with an empty palette — we never
@@ -746,6 +746,11 @@ if (whiteBtn) {
 }
 
 updateColorButtons(null);
+
+// Bianco is the default selection: record it as the cart property even if the
+// customer never touches the picker.
+if (!window.__paintState) window.__paintState = { white: true };
+syncCartProperties();
 
 // ── CART LINE-ITEM PROPERTIES ──────────────────────────────────────────────────
 // The colour is written to the cart as line-item properties. To be reliable
