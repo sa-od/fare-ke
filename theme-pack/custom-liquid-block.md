@@ -75,7 +75,7 @@ flash before JS runs).
   </script>
 
   <div class="cp-picker">
-    <span class="cp-picker__label">Codice colore</span>
+    <span class="cp-picker__label">Clicca qui per scegliere il tuo colore personalizzato</span>
     <div class="cp-btn-row">
       <button type="button" id="select-base-color" class="cp-btn cp-btn--white">Bianco</button>
       <button type="button" id="open-shade-modal" class="cp-btn cp-btn--custom" data-default-label="Colorato">Colorato</button>
