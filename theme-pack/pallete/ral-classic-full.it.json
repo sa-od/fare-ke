@@ -25,42 +25,42 @@
     "hex": "#f2a900",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "1004",
     "hex": "#dd9f00",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "1005",
     "hex": "#c58f00",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "1006",
     "hex": "#db9100",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "1007",
     "hex": "#e28d00",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "1011",
     "hex": "#ab814f",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier4"
+    "tier": "dark"
   },
   {
     "code": "1013",
@@ -88,231 +88,231 @@
     "hex": "#e8de35",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "1017",
     "hex": "#f0aa50",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "1018",
     "hex": "#f2cb2e",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "1019",
     "hex": "#a28f7a",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier4"
+    "tier": "medium"
   },
   {
     "code": "1020",
     "hex": "#9d8f65",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier4"
+    "tier": "dark"
   },
   {
     "code": "1021",
     "hex": "#eeb700",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "1023",
     "hex": "#efb700",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "1024",
     "hex": "#b5904b",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier4"
+    "tier": "dark"
   },
   {
     "code": "1027",
     "hex": "#a2800c",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "1028",
     "hex": "#ff9c00",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "1032",
     "hex": "#dba400",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "1033",
     "hex": "#f39b1b",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "1034",
     "hex": "#e69d51",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier4"
+    "tier": "dark"
   },
   {
     "code": "1037",
     "hex": "#ea9300",
     "palette": "RAL CLASSIC",
     "tone": "Gialli",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "2000",
     "hex": "#d56f00",
     "palette": "RAL CLASSIC",
     "tone": "Arancioni",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "2001",
     "hex": "#b6481c",
     "palette": "RAL CLASSIC",
     "tone": "Arancioni",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "2002",
     "hex": "#bc3823",
     "palette": "RAL CLASSIC",
     "tone": "Arancioni",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "2003",
     "hex": "#f17829",
     "palette": "RAL CLASSIC",
     "tone": "Arancioni",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "2004",
     "hex": "#de5306",
     "palette": "RAL CLASSIC",
     "tone": "Arancioni",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "2008",
     "hex": "#e86b22",
     "palette": "RAL CLASSIC",
     "tone": "Arancioni",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "2009",
     "hex": "#da530a",
     "palette": "RAL CLASSIC",
     "tone": "Arancioni",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "2010",
     "hex": "#cc5d29",
     "palette": "RAL CLASSIC",
     "tone": "Arancioni",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "2011",
     "hex": "#dd6e0f",
     "palette": "RAL CLASSIC",
     "tone": "Arancioni",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "2012",
     "hex": "#d1654e",
     "palette": "RAL CLASSIC",
     "tone": "Arancioni",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "3000",
     "hex": "#a42821",
     "palette": "RAL CLASSIC",
     "tone": "Rossi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "3001",
     "hex": "#982323",
     "palette": "RAL CLASSIC",
     "tone": "Rossi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "3002",
     "hex": "#982222",
     "palette": "RAL CLASSIC",
     "tone": "Rossi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "3003",
     "hex": "#841922",
     "palette": "RAL CLASSIC",
     "tone": "Rossi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "3004",
     "hex": "#691b23",
     "palette": "RAL CLASSIC",
     "tone": "Rossi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "3005",
     "hex": "#58181f",
     "palette": "RAL CLASSIC",
     "tone": "Rossi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "3007",
     "hex": "#3d2022",
     "palette": "RAL CLASSIC",
     "tone": "Rossi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "3009",
     "hex": "#663029",
     "palette": "RAL CLASSIC",
     "tone": "Rossi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "3011",
     "hex": "#772424",
     "palette": "RAL CLASSIC",
     "tone": "Rossi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "3012",
@@ -326,7 +326,7 @@
     "hex": "#952e25",
     "palette": "RAL CLASSIC",
     "tone": "Rossi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "3014",
@@ -347,28 +347,28 @@
     "hex": "#a43c30",
     "palette": "RAL CLASSIC",
     "tone": "Rossi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "3017",
     "hex": "#c8545d",
     "palette": "RAL CLASSIC",
     "tone": "Rossi",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "3018",
     "hex": "#c43e4a",
     "palette": "RAL CLASSIC",
     "tone": "Rossi",
-    "tier": "tier4"
+    "tier": "dark"
   },
   {
     "code": "3020",
     "hex": "#b81d13",
     "palette": "RAL CLASSIC",
     "tone": "Rossi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "3022",
@@ -382,77 +382,77 @@
     "hex": "#a9263d",
     "palette": "RAL CLASSIC",
     "tone": "Rossi",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "3028",
     "hex": "#c92b26",
     "palette": "RAL CLASSIC",
     "tone": "Rossi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "3031",
     "hex": "#a43338",
     "palette": "RAL CLASSIC",
     "tone": "Rossi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "4001",
     "hex": "#836083",
     "palette": "RAL CLASSIC",
     "tone": "Violetti",
-    "tier": "tier4"
+    "tier": "dark"
   },
   {
     "code": "4002",
     "hex": "#8c3c4b",
     "palette": "RAL CLASSIC",
     "tone": "Violetti",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "4003",
     "hex": "#c4608c",
     "palette": "RAL CLASSIC",
     "tone": "Violetti",
-    "tier": "tier4"
+    "tier": "dark"
   },
   {
     "code": "4004",
     "hex": "#641d39",
     "palette": "RAL CLASSIC",
     "tone": "Violetti",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "4005",
     "hex": "#7b679a",
     "palette": "RAL CLASSIC",
     "tone": "Violetti",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "4006",
     "hex": "#913073",
     "palette": "RAL CLASSIC",
     "tone": "Violetti",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "4007",
     "hex": "#47243c",
     "palette": "RAL CLASSIC",
     "tone": "Violetti",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "4008",
     "hex": "#874b83",
     "palette": "RAL CLASSIC",
     "tone": "Violetti",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "4009",
@@ -466,98 +466,98 @@
     "hex": "#bb3e77",
     "palette": "RAL CLASSIC",
     "tone": "Violetti",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "5000",
     "hex": "#384e6f",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "5001",
     "hex": "#1d4c64",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "5002",
     "hex": "#1e367b",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "5003",
     "hex": "#263855",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "5004",
     "hex": "#1a1e28",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "5005",
     "hex": "#005187",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "5007",
     "hex": "#426a8c",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "5008",
     "hex": "#2d3a44",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "5009",
     "hex": "#2d5e78",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "5010",
     "hex": "#004e7c",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "5011",
     "hex": "#1e2b3d",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "5012",
     "hex": "#2e88b6",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "5013",
     "hex": "#223053",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "5014",
@@ -571,196 +571,196 @@
     "hex": "#0b7bb0",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "5017",
     "hex": "#005a8c",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "5018",
     "hex": "#1b8b8c",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "5019",
     "hex": "#0f5d84",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "5020",
     "hex": "#00414b",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "5021",
     "hex": "#007577",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "5022",
     "hex": "#2b2c5a",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "5023",
     "hex": "#4a688d",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "5024",
     "hex": "#6792ac",
     "palette": "RAL CLASSIC",
     "tone": "Blu",
-    "tier": "tier4"
+    "tier": "dark"
   },
   {
     "code": "6000",
     "hex": "#3b7460",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "6002",
     "hex": "#2d5a27",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6001",
     "hex": "#2d5a27",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6003",
     "hex": "#4e533b",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "6004",
     "hex": "#084442",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6005",
     "hex": "#114232",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6006",
     "hex": "#3b392e",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6007",
     "hex": "#2a3222",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6008",
     "hex": "#36342a",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6009",
     "hex": "#27362a",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6010",
     "hex": "#486f38",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "6011",
     "hex": "#697d58",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier4"
+    "tier": "dark"
   },
   {
     "code": "6012",
     "hex": "#303d3a",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6013",
     "hex": "#7a765a",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6014",
     "hex": "#464135",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "6015",
     "hex": "#3c3d36",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6016",
     "hex": "#006a4c",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6017",
     "hex": "#53803f",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6018",
     "hex": "#599a39",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6019",
@@ -774,7 +774,7 @@
     "hex": "#36422f",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6021",
@@ -788,63 +788,63 @@
     "hex": "#393327",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6024",
     "hex": "#008450",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6025",
     "hex": "#5a6e3b",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "6026",
     "hex": "#005f4e",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6027",
     "hex": "#80bab5",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier4"
+    "tier": "dark"
   },
   {
     "code": "6028",
     "hex": "#305442",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6029",
     "hex": "#00703c",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "6032",
     "hex": "#1c8051",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "6033",
     "hex": "#48877f",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier4"
+    "tier": "dark"
   },
   {
     "code": "6034",
@@ -858,7 +858,7 @@
     "hex": "#008c27",
     "palette": "RAL CLASSIC",
     "tone": "Verdi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "7000",
@@ -907,77 +907,77 @@
     "hex": "#756a5e",
     "palette": "RAL CLASSIC",
     "tone": "Grigi",
-    "tier": "tier4"
+    "tier": "dark"
   },
   {
     "code": "7008",
     "hex": "#725f3c",
     "palette": "RAL CLASSIC",
     "tone": "Grigi",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "7009",
     "hex": "#5c6058",
     "palette": "RAL CLASSIC",
     "tone": "Grigi",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "7010",
     "hex": "#585c56",
     "palette": "RAL CLASSIC",
     "tone": "Grigi",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "7011",
     "hex": "#53595d",
     "palette": "RAL CLASSIC",
     "tone": "Grigi",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "7012",
     "hex": "#585d5e",
     "palette": "RAL CLASSIC",
     "tone": "Grigi",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "7013",
     "hex": "#565044",
     "palette": "RAL CLASSIC",
     "tone": "Grigi",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "7015",
     "hex": "#505359",
     "palette": "RAL CLASSIC",
     "tone": "Grigi",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "7016",
     "hex": "#383e42",
     "palette": "RAL CLASSIC",
     "tone": "Grigi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "7021",
     "hex": "#303234",
     "palette": "RAL CLASSIC",
     "tone": "Grigi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "7022",
     "hex": "#4c4a44",
     "palette": "RAL CLASSIC",
     "tone": "Grigi",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "7023",
@@ -991,14 +991,14 @@
     "hex": "#46494f",
     "palette": "RAL CLASSIC",
     "tone": "Grigi",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "7026",
     "hex": "#384345",
     "palette": "RAL CLASSIC",
     "tone": "Grigi",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "7030",
@@ -1089,7 +1089,7 @@
     "hex": "#4f5250",
     "palette": "RAL CLASSIC",
     "tone": "Grigi",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "7044",
@@ -1124,133 +1124,133 @@
     "hex": "#866a3e",
     "palette": "RAL CLASSIC",
     "tone": "Marroni",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "8001",
     "hex": "#99632b",
     "palette": "RAL CLASSIC",
     "tone": "Marroni",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "8002",
     "hex": "#774d3e",
     "palette": "RAL CLASSIC",
     "tone": "Marroni",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "8003",
     "hex": "#7c4b27",
     "palette": "RAL CLASSIC",
     "tone": "Marroni",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "8004",
     "hex": "#8a4931",
     "palette": "RAL CLASSIC",
     "tone": "Marroni",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "8007",
     "hex": "#6d462b",
     "palette": "RAL CLASSIC",
     "tone": "Marroni",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "8008",
     "hex": "#6f4a25",
     "palette": "RAL CLASSIC",
     "tone": "Marroni",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "8011",
     "hex": "#583827",
     "palette": "RAL CLASSIC",
     "tone": "Marroni",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "8012",
     "hex": "#64332b",
     "palette": "RAL CLASSIC",
     "tone": "Marroni",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "8014",
     "hex": "#483526",
     "palette": "RAL CLASSIC",
     "tone": "Marroni",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "8015",
     "hex": "#5d2f27",
     "palette": "RAL CLASSIC",
     "tone": "Marroni",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "8016",
     "hex": "#4b2b20",
     "palette": "RAL CLASSIC",
     "tone": "Marroni",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "8017",
     "hex": "#432f29",
     "palette": "RAL CLASSIC",
     "tone": "Marroni",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "8019",
     "hex": "#3d3635",
     "palette": "RAL CLASSIC",
     "tone": "Marroni",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "8022",
     "hex": "#1a1719",
     "palette": "RAL CLASSIC",
     "tone": "Marroni",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "8023",
     "hex": "#a05729",
     "palette": "RAL CLASSIC",
     "tone": "Marroni",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "8024",
     "hex": "#765038",
     "palette": "RAL CLASSIC",
     "tone": "Marroni",
-    "tier": "tier4"
+    "tier": "dark"
   },
   {
     "code": "8025",
     "hex": "#735847",
     "palette": "RAL CLASSIC",
     "tone": "Marroni",
-    "tier": "tier4"
+    "tier": "dark"
   },
   {
     "code": "8028",
     "hex": "#4f3a2a",
     "palette": "RAL CLASSIC",
     "tone": "Marroni",
-    "tier": "tier5"
+    "tier": "dark"
   },
   {
     "code": "9001",
@@ -1278,14 +1278,14 @@
     "hex": "#2b2b2c",
     "palette": "RAL CLASSIC",
     "tone": "Bianco/Nero",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "9005",
     "hex": "#0e0e10",
     "palette": "RAL CLASSIC",
     "tone": "Bianco/Nero",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "9010",
@@ -1299,7 +1299,7 @@
     "hex": "#27292b",
     "palette": "RAL CLASSIC",
     "tone": "Bianco/Nero",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "9016",
@@ -1313,7 +1313,7 @@
     "hex": "#2a292a",
     "palette": "RAL CLASSIC",
     "tone": "Bianco/Nero",
-    "tier": "tier6"
+    "tier": "dark"
   },
   {
     "code": "9018",
