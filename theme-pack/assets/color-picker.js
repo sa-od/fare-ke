@@ -3,7 +3,7 @@ import { tierMapping } from "./color-picker-utils.js";
 
 // Build marker — lets us confirm from the console whether the latest asset is the
 // one the browser actually loaded (theme-editor/CDN caching can serve a stale one).
-window.__cpHideVersion = 8;
+window.__cpHideVersion = 9;
 
 // Shades are injected per product via Liquid (window.__paintData.shades). If the
 // product has no colours yet, the picker renders with an empty palette — we never
@@ -640,9 +640,22 @@ function renderGrid(shades) {
       <span class="shade-chip__label">${shade.code}</span>
       <span class="shade-chip__check" aria-hidden="true"></span>
     `;
+    if (window.__paintState?.shade?.code === shade.code) {
+      chip.classList.add("shade-chip--active");
+    }
     chip.addEventListener("click", () => selectShade(shade));
     grid.appendChild(chip);
   });
+}
+
+// Mirrors the picked colour into the URL (?colore=<code>) so a shared link
+// restores the full selection — without it only the variant/tier travels and
+// the recipient would see a tier price with no colour.
+function syncColorParam(shade) {
+  const url = new URL(window.location.href);
+  if (shade) url.searchParams.set("colore", shade.code);
+  else url.searchParams.delete("colore");
+  history.replaceState(history.state, "", url);
 }
 
 function selectShade(shade) {
@@ -662,6 +675,7 @@ function selectShade(shade) {
 
   window.__paintState = { shade };
   updateColorButtons(shade);
+  syncColorParam(shade);
 
   setTimeout(() => {
     closeModal({ clearState: false });
@@ -730,6 +744,7 @@ if (whiteBtn) {
     window.__paintState = { white: true };
     clearError();
     syncCartProperties();
+    syncColorParam(null);
     document.getElementById("shade-footer").innerHTML =
       '<span class="shade-no-selection">Nessuna tonalità selezionata</span>';
     document
@@ -746,18 +761,33 @@ if (whiteBtn) {
 
 updateColorButtons(null);
 
+// Restore a shared-link colour (?colore=<code>): re-select the shade so the
+// buttons, tier, price and cart properties all match what was shared.
+const _sharedCode = new URLSearchParams(window.location.search).get("colore");
+const _sharedShade = _sharedCode
+  ? SHADES.find((s) => s.code === _sharedCode)
+  : null;
+if (_sharedShade) {
+  window.__paintState = { shade: _sharedShade };
+  updateColorButtons(_sharedShade);
+  document.getElementById("shade-footer").innerHTML = `
+    <div class="shade-swatch-circle" style="background:${_sharedShade.hex}"></div>
+    <span class="shade-selected-code">${_sharedShade.code} &mdash; ${_sharedShade.hex}</span>
+  `;
+  resolveVariant();
+  setTimeout(resolveVariant, 600);
+}
+
 // Bianco is the default selection: record it as the cart property even if the
 // customer never touches the picker.
 if (!window.__paintState) window.__paintState = { white: true };
 syncCartProperties();
 
-// Also drive the theme's tier picker to Base on load, so the page opens at the
-// base (lowest) price. Skipped when the URL pins a specific variant, or when a
-// shade survived in state. Retried once for themes that render the picker late.
-if (
-  window.__paintState?.white &&
-  !new URLSearchParams(window.location.search).has("variant")
-) {
+// With no colour to restore, drive the theme's tier picker to Base on load —
+// even when the URL pins a variant (a link shared after picking a colour
+// carries the tier but not the colour; Base is the only consistent state).
+// Retried once for themes that render the picker late.
+if (window.__paintState?.white) {
   const driveBase = () => {
     const baseValue = useConfig ? tierConfig.tierValues?.base : null;
     if (!(baseValue && selectThemeOption(baseValue))) {
