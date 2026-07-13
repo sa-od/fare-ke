@@ -3,7 +3,7 @@ import { tierMapping } from "./color-picker-utils.js";
 
 // Build marker — lets us confirm from the console whether the latest asset is the
 // one the browser actually loaded (theme-editor/CDN caching can serve a stale one).
-window.__cpHideVersion = 7;
+window.__cpHideVersion = 8;
 
 // Shades are injected per product via Liquid (window.__paintData.shades). If the
 // product has no colours yet, the picker renders with an empty palette — we never
@@ -59,14 +59,6 @@ function currentVariant() {
   return variants[0] || null;
 }
 
-// The selected size value — by option name when configured, else legacy option1.
-function getSelectedSize() {
-  const v = currentVariant();
-  if (!v) return null;
-  if (useConfig && sizeIndex >= 0) return v.options?.[sizeIndex] ?? null;
-  return v.option1 ?? null;
-}
-
 function resolveVariant() {
   if (_resolvingVariant) return;
 
@@ -82,29 +74,26 @@ function resolveVariant() {
     return;
   }
 
-  // Size only matters when the product actually has a size option.
-  const hasSize = useConfig ? sizeIndex >= 0 : true;
-  const size = hasSize ? getSelectedSize() : null;
-  if (hasSize && !size) return;
-
+  // Swap ONLY the tier on the customer's currently selected variant, keeping
+  // every other option (size, finish, …) exactly as chosen. Matching a subset
+  // of options and taking the first hit would silently change e.g. the finish
+  // on products with a 3rd option (Opaco/Lucido/Satinato).
+  const tIdx = useConfig ? tierIndex : 1;
+  const current = currentVariant();
   const variant = (window.__paintData?.variants || []).find((v) => {
-    const tierOk = useConfig
-      ? v.options?.[tierIndex] === tierValue
-      : v.option2 === tierValue;
-    const sizeOk = !hasSize
-      ? true
-      : useConfig
-        ? v.options?.[sizeIndex] === size
-        : v.option1 === size;
-    return tierOk && sizeOk;
+    if (v.options?.[tIdx] !== tierValue) return false;
+    if (!current?.options) return true;
+    return (v.options || []).every(
+      (val, i) => i === tIdx || val === current.options[i],
+    );
   });
 
   if (!variant) {
-    // The colour's tier has no variant in the chosen size — tell the customer
-    // instead of silently adding the wrong variant on submit.
+    // The colour's tier has no variant for the chosen options — tell the
+    // customer instead of silently adding the wrong variant on submit.
     window.__paintState.variantId = null;
     showError(
-      `“${shade.code}” non è disponibile nel formato selezionato. Scegli un altro formato o un altro colore.`,
+      `“${shade.code}” non è disponibile con le opzioni selezionate. Scegli un'altra combinazione o un altro colore.`,
     );
     return;
   }
@@ -762,6 +751,23 @@ updateColorButtons(null);
 if (!window.__paintState) window.__paintState = { white: true };
 syncCartProperties();
 
+// Also drive the theme's tier picker to Base on load, so the page opens at the
+// base (lowest) price. Skipped when the URL pins a specific variant, or when a
+// shade survived in state. Retried once for themes that render the picker late.
+if (
+  window.__paintState?.white &&
+  !new URLSearchParams(window.location.search).has("variant")
+) {
+  const driveBase = () => {
+    const baseValue = useConfig ? tierConfig.tierValues?.base : null;
+    if (!(baseValue && selectThemeOption(baseValue))) {
+      if (!selectThemeOption("White")) selectThemeOption("Base");
+    }
+  };
+  driveBase();
+  setTimeout(driveBase, 600);
+}
+
 // ── CART LINE-ITEM PROPERTIES ──────────────────────────────────────────────────
 // The colour is written to the cart as line-item properties. To be reliable
 // across every add path we attach it two ways:
@@ -912,7 +918,7 @@ if (form) {
           e.preventDefault();
           e.stopImmediatePropagation();
           showError(
-            "Questo colore non è disponibile nel formato selezionato. Scegline un altro.",
+            "Questo colore non è disponibile con le opzioni selezionate. Scegline un altro.",
           );
           return;
         }
