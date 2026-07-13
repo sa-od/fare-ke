@@ -3,7 +3,7 @@ import { tierMapping } from "./color-picker-utils.js";
 
 // Build marker — lets us confirm from the console whether the latest asset is the
 // one the browser actually loaded (theme-editor/CDN caching can serve a stale one).
-window.__cpHideVersion = 9;
+window.__cpHideVersion = 10;
 
 // Shades are injected per product via Liquid (window.__paintData.shades). If the
 // product has no colours yet, the picker renders with an empty palette — we never
@@ -391,15 +391,32 @@ function listenSizeChange() {
     hideTierOption();
   };
 
+  // Themes rebuild the URL from scratch on variant change (product-url +
+  // ?variant= only), which would erase our ?colore= param moments after we
+  // set it. Re-inject it into every URL the theme writes so it survives.
+  const withColorParam = (url) => {
+    if (url === undefined || url === null) return url;
+    try {
+      const u = new URL(url, window.location.href);
+      if (u.origin !== window.location.origin) return url;
+      const shade = window.__paintState?.shade;
+      if (shade) u.searchParams.set("colore", shade.code);
+      else u.searchParams.delete("colore");
+      return u.pathname + u.search + u.hash;
+    } catch {
+      return url;
+    }
+  };
+
   const _replace = history.replaceState.bind(history);
-  history.replaceState = function (...args) {
-    _replace(...args);
+  history.replaceState = function (state, title, url) {
+    _replace(state, title, withColorParam(url));
     onThemeUpdate();
   };
 
   const _push = history.pushState.bind(history);
-  history.pushState = function (...args) {
-    _push(...args);
+  history.pushState = function (state, title, url) {
+    _push(state, title, withColorParam(url));
     onThemeUpdate();
   };
 
