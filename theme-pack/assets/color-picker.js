@@ -3,7 +3,7 @@ import { tierMapping } from "./color-picker-utils.js";
 
 // Build marker — lets us confirm from the console whether the latest asset is the
 // one the browser actually loaded (theme-editor/CDN caching can serve a stale one).
-window.__cpHideVersion = 10;
+window.__cpHideVersion = 12;
 
 // Shades are injected per product via Liquid (window.__paintData.shades). If the
 // product has no colours yet, the picker renders with an empty palette — we never
@@ -665,6 +665,27 @@ function renderGrid(shades) {
   });
 }
 
+// Remembers the picked colour per product in this browser. Cart line links
+// carry only ?variant= (never our ?colore=), so this is what lets a customer
+// clicking a cart item land back on their colour instead of Bianco/Base.
+function persistColor(shade) {
+  try {
+    const key = "cpColore:" + window.location.pathname;
+    if (shade) localStorage.setItem(key, shade.code);
+    else localStorage.removeItem(key);
+  } catch {
+    /* storage unavailable (private mode) — cart links fall back to Base */
+  }
+}
+
+function recallColor() {
+  try {
+    return localStorage.getItem("cpColore:" + window.location.pathname);
+  } catch {
+    return null;
+  }
+}
+
 // Mirrors the picked colour into the URL (?colore=<code>) so a shared link
 // restores the full selection — without it only the variant/tier travels and
 // the recipient would see a tier price with no colour.
@@ -693,6 +714,7 @@ function selectShade(shade) {
   window.__paintState = { shade };
   updateColorButtons(shade);
   syncColorParam(shade);
+  persistColor(shade);
 
   setTimeout(() => {
     closeModal({ clearState: false });
@@ -762,6 +784,7 @@ if (whiteBtn) {
     clearError();
     syncCartProperties();
     syncColorParam(null);
+    persistColor(null);
     document.getElementById("shade-footer").innerHTML =
       '<span class="shade-no-selection">Nessuna tonalità selezionata</span>';
     document
@@ -778,15 +801,36 @@ if (whiteBtn) {
 
 updateColorButtons(null);
 
-// Restore a shared-link colour (?colore=<code>): re-select the shade so the
-// buttons, tier, price and cart properties all match what was shared.
-const _sharedCode = new URLSearchParams(window.location.search).get("colore");
-const _sharedShade = _sharedCode
-  ? SHADES.find((s) => s.code === _sharedCode)
+// Restore a colour on load, in priority order:
+//   1. ?colore=<code> — a shared link (works cross-device);
+//   2. the colour remembered in this browser, when the URL points at a
+//      coloured (non-base) tier variant — e.g. arriving from the cart, whose
+//      product links carry the variant but never our colour param.
+// Re-selecting drives buttons, tier, price and cart properties to match.
+const _params = new URLSearchParams(window.location.search);
+let _restoreCode = _params.get("colore");
+if (!_restoreCode && _params.has("variant")) {
+  const _urlVariant = (window.__paintData?.variants || []).find(
+    (v) => v.id === parseInt(_params.get("variant"), 10),
+  );
+  const _tIdx = useConfig ? tierIndex : 1;
+  const _baseValue = useConfig ? tierConfig.tierValues?.base : tierMapping.base;
+  if (
+    _urlVariant?.options?.[_tIdx] &&
+    _urlVariant.options[_tIdx] !== _baseValue
+  ) {
+    _restoreCode = recallColor();
+  }
+}
+const _sharedShade = _restoreCode
+  ? SHADES.find((s) => s.code === _restoreCode)
   : null;
 if (_sharedShade) {
   window.__paintState = { shade: _sharedShade };
   updateColorButtons(_sharedShade);
+  // Write the colour into the URL too — a cart link arrives with ?variant=
+  // only, and the restored page should itself be a shareable link.
+  syncColorParam(_sharedShade);
   document.getElementById("shade-footer").innerHTML = `
     <div class="shade-swatch-circle" style="background:${_sharedShade.hex}"></div>
     <span class="shade-selected-code">${_sharedShade.code} &mdash; ${_sharedShade.hex}</span>
